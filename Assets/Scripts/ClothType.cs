@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Counter : MonoBehaviour {
+public class ClothType : MonoBehaviour {
 
+    public string clothType;
 	// Use this for initialization
-	void Start ()
-    {
+	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update ()
-    {
+	void Update () {
 		
 	}
-
-
 }

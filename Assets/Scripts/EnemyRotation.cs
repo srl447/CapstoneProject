@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyRotation : MonoBehaviour {
 
     public float rotateSpeed;
+    public float rotateTime;
+    public float pauseTime;
 	// Use this for initialization
 	void Start () {
         StartCoroutine(RotateTimer());
@@ -19,8 +21,11 @@ public class EnemyRotation : MonoBehaviour {
 
     IEnumerator RotateTimer()
     {
-        yield return new WaitForSecondsRealtime(3);
-        rotateSpeed = rotateSpeed * -1;
+        yield return new WaitForSecondsRealtime(rotateTime);
+        float NextRotateSpeed = rotateSpeed * -1;
+        rotateSpeed = 0;
+        yield return new WaitForSecondsRealtime(pauseTime);
+        rotateSpeed = NextRotateSpeed;
         StartCoroutine(RotateTimer());
 
     }

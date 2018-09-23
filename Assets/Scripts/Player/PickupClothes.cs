@@ -4,23 +4,34 @@ using UnityEngine;
 
 public class PickupClothes : MonoBehaviour
 {
-    bool hasClothes = false;
+    int clothesCount = 0;
+    public GameObject clothesScreen;
 	// Use this for initialization
-	void Start () {
-		
-	}
+	void Start ()
+    {
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
 		
 	}
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Clothes")
         {
-            Destroy(collision.gameObject);
-            hasClothes = true;
+            clothesScreen.SetActive(true);
+            this.GetComponent<Movement>().enabled = false;
+            clothesCount++;
+        }
+        if (collision.gameObject.tag == "Counter")
+        {
+            if (clothesCount > 0)
+            {
+                Debug.Log("Purchased");
+            }
+
         }
     }
 }
