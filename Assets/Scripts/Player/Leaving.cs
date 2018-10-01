@@ -21,6 +21,10 @@ public class Leaving : MonoBehaviour {
         //check if they leave and haev purchased clothes
         if(collision.gameObject.tag == "Exit" && pC.purchased == true)
         {
+            foreach(GameObject g in GameManager.clothes)
+            {
+                DontDestroyOnLoad(g);
+            }
             SceneManager.LoadScene(1);
         }
     }

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ClothesUI : MonoBehaviour {
 
     public Text clothesText;
-    public MoveHand mH;
     public PickupClothes pC;
 	// Use this for initialization
 	void Start () {
@@ -18,9 +17,9 @@ public class ClothesUI : MonoBehaviour {
         if (!pC.purchased)
         {
             clothesText.text = "Clothes Bought:";
-            for (int i = 0; i < mH.clothes.Count; i++)
+            for (int i = 0; i < GameManager.clothes.Count; i++)
             {
-                clothesText.text += " " + mH.clothes[i];
+                clothesText.text += " " + GameManager.clothes[i].ToString();
             }
         }
         //change to let people know they purchased clothes

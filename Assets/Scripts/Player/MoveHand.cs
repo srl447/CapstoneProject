@@ -9,7 +9,7 @@ public class MoveHand : MonoBehaviour
     public Movement playerMovement;
     public PickupClothes playerPickup;
     public float handSpeed;
-    public ArrayList clothes = new ArrayList();
+    //public ArrayList clothes = new ArrayList();
     public ArrayList viewClothes = new ArrayList();
     // Use this for initialization
     void Start()
@@ -36,7 +36,7 @@ public class MoveHand : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<ClothType>() != null)
             {
-                clothes.Add(collision.gameObject.GetComponent<ClothType>().clothType);
+                GameManager.clothes.Add(collision.gameObject);
                 pickup();
             }
             else
