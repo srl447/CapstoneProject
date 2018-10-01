@@ -19,7 +19,7 @@ public class ClothesUI : MonoBehaviour {
             clothesText.text = "Clothes Bought:";
             for (int i = 0; i < GameManager.clothes.Count; i++)
             {
-                clothesText.text += " " + GameManager.clothes[i].ToString();
+                clothesText.text += " " +  ((GameObject)GameManager.clothes[i]).GetComponent<ClothType>().clothType;
             }
         }
         //change to let people know they purchased clothes

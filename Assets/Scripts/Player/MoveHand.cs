@@ -36,7 +36,10 @@ public class MoveHand : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<ClothType>() != null)
             {
-                GameManager.clothes.Add(collision.gameObject);
+                GameObject newCloth = Instantiate(collision.gameObject) as GameObject;
+                newCloth.SetActive(false);
+                GameManager.clothes.Add(newCloth);
+                
                 pickup();
             }
             else
