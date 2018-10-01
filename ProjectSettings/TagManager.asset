@@ -8,6 +8,7 @@ TagManager:
   - Clothes
   - Counter
   - AnxietyZone1
+  - Exit
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Hand
+  - Clothes
   - 
   - 
   - 

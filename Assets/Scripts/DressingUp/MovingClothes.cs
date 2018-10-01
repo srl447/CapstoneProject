@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClothesUI : MonoBehaviour {
+public class MovingClothes : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

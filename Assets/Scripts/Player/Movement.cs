@@ -68,5 +68,9 @@ public class Movement : MonoBehaviour {
         {
             transform.Translate(Vector3.right * velocity * Time.deltaTime);
         }
+        if(!up && !left && !down && !right)
+        {
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
+        }
     }
 }
