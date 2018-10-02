@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Cursor : MonoBehaviour
 {
-    bool holding = false;
+    bool holding;
+    GameObject heldObject;
     // Use this for initialization
     void Start()
     {
@@ -19,22 +20,32 @@ public class Cursor : MonoBehaviour
         pos = new Vector3(pos.x, pos.y, -2f); //push the cursor up infront of the camera
         transform.position = pos; //actually move the cursor
 
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            holding = false;
+        }
+        if(holding)
+        {
+            heldObject.transform.position = this.transform.position;
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         //select clothes
-        if (Input.GetKeyDown(KeyCode.Mouse0) && collision.gameObject.tag == "Clothes" && !holding)
+        if (!holding && (Input.GetKeyDown(KeyCode.Mouse0) && collision.gameObject.tag == "Clothes"))
         {
             holding = true;
+            heldObject = collision.gameObject;
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0))
+        /*else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             holding = false;
         }
-        else if(holding)
+        else if(GameManager.holding)
         {
             collision.gameObject.transform.position = this.transform.position;
-        }
+        }*/
     }
 }

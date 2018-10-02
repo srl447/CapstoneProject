@@ -216,6 +216,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 102626232}
   m_Script: {fileID: 11500000, guid: 4455c34e1d6410143b1c3945b3347b45, type: 3}
+--- !u!114 &25711152 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114715683555688274, guid: be19d65bfc638744fb72b20f0891faaa,
+    type: 2}
+  m_PrefabInternal: {fileID: 102626232}
+  m_Script: {fileID: 11500000, guid: 785e72c55aa9e404aa982dc7bb65e2c8, type: 3}
 --- !u!114 &25711155 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114946255357946420, guid: be19d65bfc638744fb72b20f0891faaa,
@@ -234,6 +240,94 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pC: {fileID: 25711151}
+--- !u!1 &40737038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 40737039}
+  - component: {fileID: 40737042}
+  - component: {fileID: 40737041}
+  - component: {fileID: 40737040}
+  m_Layer: 0
+  m_Name: AnxietyMeter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &40737039
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40737038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1415014647}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -382, y: 261}
+  m_SizeDelta: {x: 492.2, y: 144}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &40737040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40737038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b275873a331b74d868f29cc16807bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anxietyText: {fileID: 40737041}
+  gS: {fileID: 25711152}
+--- !u!114 &40737041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40737038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9921569, g: 0.9568628, b: 0.003921569, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Anxiety: '
+--- !u!222 &40737042
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40737038}
 --- !u!1001 &102626232
 Prefab:
   m_ObjectHideFlags: 0
@@ -1110,7 +1204,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d5bde62b4aa0e664bb1f7c88e174b13b, type: 3}
-  m_Color: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
+  m_Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2620,8 +2714,7 @@ Prefab:
     - target: {fileID: 1868759866690316, guid: 41ef20427afd30f45acec0219ac29135, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     - target: {fileID: 1868759866690316, guid: 41ef20427afd30f45acec0219ac29135, type: 2}
       propertyPath: m_Layer
       value: 0
@@ -2756,6 +2849,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1642562691}
+  - {fileID: 40737039}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3301,7 +3395,7 @@ GameObject:
   - component: {fileID: 1642562692}
   - component: {fileID: 1642562694}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Clothes Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3602,8 +3696,7 @@ Prefab:
     - target: {fileID: 1455158471995620, guid: c43d070970edb0f4695a0d22ae6c0c11, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     - target: {fileID: 1455158471995620, guid: c43d070970edb0f4695a0d22ae6c0c11, type: 2}
       propertyPath: m_Layer
       value: 0
@@ -3796,8 +3889,7 @@ Prefab:
     - target: {fileID: 1718799104557312, guid: 9bf4bc79de21a7042939e498aefe888a, type: 2}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     - target: {fileID: 1718799104557312, guid: 9bf4bc79de21a7042939e498aefe888a, type: 2}
       propertyPath: m_Layer
       value: 0
