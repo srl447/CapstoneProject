@@ -25,8 +25,15 @@ public class PickupClothes : MonoBehaviour
     {
         if (collision.gameObject.tag == "Clothes")
         {
-            collidedClothes = collision.GetComponent<ClothType>().clothType;
-            if (Input.GetKeyDown(KeyCode.P) && !clothesScreen.activeInHierarchy)
+            try
+            {
+                collidedClothes = collision.GetComponent<ClothType>().clothType;
+            }
+            catch(System.NullReferenceException e)
+            {
+                return;
+            } 
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy)
             {
                 clothesScreen.SetActive(true);
                 foreach (ClothesSpawner c in cS)
@@ -40,7 +47,7 @@ public class PickupClothes : MonoBehaviour
             }
         }
         //purchasing clothes
-        if (collision.gameObject.tag == "Counter" && Input.GetKeyDown(KeyCode.P))
+        if (collision.gameObject.tag == "Counter" && Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (clothesCount > 0)
             {

@@ -20,19 +20,15 @@ public class MoveHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position = new Vector3(transform.position.x + handSpeed, transform.position.y, transform.position.z);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position = new Vector3(transform.position.x - handSpeed, transform.position.y, transform.position.z);
-        }
+        Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0); //get the x and y value
+        pos = Camera.main.ScreenToWorldPoint(pos); //convert them to unity space
+        pos = new Vector3(pos.x, pos.y, -9.1f); //push the cursor up infront of the camera
+        transform.position = pos; //actually move the cursor
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         //select clothes
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (collision.gameObject.GetComponent<ClothType>() != null)
             {

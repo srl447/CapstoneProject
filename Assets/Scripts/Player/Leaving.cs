@@ -25,7 +25,7 @@ public class Leaving : MonoBehaviour {
             {
                 DontDestroyOnLoad(g);
             }
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 }
