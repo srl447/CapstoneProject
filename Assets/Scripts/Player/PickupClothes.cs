@@ -25,13 +25,9 @@ public class PickupClothes : MonoBehaviour
     {
         if (collision.gameObject.tag == "Clothes")
         {
-            try
-            {
+            if (collision.GetComponent<ClothType>() != null)
+            { 
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
-            }
-            catch(System.NullReferenceException e)
-            {
-                return;
             } 
             if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy)
             {
