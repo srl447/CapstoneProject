@@ -6,16 +6,15 @@ using UnityEngine.UI;
 public class ThoughtText : MonoBehaviour {
 
     public Text thought;
-    public string currentThought;
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 
-        thought.text = currentThought;
 		
 	}
 
@@ -23,7 +22,7 @@ public class ThoughtText : MonoBehaviour {
     {
         if (other.gameObject.GetComponent<ThoughtZone>() != null && !GameManager.thinking)
         {
-            currentThought = other.GetComponent<ThoughtZone>().thought;
+            thought.text = other.GetComponent<ThoughtZone>().thought;
             GameManager.thinking = true;
             StartCoroutine(thoughtTime(other.gameObject.GetComponent<ThoughtZone>().thoughtTime, other.gameObject));
         }
@@ -33,7 +32,7 @@ public class ThoughtText : MonoBehaviour {
     IEnumerator thoughtTime(float time, GameObject thoughtTrigger)
     {
         yield return new WaitForSecondsRealtime(time);
-        currentThought = "";
+        thought.text = "";
         Destroy(thoughtTrigger);
         GameManager.thinking = false;
     }
