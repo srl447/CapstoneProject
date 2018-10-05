@@ -228,6 +228,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 102626232}
   m_Script: {fileID: 11500000, guid: b0c80a91c5fff6648be58acf7499b633, type: 3}
+--- !u!4 &25711157 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4897160495083042, guid: be19d65bfc638744fb72b20f0891faaa,
+    type: 2}
+  m_PrefabInternal: {fileID: 102626232}
 --- !u!114 &25711158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gS: {fileID: 25711152}
   text: {fileID: 1297783615}
+  thoughts: 00
 --- !u!1 &40737038
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +320,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloomSpeed: 1.5
   chromeSpeed: 1
+  vigSpeed: 0.3
   anxietyText: {fileID: 40737041}
+  player: {fileID: 25711157}
   gS: {fileID: 25711152}
   mainProfile: {fileID: 11400000, guid: 5a8b47741bd364040b3d1d9a4dcf4999, type: 2}
 --- !u!114 &40737041
@@ -349,7 +357,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Anxiety: '
+  m_Text: 
 --- !u!222 &40737042
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -430,6 +438,42 @@ Prefab:
       propertyPath: cS.Array.data[2]
       value: 
       objectReference: {fileID: 1889396922}
+    - target: {fileID: 61808119070873710, guid: be19d65bfc638744fb72b20f0891faaa,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 61808119070873710, guid: be19d65bfc638744fb72b20f0891faaa,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 212992958469236260, guid: be19d65bfc638744fb72b20f0891faaa,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a1e3aa1bd51d9004b85a310a6794082b,
+        type: 3}
+    - target: {fileID: 61808119070873710, guid: be19d65bfc638744fb72b20f0891faaa,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.12357664
+      objectReference: {fileID: 0}
+    - target: {fileID: 61808119070873710, guid: be19d65bfc638744fb72b20f0891faaa,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.98352337
+      objectReference: {fileID: 0}
+    - target: {fileID: 61808119070873710, guid: be19d65bfc638744fb72b20f0891faaa,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.013730645
+      objectReference: {fileID: 0}
+    - target: {fileID: 61808119070873710, guid: be19d65bfc638744fb72b20f0891faaa,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.62103176
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be19d65bfc638744fb72b20f0891faaa, type: 2}
   m_IsPrefabParent: 0
@@ -3600,7 +3644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1642562691
 RectTransform:
   m_ObjectHideFlags: 0

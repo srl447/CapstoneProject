@@ -8,13 +8,17 @@ public class AnxietyUI : MonoBehaviour {
 
     public float bloomSpeed;
     public float chromeSpeed;
+    public float vigSpeed;
 
     public Text anxietyText;
+    public Transform player;
     public GetSpotted gS;
     public PostProcessingProfile mainProfile;
 
     BloomModel.Settings bloomS;
     ChromaticAberrationModel.Settings chromeS;
+    VignetteModel.Settings vigS;
+
     // Use this for initialization
     void Start ()
     {
@@ -22,13 +26,18 @@ public class AnxietyUI : MonoBehaviour {
         bloomS.bloom.intensity = 0;
         chromeS = mainProfile.chromaticAberration.settings;
         chromeS.intensity = 0;
+        vigS = mainProfile.vignette.settings;
+        vigS.intensity = 0;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        bloomS.bloom.intensity = gS.anx*bloomSpeed;
+        //vigS.center = player.position; //Need to convert world space to canvas space
+        vigS.intensity = gS.anx * vigSpeed;
+        bloomS.bloom.intensity = gS.anx * bloomSpeed;
         chromeS.intensity = gS.anx * chromeSpeed;
+        mainProfile.vignette.settings = vigS;
         mainProfile.chromaticAberration.settings = chromeS;
         mainProfile.bloom.settings = bloomS;
         anxietyText.text = "Anxiety: " + Mathf.Floor(gS.anx*100);
