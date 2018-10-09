@@ -29,7 +29,7 @@ public class PickupClothes : MonoBehaviour
             { 
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
             } 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy)
+            if (Input.GetKeyDown(KeyCode.E) && !clothesScreen.activeInHierarchy)
             {
                 clothesScreen.SetActive(true);
                 foreach (ClothesSpawner c in cS)
@@ -40,6 +40,7 @@ public class PickupClothes : MonoBehaviour
                 this.GetComponent<Movement>().enabled = false;
                 clothesCount++;
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
+                this.GetComponent<PickupClothes>().enabled = false;
             }
         }
         //purchasing clothes

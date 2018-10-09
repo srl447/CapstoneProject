@@ -63,4 +63,10 @@ public class MoveHand : MonoBehaviour
         //allow the player to move again
         playerMovement.enabled = true;
     }
+
+    IEnumerator clothDelay()
+    {
+        yield return new WaitForSecondsRealtime(.1f);
+        playerPickup.enabled = true;
+    }
 }

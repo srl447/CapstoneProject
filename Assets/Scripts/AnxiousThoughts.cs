@@ -27,8 +27,15 @@ public class AnxiousThoughts : MonoBehaviour {
             thoughts[0] = true;
 
         }
-		
-	}
+        if (gS.anx > 10 && !GameManager.thinking && !thoughts[1])
+        {
+            text.text = "Fuckkk people are staring at me";
+            StartCoroutine(thoughtTime(2));
+            thoughts[1] = true;
+
+        }
+
+    }
 
     IEnumerator thoughtTime(float time)
     {

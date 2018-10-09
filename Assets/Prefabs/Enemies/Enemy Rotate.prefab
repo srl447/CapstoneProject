@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4629994192433700}
   - component: {fileID: 212678681586380096}
   - component: {fileID: 60959562869634656}
+  - component: {fileID: 114500001077496172}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: EnemySight
@@ -139,6 +140,23 @@ MonoBehaviour:
   rotateSpeed: 1
   rotateTime: 3
   pauseTime: 0
+--- !u!114 &114500001077496172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1389773892088586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5ccee86cfff8448a8fca5c1074b634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stareTime: 2
+  stare: 0
+  player: {fileID: 1679896231103632, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
+  shopper: {fileID: 1647519876982442}
+  eM: {fileID: 0}
+  eR: {fileID: 114310828351442572}
 --- !u!212 &212611735888040938
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4176445552747254}
   - component: {fileID: 212977746689368612}
   - component: {fileID: 60402714127993360}
+  - component: {fileID: 114056386092116268}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: EnemySight
@@ -146,6 +147,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114056386092116268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1448384448081694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5ccee86cfff8448a8fca5c1074b634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stareTime: 2
+  stare: 0
+  player: {fileID: 1072018915081824, guid: be19d65bfc638744fb72b20f0891faaa, type: 2}
+  shopper: {fileID: 1576577792937478}
+  eM: {fileID: 114986420275481916}
+  eR: {fileID: 0}
 --- !u!114 &114986420275481916
 MonoBehaviour:
   m_ObjectHideFlags: 1
