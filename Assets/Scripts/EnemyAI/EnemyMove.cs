@@ -19,7 +19,7 @@ public class EnemyMove : MonoBehaviour {
         this.GetComponent<Rigidbody2D>().MovePosition(transform.position+dir);
 	}
 
-    IEnumerator SwitchDir()
+    public IEnumerator SwitchDir()
     {
         yield return new WaitForSecondsRealtime(time);
         Vector3 nextDir = dir * -1;

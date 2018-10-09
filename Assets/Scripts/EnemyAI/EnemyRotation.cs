@@ -19,7 +19,7 @@ public class EnemyRotation : MonoBehaviour {
 		
 	}
 
-    IEnumerator RotateTimer()
+    public IEnumerator RotateTimer()
     {
         yield return new WaitForSecondsRealtime(rotateTime);
         float NextRotateSpeed = rotateSpeed * -1;
