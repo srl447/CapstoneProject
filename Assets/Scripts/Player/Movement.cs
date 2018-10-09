@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 
     public Rigidbody2D rb;
+    public Animator anim;
     bool up, down, left, right;
     public float velocity;
 	// Use this for initialization
@@ -63,6 +64,7 @@ public class Movement : MonoBehaviour {
         if (down)
         {
             transform.Translate(Vector3.down * velocity * Time.deltaTime);
+            anim.SetTrigger("downWalk");
         }
         if (right)
         {
@@ -71,6 +73,7 @@ public class Movement : MonoBehaviour {
         if(!up && !left && !down && !right)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
+            anim.SetTrigger("idle");
         }
     }
 }
