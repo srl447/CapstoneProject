@@ -25,21 +25,24 @@ public class Movement : MonoBehaviour {
         {
             up = false;
         }
-        if(Input.GetKey(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.S))
         {
             down = true;
+            anim.SetTrigger("downWalk");
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.S))
         {
             down = false;
+            anim.SetTrigger("idle");
         }
         if (Input.GetKey(KeyCode.D))
         {
             right = true;
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.D))
         {
             right = false;
+            anim.SetTrigger("idleS");
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -64,7 +67,7 @@ public class Movement : MonoBehaviour {
         if (down)
         {
             transform.Translate(Vector3.down * velocity * Time.deltaTime);
-            anim.SetTrigger("downWalk");
+
         }
         if (right)
         {
@@ -73,7 +76,6 @@ public class Movement : MonoBehaviour {
         if(!up && !left && !down && !right)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
-            anim.SetTrigger("idle");
         }
     }
 }
