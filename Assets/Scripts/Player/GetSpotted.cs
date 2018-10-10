@@ -18,6 +18,7 @@ public class GetSpotted : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        //All of this was prototype anxiety display method
 		//if(sR.color.r <= 0)
         //{
             //Debug.Log("Max Blue");
@@ -29,6 +30,7 @@ public class GetSpotted : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        //now this just tracks anxiety
         if (collision.gameObject.tag == "EnemySight")
         {
             //sR.color = new Color(sR.color.r - enemyPow , sR.color.g - enemyPow ,sR.color.b);

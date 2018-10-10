@@ -20,6 +20,8 @@ public class ThoughtText : MonoBehaviour {
 
     private void OnTriggerEnter2D (Collider2D other)
     {
+        //sets text based on hitting certain areas 
+        //such as store entrance
         if (other.gameObject.GetComponent<ThoughtZone>() != null && !GameManager.thinking)
         {
             thought.text = other.GetComponent<ThoughtZone>().thought;
@@ -28,11 +30,13 @@ public class ThoughtText : MonoBehaviour {
         }
         
     }
-
+    //Text always stays for set amount of time
+    //so that people can read it
     IEnumerator thoughtTime(float time, GameObject thoughtTrigger)
     {
         yield return new WaitForSecondsRealtime(time);
         thought.text = "";
+        //don't want people reading the same text twice
         Destroy(thoughtTrigger);
         GameManager.thinking = false;
     }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ClothesUI : MonoBehaviour {
 
+    //this isn't used at all anymore?
     public Text clothesText;
     public PickupClothes pC;
 	// Use this for initialization

@@ -22,6 +22,7 @@ public class ClothesSpawner : MonoBehaviour {
             cloth.transform.position = transform.position;
             mH.viewClothes.Add(cloth);
         }
+        //each area have their own kinds of clothes
         else if (player.collidedClothes == "Pants")
         {
             GameObject cloth = Instantiate(pants[(int)Mathf.Floor(Random.Range(0f, tops.Length))]) as GameObject;

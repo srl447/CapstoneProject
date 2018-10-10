@@ -6,7 +6,8 @@ public class Movement : MonoBehaviour {
 
     public Rigidbody2D rb;
     public Animator anim;
-    bool up, down, left, right;
+    //input variables per direction
+    bool up, down, left, right, upLeft, downLeft, upRight, downRight;
     public float velocity;
 	// Use this for initialization
 	void Start ()
@@ -17,6 +18,24 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        //check which input occurs
+        //Diagnols to be added laters
+        if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.A))
+        {
+
+        }
+        else if(Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.D))
+        {
+
+        }
+        else if (Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.A))
+        {
+
+        }
+        else if (Input.GetKeyDown(KeyCode.S) && Input.GetKeyDown(KeyCode.D))
+        {
+
+        }
 		if(Input.GetKey(KeyCode.W))
         {
             up = true;
@@ -28,6 +47,7 @@ public class Movement : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.S))
         {
             down = true;
+            //animation is set on button presses because it worked here
             anim.SetTrigger("downWalk");
         }
         else if(Input.GetKeyUp(KeyCode.S))
@@ -56,6 +76,7 @@ public class Movement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        //move in FixedUpdate for physics reasons
         if (up)
         {
             transform.Translate(Vector3.up * velocity * Time.deltaTime);
@@ -73,6 +94,8 @@ public class Movement : MonoBehaviour {
         {
             transform.Translate(Vector3.right * velocity * Time.deltaTime);
         }
+        //stops character from being pushed kinda
+        //Needs to be adjusted for while moving
         if(!up && !left && !down && !right)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);

@@ -11,6 +11,7 @@ public class AnxiousThoughts : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        //No thoughts have been thunk
 		for(int i = 0; i < thoughts.Length; i++)
         {
             thoughts[i] = false;
@@ -20,6 +21,10 @@ public class AnxiousThoughts : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        //What's basically going on is there's an array of bools
+        //when anxiety reaches a certain point a new thought will be displayed
+        //and then never displayed again
+        //the array of bools keeps track of this
         if(gS.anx >0 && !GameManager.thinking && !thoughts[0])
         {
             text.text = "I can't let anyone see me";
@@ -27,7 +32,7 @@ public class AnxiousThoughts : MonoBehaviour {
             thoughts[0] = true;
 
         }
-        if (gS.anx > 10 && !GameManager.thinking && !thoughts[1])
+        if (gS.anx > .8 && !GameManager.thinking && !thoughts[1])
         {
             text.text = "Fuckkk people are staring at me";
             StartCoroutine(thoughtTime(2));
@@ -36,7 +41,7 @@ public class AnxiousThoughts : MonoBehaviour {
         }
 
     }
-
+    //thoughts have to exist for a certain amount of time
     IEnumerator thoughtTime(float time)
     {
         yield return new WaitForSecondsRealtime(time);
