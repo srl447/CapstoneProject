@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour {
     public Rigidbody2D rb;
     public Animator anim;
     //input variables per direction
-    bool up, down, left, right, upLeft, downLeft, upRight, downRight;
+    public bool up, down, left, right, upLeft, downLeft, upRight, downRight, walking;
     public float velocity;
     string[] triggers = new string[6] { "idle", "upIdle", "idleS", "sideWalk", "downWalk", "upWalk"};
 	void Start ()
@@ -39,53 +39,53 @@ public class Movement : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.W))
         {
             up = true;
-            ResetTriggers();
-            anim.SetTrigger("upWalk");
+            //ResetTriggers();
+            //anim.SetTrigger("upWalk");
         }
         else if(Input.GetKeyUp(KeyCode.W))
         {
             up = false;
-            ResetTriggers();
-            anim.SetTrigger("upIdle");
+            //ResetTriggers();
+            //anim.SetTrigger("upIdle");
         }
         if(Input.GetKeyDown(KeyCode.S))
         {
             down = true;
             //animation is set on button presses because it worked here
-            ResetTriggers();
-            anim.SetTrigger("downWalk");
+            //ResetTriggers();
+            //anim.SetTrigger("downWalk");
         }
         else if(Input.GetKeyUp(KeyCode.S))
         {
             down = false;
-            ResetTriggers();
-            anim.SetTrigger("idle");
+            //ResetTriggers();
+            //anim.SetTrigger("idle");
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             right = true;
-            this.GetComponent<SpriteRenderer>().flipX =false;
-            ResetTriggers();
-            anim.SetTrigger("sideWalk");
+            //this.GetComponent<SpriteRenderer>().flipX =false;
+            //ResetTriggers();
+            //anim.SetTrigger("sideWalk");
         }
         else if (Input.GetKeyUp(KeyCode.D))
         {
             right = false;
-            ResetTriggers();
-            anim.SetTrigger("idleS");
+            //ResetTriggers();
+            //anim.SetTrigger("idleS");
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            this.GetComponent<SpriteRenderer>().flipX = true;
+            //this.GetComponent<SpriteRenderer>().flipX = true;
             left = true;
-            ResetTriggers();
-            anim.SetTrigger("sideWalk");
+            //ResetTriggers();
+            //anim.SetTrigger("sideWalk");
         }
         else if (Input.GetKeyUp(KeyCode.A))
         {
             left = false;
-            ResetTriggers();
-            anim.SetTrigger("idleS");
+            //ResetTriggers();
+            //anim.SetTrigger("idleS");
         }
     }
 
@@ -114,6 +114,11 @@ public class Movement : MonoBehaviour {
         if(!up && !left && !down && !right)
         {
             this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
+            walking = false;
+        }
+        else
+        {
+            walking = true;
         }
     }
 

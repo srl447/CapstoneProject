@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickupClothes : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PickupClothes : MonoBehaviour
     public GameObject clothesScreen;
     public string collidedClothes;
     public ClothesSpawner[] cS;
+    public ThoughtText tT;
     public bool purchased = false;
 
 	// Use this for initialization
@@ -29,7 +31,7 @@ public class PickupClothes : MonoBehaviour
             { 
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
             } 
-            if (Input.GetKeyDown(KeyCode.E) && !clothesScreen.activeInHierarchy)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy)
             {
                 clothesScreen.SetActive(true);
                 foreach (ClothesSpawner c in cS)
@@ -48,8 +50,11 @@ public class PickupClothes : MonoBehaviour
         {
             if (clothesCount > 0)
             {
+                Node newNode = new Node();
+                newNode.thoughts = "Finally, I can get out of here!";
+                newNode.thoughtTime = 2;
+                tT.add(newNode);
                 purchased = true;
-                Debug.Log("works!");
             }
 
         }

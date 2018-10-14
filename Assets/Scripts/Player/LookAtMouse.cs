@@ -7,10 +7,15 @@ public class LookAtMouse : MonoBehaviour {
     public Transform cursor;
     float xDir, yDir;
 
-    public Animator anim;
+    Animator anim;
+    string[] triggers = new string[6] { "idle", "upIdle", "idleS", "sideWalk", "downWalk", "upWalk" };
+    Movement move;
+    SpriteRenderer sR;
 	// Use this for initialization
 	void Start () {
-		
+        sR = GetComponent<SpriteRenderer>();
+        move = GetComponent<Movement>();
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -22,19 +27,60 @@ public class LookAtMouse : MonoBehaviour {
         yDir = cursor.position.y - transform.position.y;
         if (xDir >= 0 && Mathf.Abs(xDir) > Mathf.Abs(yDir))
         {
-            Debug.Log("right");
+            sR.flipX = false;
+            if (move.walking)
+            {
+                SetTriggers("sideWalk");
+            }
+            else
+            {
+                SetTriggers("idleS");
+            }
         }
         if(xDir < 0 && Mathf.Abs(xDir) > Mathf.Abs(yDir))
         {
-            Debug.Log("left");
+            sR.flipX = true;
+            if (move.walking)
+            {
+                SetTriggers("sideWalk");
+            }
+            else
+            {
+                SetTriggers("idleS");
+            }
         }
         if (yDir >= 0 && Mathf.Abs(yDir) > Mathf.Abs(xDir))
         {
-            Debug.Log("up");
+            sR.flipX = false;
+            if (move.walking)
+            {
+                SetTriggers("upWalk");
+            }
+            else
+            {
+                SetTriggers("upIdle");
+            }
         }
         if (yDir < 0 && Mathf.Abs(yDir) > Mathf.Abs(xDir))
         {
-            Debug.Log("down");
+            sR.flipX = false;
+            if (move.walking)
+            {
+                SetTriggers("downWalk");
+            }
+            else
+            {
+                SetTriggers("idle");
+            }
         }
     }
+    void SetTriggers(string trigger)
+    {
+        for (int i = 0; i < triggers.Length; i++)
+        {
+            anim.ResetTrigger(triggers[i]);
+        }
+        anim.SetTrigger(trigger);
+    }
+
 }

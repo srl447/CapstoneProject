@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AnxiousThoughts : MonoBehaviour {
 
     public GetSpotted gS;
-    public Text text;
+    public ThoughtText tT;
     public bool[] thoughts = new bool[1];
 	// Use this for initialization
 	void Start ()
@@ -17,35 +17,31 @@ public class AnxiousThoughts : MonoBehaviour {
             thoughts[i] = false;
         }
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         //What's basically going on is there's an array of bools
         //when anxiety reaches a certain point a new thought will be displayed
         //and then never displayed again
         //the array of bools keeps track of this
-        if(gS.anx >0 && !GameManager.thinking && !thoughts[0])
+        if (gS.anx > 0 && !thoughts[0])
         {
-            text.text = "I can't let anyone see me";
-            StartCoroutine(thoughtTime(2));
+            Node newThought = new Node();
+            newThought.thoughts = "I can't let anyone see me";
+            newThought.thoughtTime = 2;
+            tT.add(newThought);
             thoughts[0] = true;
 
         }
-        if (gS.anx > .8 && !GameManager.thinking && !thoughts[1])
+        if (gS.anx > .8 && !thoughts[1])
         {
-            text.text = "Fuckkk people are staring at me";
-            StartCoroutine(thoughtTime(2));
+            Node newThought = new Node();
+            newThought.thoughts = "Fuckkk people are staring at me";
+            newThought.thoughtTime = 2;
+            tT.add(newThought);
             thoughts[1] = true;
 
         }
-
-    }
-    //thoughts have to exist for a certain amount of time
-    IEnumerator thoughtTime(float time)
-    {
-        yield return new WaitForSecondsRealtime(time);
-        text.text = "";
-        GameManager.thinking = false;
     }
 }

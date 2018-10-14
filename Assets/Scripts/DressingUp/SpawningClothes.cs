@@ -7,7 +7,7 @@ public class SpawningClothes : MonoBehaviour {
     public GameObject[] clothing;
 	// Use this for initialization
 	void Start () {
-        Debug.Log(GameManager.clothes.Count);
+        //Debug.Log(GameManager.clothes.Count);
         for(int i = 0; i < GameManager.clothes.Count; i++)
         {
             GameObject newCloth = Instantiate((GameObject) GameManager.clothes[i]) as GameObject;
