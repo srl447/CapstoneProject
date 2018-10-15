@@ -9,6 +9,7 @@ public class AnxietyUI : MonoBehaviour {
     public float bloomSpeed;
     public float chromeSpeed;
     public float vigSpeed;
+    public float extravig;
 
     public Text anxietyText;
     public Transform player;
@@ -32,7 +33,7 @@ public class AnxietyUI : MonoBehaviour {
         chromeS = mainProfile.chromaticAberration.settings;
         chromeS.intensity = 0;
         vigS = mainProfile.vignette.settings;
-        vigS.intensity = 0;
+        vigS.intensity = 0.5f;
     }
 	
 	// Update is called once per frame
@@ -41,7 +42,7 @@ public class AnxietyUI : MonoBehaviour {
         //vigS.center = player.position; //Need to convert world space to canvas space
         //Basically, this just increases several post processing effects intensities, bloom
         //vingette, and chromatic abberation, as anxiety rises.
-        vigS.intensity = gS.anx * vigSpeed;
+        vigS.intensity = (gS.anx * vigSpeed) + extravig + .5f;
         bloomS.bloom.intensity = gS.anx * bloomSpeed;
         chromeS.intensity = gS.anx * chromeSpeed;
         mainProfile.vignette.settings = vigS;

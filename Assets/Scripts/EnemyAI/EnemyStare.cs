@@ -34,17 +34,7 @@ public class EnemyStare : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            origin = shopper.transform.eulerAngles;
-            //turns off coroutines
-            if(eR)
-            {
-                eR.enabled = false;
-            }
-            if (eM)
-            {
-                eM.enabled = false;
-            }
-            stare = true;
+            CollisionOccurence();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -56,7 +46,21 @@ public class EnemyStare : MonoBehaviour {
         }
     }
 
-    IEnumerator StareWait(float timer)
+    public void CollisionOccurence()
+    {
+        origin = shopper.transform.eulerAngles;
+        //turns off coroutines
+        if (eR != null)
+        {
+            eR.enabled = false;
+        }
+        if (eM != null)
+        {
+            eM.enabled = false;
+        }
+        stare = true;
+    }
+    public IEnumerator StareWait(float timer)
     {
         yield return new WaitForSecondsRealtime(timer);
         //stop coroutines

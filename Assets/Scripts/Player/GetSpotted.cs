@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class GetSpotted : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class GetSpotted : MonoBehaviour {
     public float enemyPow;
     public float aZ1Pow;
     public float anx;
+    public AnxietyUI aUI;
 	// Use this for initialization
 	void Start ()
     {
@@ -28,6 +30,13 @@ public class GetSpotted : MonoBehaviour {
         //GameManager.anxiety = anx;
 	}
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "EnemySight" || collision.gameObject.tag == "AnxietyZone1")
+        {
+            ScreenShake.shakeStrength = 2f;
+        }
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         //now this just tracks anxiety
@@ -40,6 +49,23 @@ public class GetSpotted : MonoBehaviour {
         {
             //sR.color = new Color(sR.color.r - aZ1Pow, sR.color.g - aZ1Pow, sR.color.b);
             anx += aZ1Pow;
+            aUI.extravig = Mathf.Lerp(aUI.extravig,.1f,.3f);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "AnxietyZone1")
+        {
+            StartCoroutine(LerpBack());
+        }
+    }
+
+    IEnumerator LerpBack()
+    {
+        for(;aUI.extravig > .05;)
+        {
+            yield return new WaitForEndOfFrame();
+            aUI.extravig = Mathf.Lerp(aUI.extravig, 0, .2f);
         }
     }
 }
