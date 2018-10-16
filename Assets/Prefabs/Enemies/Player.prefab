@@ -28,6 +28,9 @@ GameObject:
   - component: {fileID: 114729186681427836}
   - component: {fileID: 114831725971970244}
   - component: {fileID: 114722368104766260}
+  - component: {fileID: 95599234785671548}
+  - component: {fileID: 114693768403356180}
+  - component: {fileID: 114641390486822538}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -93,6 +96,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.62103176, y: 0.98352337}
   m_EdgeRadius: 0
+--- !u!95 &95599234785671548
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679896231103632}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b55ca15de4dffad49b202c9dd89c9042, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114196836872373336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,7 +125,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c80a91c5fff6648be58acf7499b633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 50642865288918064}
+  anim: {fileID: 95599234785671548}
+  up: 0
+  down: 0
+  left: 0
+  right: 0
+  upLeft: 0
+  downLeft: 0
+  upRight: 0
+  downRight: 0
+  walking: 0
   velocity: 4
 --- !u!114 &114411432712958136
 MonoBehaviour:
@@ -120,6 +151,30 @@ MonoBehaviour:
   enemyPow: 0.006
   aZ1Pow: 0.0005
   anx: 0
+  aUI: {fileID: 0}
+--- !u!114 &114641390486822538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679896231103632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0fd7f43f92153445aba650e106cdb4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114693768403356180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679896231103632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51025a7d0fb447047a74ff7bd5310cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 0}
 --- !u!114 &114722368104766260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,8 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gS: {fileID: 114411432712958136}
-  text: {fileID: 0}
-  thoughts: 00
+  tT: {fileID: 114831725971970244}
+  thoughts: 0000
 --- !u!114 &114729186681427836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,11 +225,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothesScreen: {fileID: 0}
+  checkOut: {fileID: 0}
   collidedClothes: 
   cS:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  tT: {fileID: 114831725971970244}
+  check: {fileID: 0}
+  mH: {fileID: 0}
   purchased: 0
 --- !u!212 &212755981468672648
 SpriteRenderer:

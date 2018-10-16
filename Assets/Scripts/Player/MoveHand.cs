@@ -8,8 +8,9 @@ public class MoveHand : MonoBehaviour
     public GameObject clothesScreen;
     public Movement playerMovement;
     public PickupClothes playerPickup;
-    public float handSpeed;
-    //public ArrayList clothes = new ArrayList();
+    public bool checkout;
+    bool holding;
+    GameObject heldObject;
     public ArrayList viewClothes = new ArrayList();
     // Use this for initialization
     void Start()
@@ -24,11 +25,23 @@ public class MoveHand : MonoBehaviour
         pos = Camera.main.ScreenToWorldPoint(pos); //convert them to unity space
         pos = new Vector3(pos.x, pos.y, -9.1f); //push the cursor up infront of the camera
         transform.position = pos; //actually move the cursor
+
+        if(checkout)
+        {
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                holding = false;
+            }
+            if (holding)
+            {
+                heldObject.transform.position = this.transform.position;
+            }
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         //select clothes
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !checkout)
         {
             if (collision.gameObject.GetComponent<ClothType>() != null)
             {
@@ -41,11 +54,16 @@ public class MoveHand : MonoBehaviour
             else
             {
                 //if there's no clothes name, say which object is lacking it
-                Debug.LogError("no clothes on " + collision.gameObject.name);
+                //Debug.LogError("no clothes on " + collision.gameObject.name);
             }
-
-          
-           
+        }
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && !checkout)
+        {
+            if (!holding && (Input.GetKeyDown(KeyCode.Mouse0) && collision.gameObject.tag == "Clothes"))
+            {
+                holding = true;
+                heldObject = collision.gameObject;
+            }
         }
     }
 

@@ -7,9 +7,12 @@ public class PickupClothes : MonoBehaviour
 {
     int clothesCount = 0;
     public GameObject clothesScreen;
+    public GameObject checkOut;
     public string collidedClothes;
     public ClothesSpawner[] cS;
     public ThoughtText tT;
+    public Checkout check;
+    public MoveHand mH;
     public bool purchased = false;
 
 	// Use this for initialization
@@ -50,11 +53,18 @@ public class PickupClothes : MonoBehaviour
         {
             if (clothesCount > 0)
             {
-                Node newNode = new Node();
-                newNode.thoughts = "Finally, I can get out of here!";
-                newNode.thoughtTime = 2;
-                tT.add(newNode);
-                purchased = true;
+                ArrayList clothSet = new ArrayList();
+                foreach (GameObject c in GameManager.clothes)
+                {
+                    GameObject newCloth = Instantiate(c) as GameObject;
+                    newCloth.transform.position = new Vector3(Random.Range(-25f, -32f), Random.Range(-4f, -9f), -9f);
+                    clothSet.Add(newCloth);
+                }
+                check.clothSet = clothSet;
+                checkOut.SetActive(true);
+                mH.checkout = true;
+                this.GetComponent<Movement>().enabled = false;
+                this.GetComponent<PickupClothes>().enabled = false;
             }
 
         }
