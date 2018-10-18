@@ -9,6 +9,7 @@ TagManager:
   - Counter
   - AnxietyZone1
   - Exit
+  - CashSight
   layers:
   - Default
   - TransparentFX

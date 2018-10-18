@@ -18,7 +18,6 @@ public class AllShoppersLook : MonoBehaviour {
     {
         if (collision.gameObject.tag == "AnxietyZone1")
         {
-            Debug.Log("Player Here");
             if (collision.GetComponent<AreaShopperList>() != null)
             {
                 foreach (GameObject e in collision.GetComponent<AreaShopperList>().enemies)

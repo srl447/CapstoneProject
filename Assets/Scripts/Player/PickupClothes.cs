@@ -42,6 +42,10 @@ public class PickupClothes : MonoBehaviour
                     c.Spawn();
                 }
                 //turn off player movement
+                this.GetComponent<Movement>().up = false;
+                this.GetComponent<Movement>().left = false;
+                this.GetComponent<Movement>().down = false;
+                this.GetComponent<Movement>().right = false;
                 this.GetComponent<Movement>().enabled = false;
                 clothesCount++;
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
@@ -57,12 +61,16 @@ public class PickupClothes : MonoBehaviour
                 foreach (GameObject c in GameManager.clothes)
                 {
                     GameObject newCloth = Instantiate(c) as GameObject;
-                    newCloth.transform.position = new Vector3(Random.Range(-25f, -32f), Random.Range(-4f, -9f), -9f);
+                    newCloth.transform.position = new Vector3(Random.Range(-28f, -32f), Random.Range(0f, -2f), -9f);
                     clothSet.Add(newCloth);
                 }
                 check.clothSet = clothSet;
                 checkOut.SetActive(true);
                 mH.checkout = true;
+                this.GetComponent<Movement>().up = false;
+                this.GetComponent<Movement>().left = false;
+                this.GetComponent<Movement>().down = false;
+                this.GetComponent<Movement>().right = false;
                 this.GetComponent<Movement>().enabled = false;
                 this.GetComponent<PickupClothes>().enabled = false;
             }

@@ -148,8 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785e72c55aa9e404aa982dc7bb65e2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPow: 0.006
-  aZ1Pow: 0.0005
+  enemyPow: 0.0008
+  cashPow: 0.0004
+  aZ1Pow: 0.0004
   anx: 0
   aUI: {fileID: 0}
 --- !u!114 &114641390486822538

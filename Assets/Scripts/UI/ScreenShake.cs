@@ -34,6 +34,10 @@ public class ScreenShake : MonoBehaviour
             shakeStrength = 2f;
         }*/
         shakeStrength = Mathf.Lerp(shakeStrength, 0f, Time.deltaTime * 5f); // bring it back down to 0
+        if(shakeStrength > 0)
+        {
+            //Debug.Log("Is Shaking");
+        }
 
     }
 }

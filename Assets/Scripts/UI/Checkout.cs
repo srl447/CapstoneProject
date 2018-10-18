@@ -9,6 +9,9 @@ public class Checkout : MonoBehaviour {
     public Movement move;
     public PickupClothes pC;
     public ThoughtText tT;
+
+    int clothCount;
+    
 	// Use this for initialization
 	void Awake () {
 		foreach(GameObject c in clothSet)
@@ -19,8 +22,14 @@ public class Checkout : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(allCloth() || Input.GetKeyDown(KeyCode.Space))
+        Debug.Log(GameManager.clothes.Count);
+        Debug.Log(clothCount);
+        if (GameManager.clothes.Count <= clothCount)
         {
+            foreach (GameObject c in clothSet)
+            { 
+                c.SetActive(false);
+            }
             counterScreen.SetActive(false);
             move.enabled = true;
             pC.enabled = true;
@@ -31,12 +40,19 @@ public class Checkout : MonoBehaviour {
             pC.purchased = true;
         }
 	}
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Clothes")
+        {
+            clothCount++;
+            clothSet.Add(collision.gameObject);
+        }
+    }
     bool allCloth()
     {
         foreach(GameObject c in clothSet)
-        {
-            if(c.transform.position.x < -19)
+        { 
+            if(c.transform.position.x < -18)
             {
                 return false;
             }

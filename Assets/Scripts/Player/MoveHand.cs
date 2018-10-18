@@ -57,7 +57,7 @@ public class MoveHand : MonoBehaviour
                 //Debug.LogError("no clothes on " + collision.gameObject.name);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Mouse0) && !checkout)
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && checkout)
         {
             if (!holding && (Input.GetKeyDown(KeyCode.Mouse0) && collision.gameObject.tag == "Clothes"))
             {

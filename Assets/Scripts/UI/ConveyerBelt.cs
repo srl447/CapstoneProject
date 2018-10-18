@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ConveyerBelt : MonoBehaviour {
 
+    public float speed;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,11 +15,11 @@ public class ConveyerBelt : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Clothes")
         {
-            collision.gameObject.transform.position += Vector3.right;
+            collision.gameObject.transform.position += Vector3.right * Time.deltaTime * speed; ;
         }
     }
 }

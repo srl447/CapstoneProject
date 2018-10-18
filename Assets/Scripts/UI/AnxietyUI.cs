@@ -42,7 +42,14 @@ public class AnxietyUI : MonoBehaviour {
         //vigS.center = player.position; //Need to convert world space to canvas space
         //Basically, this just increases several post processing effects intensities, bloom
         //vingette, and chromatic abberation, as anxiety rises.
-        vigS.intensity = (gS.anx * vigSpeed) + extravig + .5f;
+        if (vigS.intensity < 3.5f)
+        {
+            vigS.intensity = (gS.anx * vigSpeed) + extravig + .5f;
+        }
+        else
+        {
+            vigS.intensity = 3.5f;
+        }
         bloomS.bloom.intensity = gS.anx * bloomSpeed;
         chromeS.intensity = gS.anx * chromeSpeed;
         mainProfile.vignette.settings = vigS;
