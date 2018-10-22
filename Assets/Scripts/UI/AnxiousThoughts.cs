@@ -8,6 +8,8 @@ public class AnxiousThoughts : MonoBehaviour {
     public GetSpotted gS;
     public ThoughtText tT;
     public bool[] thoughts = new bool[1];
+    public Image img;
+    public Sprite[] heads;
 	// Use this for initialization
 	void Start ()
     {
@@ -32,15 +34,17 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.thoughtTime = 2;
             tT.add(newThought);
             thoughts[0] = true;
+            img.sprite = heads[0];
 
         }
-        if (gS.anx > .8 && !thoughts[1])
+        if (gS.anx > .3 && !thoughts[1])
         {
             Node newThought = new Node();
             newThought.thoughts = "Fuckkk people are staring at me";
             newThought.thoughtTime = 2;
             tT.add(newThought);
             thoughts[1] = true;
+            img.sprite = heads[1];
 
         }
     }

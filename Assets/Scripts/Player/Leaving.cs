@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class Leaving : MonoBehaviour {
 
     public PickupClothes pC;
+    ThoughtText tT;
 	// Use this for initialization
 	void Start () {
+        tT = GetComponent<ThoughtText>();
 		
 	}
 	
@@ -16,7 +18,7 @@ public class Leaving : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //check if they leave and haev purchased clothes
         if(collision.gameObject.tag == "Exit" && pC.purchased == true)
@@ -26,6 +28,15 @@ public class Leaving : MonoBehaviour {
                 DontDestroyOnLoad(g);
             }
             SceneManager.LoadScene(0);
+        }
+        else if (collision.gameObject.tag == "Exit" && pC.purchased == false)
+        {
+            Node dontLeave = new Node();
+            dontLeave.thoughts = "I'm not letting myself leave until I purchase some clothes!";
+            dontLeave.thoughtTime = 2;
+            tT.add(dontLeave);
+
+
         }
     }
 }
