@@ -47,5 +47,15 @@ public class AnxiousThoughts : MonoBehaviour {
             img.sprite = heads[1];
 
         }
+        if (gS.anx > .6 && !thoughts[2])
+        {
+            Node newThought = new Node();
+            newThought.thoughts = "I hate this, I hate this, I hate this";
+            newThought.thoughtTime = 2;
+            tT.add(newThought);
+            thoughts[2] = true;
+            img.sprite = heads[2];
+
+        }
     }
 }
