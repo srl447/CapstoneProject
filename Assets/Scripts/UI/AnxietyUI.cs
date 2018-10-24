@@ -16,6 +16,9 @@ public class AnxietyUI : MonoBehaviour {
     public GetSpotted gS;
     public PostProcessingProfile mainProfile;
 
+    bool flicker = false;
+    float flickerAmount = 0;
+
     //To edit Post Processing effects through code
     //you need to have setting variables that you edit
     //for each component you want to change
@@ -44,17 +47,45 @@ public class AnxietyUI : MonoBehaviour {
         //vingette, and chromatic abberation, as anxiety rises.
         if (vigS.intensity < 3.5f)
         {
-            vigS.intensity = (gS.anx * vigSpeed) + extravig + .5f;
+            vigS.intensity = (gS.anx * vigSpeed) + extravig + .5f + flickerAmount;
         }
         else
         {
-            vigS.intensity = 3.5f;
+            vigS.intensity = 3.5f + flickerAmount;
         }
-        bloomS.bloom.intensity = gS.anx * bloomSpeed;
-        chromeS.intensity = gS.anx * chromeSpeed;
+        bloomS.bloom.intensity = gS.anx * bloomSpeed + flickerAmount;
+        chromeS.intensity = gS.anx * chromeSpeed + flickerAmount;
         mainProfile.vignette.settings = vigS;
         mainProfile.chromaticAberration.settings = chromeS;
         mainProfile.bloom.settings = bloomS;
         anxietyText.text = "Anxiety: " + Mathf.Floor(gS.anx*100);
+        if(gS.anx > 1.3 && !flicker)
+        {
+            StartCoroutine(flickering());
+            flicker = true;
+            Debug.Log(flicker);
+        }
 	}
+
+    IEnumerator flickering()
+    {
+        yield return new WaitForEndOfFrame();
+        float randomAmount = Random.Range(-.08f, .08f);
+        float randomSpeed = Random.Range(.3f, .8f);
+        int counter = 0;
+        for(;flickerAmount != randomAmount;)
+        {
+            flickerAmount = Mathf.Lerp(flickerAmount, randomAmount, randomSpeed);
+            yield return new WaitForEndOfFrame();
+            counter++;
+            if(counter > 9)
+            {
+                flickerAmount = randomAmount;
+            }
+            Debug.Log(flickerAmount);
+            //if(flickerAmount +.05f > randomAmount || flickerAmount -.05f < randomAmount)
+        }
+        Debug.Log("finished");
+        StartCoroutine(flickering());
+    }
 }
