@@ -23,7 +23,7 @@ public class EndingText : MonoBehaviour {
 
     IEnumerator TextFades()
     {
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(2);
         for(int i = 0; i < 10; i++)
         { 
             final.color = new Color(final.color.r, final.color.g, final.color.b, final.color.a - .2f);
@@ -34,7 +34,7 @@ public class EndingText : MonoBehaviour {
         wordIndex++;
         if (wordIndex == words.Length)
         {
-            yield return new WaitForSecondsRealtime(1.5f);
+            yield return new WaitForSecondsRealtime(1f);
             SceneManager.LoadScene(2);
         }
         else

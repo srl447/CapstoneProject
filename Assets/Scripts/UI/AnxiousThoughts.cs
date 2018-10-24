@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AnxiousThoughts : MonoBehaviour {
 
     public GetSpotted gS;
+    PickupClothes pC;
     public ThoughtText tT;
     public bool[] thoughts = new bool[1];
     public Image img;
@@ -13,6 +14,7 @@ public class AnxiousThoughts : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        pC = GetComponent<PickupClothes>();
         //No thoughts have been thunk
 		for(int i = 0; i < thoughts.Length; i++)
         {
@@ -56,6 +58,14 @@ public class AnxiousThoughts : MonoBehaviour {
             thoughts[2] = true;
             img.sprite = heads[2];
 
+        }
+        if(gS.anx > 1.4 && !thoughts[3])
+        {
+            Node badEnd = new Node("I can't take this anymore. I can barely think. I have to get out!", 3);
+            tT.add(badEnd);
+            thoughts[3] = true;
+            pC.enabled = false;
+            img.sprite = heads[3];
         }
     }
 }

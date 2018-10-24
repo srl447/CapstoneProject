@@ -5,7 +5,6 @@ using UnityEngine.PostProcessing;
 
 public class GetSpotted : MonoBehaviour {
 
-    SpriteRenderer sR;
     public float enemyPow, cashPow;
     public float aZ1Pow;
     public float anx;
@@ -13,7 +12,6 @@ public class GetSpotted : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        sR = GetComponent<SpriteRenderer>();
 
     }
 	

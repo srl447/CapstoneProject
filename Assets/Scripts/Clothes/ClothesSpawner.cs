@@ -10,6 +10,7 @@ public class ClothesSpawner : MonoBehaviour {
     public GameObject[] tops;
     public GameObject[] pants;
     public GameObject[] ugTop;
+    public GameObject[] hats;
 
     public MoveHand mH;
 
@@ -42,7 +43,15 @@ public class ClothesSpawner : MonoBehaviour {
             cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
             mH.viewClothes.Add(cloth);
         }
-	}
+        else if (player.collidedClothes == "Hats")
+        {
+            GameObject cloth = Instantiate(hats[(int)Mathf.Floor(Random.Range(0f, hats.Length))]) as GameObject;
+            cloth.transform.position = transform.position;
+            float randScale = Random.Range(1f, 1.6f);
+            cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
+            mH.viewClothes.Add(cloth);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {

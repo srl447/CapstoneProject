@@ -84,4 +84,14 @@ public class Node
     public string thoughts;
     public float thoughtTime;
     public Node nextNode;
+
+    public Node()
+    {
+
+    }
+    public Node(string text, int num)
+    {
+        thoughts = text;
+        thoughtTime = num;
+    }
 }

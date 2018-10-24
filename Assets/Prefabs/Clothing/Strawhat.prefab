@@ -9,52 +9,52 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1132692069703474}
+  m_RootGameObject: {fileID: 1380228520102098}
   m_IsPrefabParent: 1
---- !u!1 &1132692069703474
+--- !u!1 &1380228520102098
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4852108979937058}
-  - component: {fileID: 212370769924453422}
-  - component: {fileID: 61025932496946088}
-  - component: {fileID: 114951179781559654}
-  m_Layer: 0
-  m_Name: clothesSpawner1
+  - component: {fileID: 4490991966891044}
+  - component: {fileID: 212792814754940750}
+  - component: {fileID: 61645732839416134}
+  - component: {fileID: 114672488331945326}
+  m_Layer: 9
+  m_Name: Strawhat
   m_TagString: Clothes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4852108979937058
+--- !u!4 &4490991966891044
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1132692069703474}
+  m_GameObject: {fileID: 1380228520102098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2122, y: -0.108, z: -1}
-  m_LocalScale: {x: 0.077572554, y: 0.13976757, z: 1}
+  m_LocalPosition: {x: -21.109407, y: 37.968513, z: -1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61025932496946088
+--- !u!61 &61645732839416134
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1132692069703474}
+  m_GameObject: {fileID: 1380228520102098}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07493715, y: 0}
+  m_Offset: {x: 0.08251938, y: 0.040741026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -65,44 +65,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.98637545, y: 1}
+  m_Size: {x: 0.97343594, y: 0.78588045}
   m_EdgeRadius: 0
---- !u!114 &114951179781559654
+--- !u!114 &114672488331945326
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1132692069703474}
+  m_GameObject: {fileID: 1380228520102098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4014ef89af045d346803e39fc37d2287, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e9bd0bdb8945144f9d0770f4471391c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  tops:
-  - {fileID: 1142626733727544, guid: eaddbeb08823bc54493c97c54e4000e2, type: 2}
-  - {fileID: 1730649369512656, guid: b5379d4bd1168de418b2db13bbc85c61, type: 2}
-  - {fileID: 1065775967066538, guid: e7443865d0f4f7e43855557c901e25be, type: 2}
-  pants:
-  - {fileID: 1718799104557312, guid: 9bf4bc79de21a7042939e498aefe888a, type: 2}
-  - {fileID: 1455158471995620, guid: c43d070970edb0f4695a0d22ae6c0c11, type: 2}
-  - {fileID: 1868759866690316, guid: 41ef20427afd30f45acec0219ac29135, type: 2}
-  ugTop:
-  - {fileID: 1188436629836688, guid: 7eeb54577a930fe478b33138baf7a3d5, type: 2}
-  - {fileID: 1217139561877610, guid: 643f161098211a04788f57c176e4dc59, type: 2}
-  - {fileID: 1981922762534174, guid: a5570a2685b677b4e9456f499eccec41, type: 2}
-  hats:
-  - {fileID: 1794452313392066, guid: b06aeb5a9ea4cbd4cbbb241fec902bdb, type: 2}
-  - {fileID: 1504114158080088, guid: 7e2416f59a6de9a4a80631f991a9b06c, type: 2}
-  - {fileID: 1380228520102098, guid: b6927ce41ded17740a410f480b78fcc8, type: 2}
-  mH: {fileID: 0}
---- !u!212 &212370769924453422
+  clothType: Straw Hat
+--- !u!212 &212792814754940750
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1132692069703474}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1380228520102098}
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -131,8 +114,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c06200208aeaadd4ab14b6cd9ff194b6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 606e4c89442b30b4a97d6045c911a5bb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
