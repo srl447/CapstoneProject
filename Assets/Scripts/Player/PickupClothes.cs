@@ -36,6 +36,16 @@ public class PickupClothes : MonoBehaviour
             } 
             if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy)
             {
+                if (GameManager.clothes.Count == 0)
+                {
+                    Node newThought = new Node("Ooo they're so many cute options!", 2);
+                    tT.add(newThought);
+                }
+                else if(GameManager.clothes.Count == 2)
+                {
+                    Node newThought = new Node("I hope I'm not spending too much", 2);
+                    tT.add(newThought);
+                }
                 clothesScreen.SetActive(true);
                 foreach (ClothesSpawner c in cS)
                 {

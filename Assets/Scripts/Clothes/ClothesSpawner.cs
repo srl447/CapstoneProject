@@ -11,6 +11,7 @@ public class ClothesSpawner : MonoBehaviour {
     public GameObject[] pants;
     public GameObject[] ugTop;
     public GameObject[] hats;
+    public GameObject[] dresses;
 
     public MoveHand mH;
 
@@ -46,6 +47,14 @@ public class ClothesSpawner : MonoBehaviour {
         else if (player.collidedClothes == "Hats")
         {
             GameObject cloth = Instantiate(hats[(int)Mathf.Floor(Random.Range(0f, hats.Length))]) as GameObject;
+            cloth.transform.position = transform.position;
+            float randScale = Random.Range(1f, 1.6f);
+            cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
+            mH.viewClothes.Add(cloth);
+        }
+        else if (player.collidedClothes == "Dresses")
+        {
+            GameObject cloth = Instantiate(dresses[(int)Mathf.Floor(Random.Range(0f, dresses.Length))]) as GameObject;
             cloth.transform.position = transform.position;
             float randScale = Random.Range(1f, 1.6f);
             cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
