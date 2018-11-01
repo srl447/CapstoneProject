@@ -13,6 +13,7 @@ public class PickupClothes : MonoBehaviour
     public ThoughtText tT;
     public Checkout check;
     public MoveHand mH;
+    public GameObject topUI;
     public bool purchased = false;
 
 	// Use this for initialization
@@ -77,6 +78,7 @@ public class PickupClothes : MonoBehaviour
                 check.clothSet = clothSet;
                 checkOut.SetActive(true);
                 mH.checkout = true;
+                topUI.SetActive(true);
                 this.GetComponent<Movement>().up = false;
                 this.GetComponent<Movement>().left = false;
                 this.GetComponent<Movement>().down = false;

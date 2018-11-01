@@ -5,18 +5,19 @@ using UnityEngine.UI;
 
 public class RegisterThoughts : MonoBehaviour {
 
-    public Image topUI;
-    public Image head;
-	// Use this for initialization
-	void Awake () {
-        topUI.enabled = true;
-        head.enabled = true;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    public Text text;
+    private void Start()
+    { 
+    }
+    // Use this for initialization
+    void Awake () {
 
-        //Add in Cashier
-		
 	}
+
+    IEnumerator Conversation()
+    {
+        yield return new WaitForEndOfFrame();
+        text.text = "Hello";
+    }
+	
 }

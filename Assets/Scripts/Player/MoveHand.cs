@@ -84,7 +84,7 @@ public class MoveHand : MonoBehaviour
 
     IEnumerator clothDelay()
     {
-        yield return new WaitForSecondsRealtime(.1f);
+        yield return new WaitForSecondsRealtime(.4f);
         playerPickup.enabled = true;
     }
 }

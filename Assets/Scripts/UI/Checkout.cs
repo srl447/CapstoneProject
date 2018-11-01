@@ -22,8 +22,6 @@ public class Checkout : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(GameManager.clothes.Count);
-        Debug.Log(clothCount);
         if (GameManager.clothes.Count <= clothCount)
         {
             foreach (GameObject c in clothSet)
