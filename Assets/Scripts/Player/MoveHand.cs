@@ -70,8 +70,6 @@ public class MoveHand : MonoBehaviour
     //picks up the clothes, but run as it's own method to not rely on collision
     private void pickup()
     {
-
-        clothesScreen.SetActive(false);
         //remove clothes
         for (int i = 0; i < viewClothes.Count; i++)
         {
@@ -79,7 +77,9 @@ public class MoveHand : MonoBehaviour
             viewClothes.Remove(i);
         }
         //allow the player to move again
+        clothesScreen.SetActive(false);
         playerMovement.enabled = true;
+        StartCoroutine(clothDelay());
     }
 
     IEnumerator clothDelay()

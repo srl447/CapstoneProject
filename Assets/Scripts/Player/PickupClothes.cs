@@ -35,7 +35,7 @@ public class PickupClothes : MonoBehaviour
             { 
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
             } 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy && collision.GetComponent<ClothType>())
             {
                 if (GameManager.clothes.Count == 0)
                 {
@@ -72,7 +72,7 @@ public class PickupClothes : MonoBehaviour
                 foreach (GameObject c in GameManager.clothes)
                 {
                     GameObject newCloth = Instantiate(c) as GameObject;
-                    newCloth.transform.position = new Vector3(Random.Range(-28f, -32f), Random.Range(0f, -2f), -9f);
+                    newCloth.transform.position = new Vector3(Random.Range(-28f, -29f), Random.Range(-.5f, -1.5f), -9f);
                     clothSet.Add(newCloth);
                 }
                 check.clothSet = clothSet;

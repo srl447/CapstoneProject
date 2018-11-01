@@ -5,16 +5,20 @@ using UnityEngine;
 public class Checkout : MonoBehaviour {
 
     public ArrayList clothSet;
-    public GameObject counterScreen;
+    public GameObject counterScreen, topUI;
     public Movement move;
     public PickupClothes pC;
     public ThoughtText tT;
+    public RegisterThoughts rT;
+    public AnxiousThoughts aT;
 
     int clothCount;
     
 	// Use this for initialization
 	void Awake () {
-		foreach(GameObject c in clothSet)
+        tT.enabled = false;
+        aT.enabled = false;
+        foreach (GameObject c in clothSet)
         {
             c.SetActive(true);
         }
@@ -24,13 +28,22 @@ public class Checkout : MonoBehaviour {
 	void Update () {
         if (GameManager.clothes.Count <= clothCount)
         {
+            rT.end = true;
+        }
+        if (rT.fin)
+        {
+           // Debug.Log("step 1");
+            tT.enabled = true;
+            topUI.SetActive(false);
+            counterScreen.SetActive(false);
+           // Debug.Log("step 2");
             foreach (GameObject c in clothSet)
-            { 
+            {
                 c.SetActive(false);
             }
-            counterScreen.SetActive(false);
             move.enabled = true;
             pC.enabled = true;
+           // Debug.Log("step 3");
             Node newNode = new Node();
             newNode.thoughts = "Finally, I can get out of here!";
             newNode.thoughtTime = 2;
