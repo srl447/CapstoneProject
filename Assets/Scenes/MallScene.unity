@@ -1871,7 +1871,7 @@ GameObject:
   - component: {fileID: 440725149}
   - component: {fileID: 440725148}
   m_Layer: 0
-  m_Name: Bathroom Thoughts (1)
+  m_Name: Changing Rooms
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -6862,6 +6862,10 @@ Prefab:
       propertyPath: m_Color.a
       value: 0.3019608
       objectReference: {fileID: 0}
+    - target: {fileID: 1016610344038524, guid: a74224c10dc1338498967ba039292fd2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74224c10dc1338498967ba039292fd2, type: 2}
   m_IsPrefabParent: 0
@@ -7264,7 +7268,7 @@ Prefab:
     - target: {fileID: 114960264231456078, guid: 6b996ca23ee967d43a3a76b27e05be02,
         type: 2}
       propertyPath: thought
-      value: I can't use the bathrooms
+      value: I just need to buy some clothes, pay, and get out. That's easy mode
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b996ca23ee967d43a3a76b27e05be02, type: 2}
