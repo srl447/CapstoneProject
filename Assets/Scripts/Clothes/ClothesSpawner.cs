@@ -12,6 +12,7 @@ public class ClothesSpawner : MonoBehaviour {
     public GameObject[] ugTop;
     public GameObject[] hats;
     public GameObject[] dresses;
+    public GameObject[] misc;
 
     public MoveHand mH;
 
@@ -23,7 +24,7 @@ public class ClothesSpawner : MonoBehaviour {
         {
             GameObject cloth = Instantiate(tops[(int)Mathf.Floor(Random.Range(0f, tops.Length))]) as GameObject;
             cloth.transform.position = transform.position;
-            float randScale = Random.Range(1f, 1.6f);
+            float randScale = Random.Range(1f, 1.3f);
             cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
             mH.viewClothes.Add(cloth);
         }
@@ -32,7 +33,7 @@ public class ClothesSpawner : MonoBehaviour {
         {
             GameObject cloth = Instantiate(pants[(int)Mathf.Floor(Random.Range(0f, tops.Length))]) as GameObject;
             cloth.transform.position = transform.position;
-            float randScale = Random.Range(1f, 1.6f);
+            float randScale = Random.Range(1f, 1.3f);
             cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
             mH.viewClothes.Add(cloth);
         }
@@ -40,7 +41,7 @@ public class ClothesSpawner : MonoBehaviour {
         {
             GameObject cloth = Instantiate(ugTop[(int)Mathf.Floor(Random.Range(0f, tops.Length))]) as GameObject;
             cloth.transform.position = transform.position;
-            float randScale = Random.Range(1f, 1.6f);
+            float randScale = Random.Range(1f, 1.3f);
             cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
             mH.viewClothes.Add(cloth);
         }
@@ -48,7 +49,7 @@ public class ClothesSpawner : MonoBehaviour {
         {
             GameObject cloth = Instantiate(hats[(int)Mathf.Floor(Random.Range(0f, hats.Length))]) as GameObject;
             cloth.transform.position = transform.position;
-            float randScale = Random.Range(1f, 1.6f);
+            float randScale = Random.Range(1f, 1.3f);
             cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
             mH.viewClothes.Add(cloth);
         }
@@ -56,7 +57,15 @@ public class ClothesSpawner : MonoBehaviour {
         {
             GameObject cloth = Instantiate(dresses[(int)Mathf.Floor(Random.Range(0f, dresses.Length))]) as GameObject;
             cloth.transform.position = transform.position;
-            float randScale = Random.Range(1f, 1.6f);
+            float randScale = Random.Range(1f, 1.3f);
+            cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
+            mH.viewClothes.Add(cloth);
+        }
+        else if (player.collidedClothes == "Misc")
+        {
+            GameObject cloth = Instantiate(misc[(int)Mathf.Floor(Random.Range(0f, misc.Length))]) as GameObject;
+            cloth.transform.position = transform.position;
+            float randScale = Random.Range(1f, 1.3f);
             cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
             mH.viewClothes.Add(cloth);
         }
