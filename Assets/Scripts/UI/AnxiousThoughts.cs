@@ -59,6 +59,13 @@ public class AnxiousThoughts : MonoBehaviour {
             img.sprite = heads[2];
 
         }
+        if (gS.anx > .8 && ! thoughts[4])
+        {
+            Node newThought= new Node("You need to stay calm Kril, pretend like no one's around", 4);
+            tT.add(newThought);
+            thoughts[4] = true;
+            img.sprite = heads[4];
+        }
         if(gS.anx > 1.4 && !thoughts[3])
         {
             Node badEnd = new Node("I can't take this anymore. I can barely think. I have to get out!", 3);
