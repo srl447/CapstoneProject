@@ -187,6 +187,7 @@ MonoBehaviour:
   shopper: {fileID: 1647519876982442}
   eM: {fileID: 0}
   eR: {fileID: 114310828351442572}
+  point: {fileID: 1343023492890560, guid: 5d0115cc47e46134d8cbcde272187dd0, type: 2}
 --- !u!212 &212174464676656270
 SpriteRenderer:
   m_ObjectHideFlags: 1

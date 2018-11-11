@@ -11,6 +11,8 @@ public class EnemyStare : MonoBehaviour {
     public GameObject shopper;
     public EnemyMove eM;
     public EnemyRotation eR;
+
+    public GameObject point;
 	// Use this for initialization
 	void Start () {
 		
@@ -57,6 +59,11 @@ public class EnemyStare : MonoBehaviour {
         if (eM != null)
         {
             eM.enabled = false;
+        }
+        if(!stare)
+        {
+            GameObject newPoint = Instantiate(point) as GameObject;
+            newPoint.transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y + .8f, transform.parent.position.z);
         }
         stare = true;
     }

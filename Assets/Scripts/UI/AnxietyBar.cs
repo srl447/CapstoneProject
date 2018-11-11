@@ -13,7 +13,7 @@ public class AnxietyBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(GameManager.anxiety);
+       // Debug.Log(GameManager.anxiety);
         bar.sizeDelta = new Vector2(177 - (GameManager.anxiety * 100f)*1.3f, bar.sizeDelta.y);
         bar.position = new Vector3(525 - (GameManager.anxiety * 50f)*1.3f, bar.position.y, bar.position.z);
 		
