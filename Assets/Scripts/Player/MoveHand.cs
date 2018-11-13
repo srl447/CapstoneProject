@@ -37,6 +37,10 @@ public class MoveHand : MonoBehaviour
                 heldObject.transform.position = this.transform.position;
             }
         }
+        if(Input.GetKeyDown(KeyCode.Mouse1) && clothesScreen.activeSelf)
+        {
+            pickup();
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
