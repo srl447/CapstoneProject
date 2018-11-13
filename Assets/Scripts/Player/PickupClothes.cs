@@ -29,13 +29,13 @@ public class PickupClothes : MonoBehaviour
 	}
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Clothes")
+        if (collision.gameObject.tag == "ClothesZone" && GameManager.anxiety < 1.4f)
         {
             if (collision.GetComponent<ClothType>() != null)
             { 
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
             } 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy && collision.GetComponent<ClothType>())
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy && collision.GetComponent<ClothType>() && !mH.checkout)
             {
                 if (GameManager.clothes.Count == 0)
                 {
@@ -64,7 +64,7 @@ public class PickupClothes : MonoBehaviour
             }
         }
         //purchasing clothes
-        if (collision.gameObject.tag == "Counter" && Input.GetKeyDown(KeyCode.Mouse0))
+        if (collision.gameObject.tag == "Counter" && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.anxiety < 1.4f)
         {
             if (clothesCount > 0)
             {
@@ -72,7 +72,7 @@ public class PickupClothes : MonoBehaviour
                 foreach (GameObject c in GameManager.clothes)
                 {
                     GameObject newCloth = Instantiate(c) as GameObject;
-                    newCloth.transform.position = new Vector3(Random.Range(-23.5f, -20f), Random.Range(-.55f, -1.75f), -9f);
+                    newCloth.transform.position = new Vector3(Random.Range(-9f, -5f), Random.Range(-.55f, -1.75f), -9f);
                     clothSet.Add(newCloth);
                 }
                 check.clothSet = clothSet;

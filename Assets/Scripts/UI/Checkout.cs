@@ -5,7 +5,7 @@ using UnityEngine;
 public class Checkout : MonoBehaviour {
 
     public ArrayList clothSet;
-    public GameObject counterScreen, topUI;
+    public GameObject counterScreen, topUI, clothes, cart;
     public Movement move;
     public PickupClothes pC;
     public ThoughtText tT;
@@ -16,6 +16,8 @@ public class Checkout : MonoBehaviour {
     
 	// Use this for initialization
 	void Awake () {
+        cart.SetActive(false);
+        clothes.SetActive(false);
         tT.enabled = false;
         aT.enabled = false;
         foreach (GameObject c in clothSet)

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EndingText : MonoBehaviour {
 
-    string[] words = {"I can't wear these clothes.", "The world's a scary place.", "But I love these clothes", "Because they are mine!" };
+    string[] words = {"I wish I could wear these clothes.", "The world's a scary place.", "But I love these clothes", "Because they are mine!" };
     public Text final;
     public int wordIndex = 0;
     // Use this for initialization
@@ -14,6 +14,7 @@ public class EndingText : MonoBehaviour {
     {
         final.text = words[0];
         StartCoroutine(TextFades());
+        GameManager.clothes = new ArrayList();
 	}
 	
 	// Update is called once per frame

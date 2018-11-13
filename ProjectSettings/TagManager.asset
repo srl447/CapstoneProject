@@ -10,6 +10,7 @@ TagManager:
   - AnxietyZone1
   - Exit
   - CashSight
+  - ClothesZone
   layers:
   - Default
   - TransparentFX

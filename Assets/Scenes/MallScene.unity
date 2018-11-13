@@ -246,9 +246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b275873a331b74d868f29cc16807bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloomSpeed: 1.5
+  bloomSpeed: 1
   chromeSpeed: 1
-  vigSpeed: 0.3
+  vigSpeed: 0.4
   extravig: 0
   anxietyText: {fileID: 40737041}
   player: {fileID: 25711157}
@@ -610,11 +610,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4602266616739266, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.33
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4602266616739266, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.42
+      value: -6.74
       objectReference: {fileID: 0}
     - target: {fileID: 4602266616739266, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
       propertyPath: m_LocalPosition.z
@@ -712,11 +712,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.549999
+      value: 3.542
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 25.720001
+      value: 25.653
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -748,11 +748,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.6480181
+      value: 3.2725966
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.7376859
+      value: 2.2908838
       objectReference: {fileID: 0}
     - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
         type: 2}
@@ -762,6 +762,15 @@ Prefab:
     - target: {fileID: 1016610344038524, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016610344038524, guid: a74224c10dc1338498967ba039292fd2, type: 2}
+      propertyPath: m_TagString
+      value: ClothesZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74224c10dc1338498967ba039292fd2, type: 2}
@@ -1102,14 +1111,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164858187}
-  m_LocalRotation: {x: -0, y: -0, z: 0.3003351, w: 0.9538338}
-  m_LocalPosition: {x: 0.85, y: -4.3, z: 0.8999996}
+  m_LocalRotation: {x: -0, y: -0, z: 0.20280609, w: 0.97921896}
+  m_LocalPosition: {x: 0.9910001, y: -4.498, z: 0.8999996}
   m_LocalScale: {x: 0.5027439, y: 0.9768202, z: 1}
   m_Children:
   - {fileID: 749576911}
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 34.955}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 23.402}
 --- !u!212 &164858189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2201,11 +2210,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.919
+      value: -16.631
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 22.593426
+      value: 22.547
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2237,31 +2246,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.6480181
+      value: 3.7453902
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.7376859
+      value: 2.4838998
       objectReference: {fileID: 0}
     - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
         type: 2}
       propertyPath: m_Color.a
       value: 0.3019608
       objectReference: {fileID: 0}
+    - target: {fileID: 1016610344038524, guid: a74224c10dc1338498967ba039292fd2, type: 2}
+      propertyPath: m_TagString
+      value: ClothesZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74224c10dc1338498967ba039292fd2, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &379073397 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1576577792937478, guid: d4645708849767540a7f5055dec53076,
-    type: 2}
-  m_PrefabInternal: {fileID: 814385026}
---- !u!114 &379073399 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114986420275481916, guid: d4645708849767540a7f5055dec53076,
-    type: 2}
-  m_PrefabInternal: {fileID: 814385026}
-  m_Script: {fileID: 11500000, guid: 999569fd43613a840a91db6a443b5519, type: 3}
 --- !u!1 &422491016
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,11 +3060,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.006
+      value: -21.09
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.490425
+      value: 7.52
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3089,16 +3096,25 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.3057384
+      value: 3.54539
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.6256657
+      value: 2.805335
       objectReference: {fileID: 0}
     - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
         type: 2}
       propertyPath: m_Color.a
       value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016610344038524, guid: a74224c10dc1338498967ba039292fd2, type: 2}
+      propertyPath: m_TagString
+      value: ClothesZone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74224c10dc1338498967ba039292fd2, type: 2}
@@ -3755,8 +3771,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 749576910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 0, z: 9.1}
-  m_LocalScale: {x: 17.84401, y: 8.922005, z: 0.7435004}
+  m_LocalPosition: {x: 0.36, y: 0.08, z: 9.1}
+  m_LocalScale: {x: 11.854165, y: 5.9270825, z: 0.49392357}
   m_Children: []
   m_Father: {fileID: 164858188}
   m_RootOrder: 0
@@ -4227,29 +4243,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &851561387 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1448384448081694, guid: d4645708849767540a7f5055dec53076,
-    type: 2}
-  m_PrefabInternal: {fileID: 814385026}
---- !u!114 &851561391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 851561387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5ccee86cfff8448a8fca5c1074b634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stareTime: 2
-  stare: 0
-  player: {fileID: 25711150}
-  shopper: {fileID: 379073397}
-  eM: {fileID: 379073399}
-  eR: {fileID: 0}
-  point: {fileID: 0}
 --- !u!1 &857130109
 GameObject:
   m_ObjectHideFlags: 0
@@ -4345,7 +4338,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4718830463517544, guid: 70dea8b6d236e3d4fb2fda12d063cc2c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10.13
+      value: 10.29
       objectReference: {fileID: 0}
     - target: {fileID: 4718830463517544, guid: 70dea8b6d236e3d4fb2fda12d063cc2c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4611,6 +4604,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counterScreen: {fileID: 178147122}
   topUI: {fileID: 857130109}
+  clothes: {fileID: 112266542}
+  cart: {fileID: 44198277}
   move: {fileID: 25711155}
   pC: {fileID: 25711151}
   tT: {fileID: 25711156}
@@ -4730,7 +4725,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 972963833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.367, y: -10.41, z: 0.12}
+  m_LocalPosition: {x: -1.83, y: -9.43, z: 0.12}
   m_LocalScale: {x: 12.788494, y: 3.5535002, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4874,11 +4869,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.7
+      value: 7.634
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 25.409998
+      value: 25.293
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4910,17 +4905,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.6480181
+      value: 3.2369072
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.7376859
+      value: 2.2908857
       objectReference: {fileID: 0}
     - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
         type: 2}
       propertyPath: m_Color.a
       value: 0.3019608
       objectReference: {fileID: 0}
+    - target: {fileID: 1016610344038524, guid: a74224c10dc1338498967ba039292fd2, type: 2}
+      propertyPath: m_TagString
+      value: ClothesZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016610344038524, guid: a74224c10dc1338498967ba039292fd2, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74224c10dc1338498967ba039292fd2, type: 2}
   m_IsPrefabParent: 0
@@ -4933,11 +4942,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.197001
+      value: 13.203
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 26.394001
+      value: 26.174
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4965,11 +4974,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.4732094
+      value: 3.6331415
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.8529164
+      value: 2.887933
       objectReference: {fileID: 0}
     - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
         type: 2}
@@ -4990,6 +4999,10 @@ Prefab:
         type: 2}
       propertyPath: m_Color.a
       value: 0.37254903
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016610344038524, guid: a74224c10dc1338498967ba039292fd2, type: 2}
+      propertyPath: m_TagString
+      value: ClothesZone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74224c10dc1338498967ba039292fd2, type: 2}
@@ -8289,11 +8302,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.1799998
+      value: 3.111
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 20.019999
+      value: 20.006
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8325,11 +8338,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.6480181
+      value: 3.6709774
       objectReference: {fileID: 0}
     - target: {fileID: 4331756796351516, guid: a74224c10dc1338498967ba039292fd2, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.7376859
+      value: 2.6049764
       objectReference: {fileID: 0}
     - target: {fileID: 212722588486683526, guid: a74224c10dc1338498967ba039292fd2,
         type: 2}
@@ -8343,29 +8356,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74224c10dc1338498967ba039292fd2, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1916400255 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1389773892088586, guid: c85c4f9d55810424ebc308c4d105a566,
-    type: 2}
-  m_PrefabInternal: {fileID: 1417692119}
---- !u!114 &1916400259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1916400255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5ccee86cfff8448a8fca5c1074b634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stareTime: 2
-  stare: 0
-  player: {fileID: 25711150}
-  shopper: {fileID: 1417692120}
-  eM: {fileID: 0}
-  eR: {fileID: 1417692121}
-  point: {fileID: 0}
 --- !u!1001 &1995029900
 Prefab:
   m_ObjectHideFlags: 0
