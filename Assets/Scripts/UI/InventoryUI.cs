@@ -19,7 +19,7 @@ public class InventoryUI : MonoBehaviour {
         {
             GameObject cloth = Instantiate(img) as GameObject;
             cloth.transform.parent = holder.transform;
-            cloth.GetComponent<RectTransform>().transform.position = new Vector3(Random.Range(-100, 250) + 500, 80);
+            cloth.GetComponent<RectTransform>().transform.position = new Vector3(Random.Range(-100, 250) + 500, 78);
             cloth.GetComponent<RectTransform>().sizeDelta = new Vector2(cloth.GetComponent<RectTransform>().sizeDelta.x * 10 - 20, cloth.GetComponent<RectTransform>().sizeDelta.y * 5 - 20);
             cloth.GetComponent<Image>().sprite = ((GameObject) GameManager.clothes[inventoryCount]).GetComponent<SpriteRenderer>().sprite;
             inventoryCount++;
