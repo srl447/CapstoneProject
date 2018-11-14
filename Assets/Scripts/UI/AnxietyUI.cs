@@ -16,8 +16,10 @@ public class AnxietyUI : MonoBehaviour {
     public GetSpotted gS;
     public PostProcessingProfile mainProfile;
 
-    bool flicker = false;
+    /*bool flicker = false;
     float flickerAmount = 0;
+    float sinWave = 0;*/
+    float heartbeat = 0;
 
     //To edit Post Processing effects through code
     //you need to have setting variables that you edit
@@ -25,6 +27,7 @@ public class AnxietyUI : MonoBehaviour {
     BloomModel.Settings bloomS;
     ChromaticAberrationModel.Settings chromeS;
     VignetteModel.Settings vigS;
+    GrainModel.Settings grainS;
 
     // Use this for initialization
     void Start ()
@@ -37,37 +40,47 @@ public class AnxietyUI : MonoBehaviour {
         chromeS.intensity = 0;
         vigS = mainProfile.vignette.settings;
         vigS.intensity = 0.5f;
+        StartCoroutine(heartbeatChange());
+        grainS = mainProfile.grain.settings;
+        grainS.intensity = 0;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //vigS.center = player.position; //Need to convert world space to canvas space
+        Debug.Log(heartbeat);
+        // vigS.center = player.position; //Need to convert world space to canvas space
         //Basically, this just increases several post processing effects intensities, bloom
         //vingette, and chromatic abberation, as anxiety rises.
-        if (vigS.intensity < 3.5f)
+       if (vigS.intensity < 3.5f)
         {
-            vigS.intensity = (gS.anx * vigSpeed) + extravig + .5f + flickerAmount;
+            vigS.intensity = (gS.anx * vigSpeed) + extravig + .5f + heartbeat;
         }
         else
         {
-            vigS.intensity = 3.5f + flickerAmount;
+            vigS.intensity = 3.5f + +heartbeat;
         }
-        bloomS.bloom.intensity = gS.anx * bloomSpeed + flickerAmount;
-        chromeS.intensity = gS.anx * chromeSpeed + flickerAmount;
+        bloomS.bloom.intensity = gS.anx * bloomSpeed + heartbeat;
+        chromeS.intensity = gS.anx * chromeSpeed + heartbeat;
         mainProfile.vignette.settings = vigS;
         mainProfile.chromaticAberration.settings = chromeS;
         mainProfile.bloom.settings = bloomS;
-        anxietyText.text = "Anxiety: " + Mathf.Floor(gS.anx*100);
-        if(gS.anx > 1.3 && !flicker)
+       // anxietyText.text = "Anxiety: " + Mathf.Floor(gS.anx*100);
+        if(GameManager.anxiety > 1.2)
+        {
+            grainS.intensity = (GameManager.anxiety - 1.2f)*2;
+            mainProfile.grain.settings = grainS;
+        }
+        /*if(gS.anx > 1.3 && !flicker)
         {
             StartCoroutine(flickering());
             flicker = true;
             Debug.Log(flicker);
         }
+        sinWave += .001f;*/
 	}
 
-    IEnumerator flickering()
+    /*IEnumerator flickering()
     {
         yield return new WaitForEndOfFrame();
         float randomAmount = Random.Range(-.08f, .08f);
@@ -87,5 +100,51 @@ public class AnxietyUI : MonoBehaviour {
         }
         Debug.Log("finished");
         StartCoroutine(flickering());
+    }*/
+    IEnumerator heartbeatChange()
+    {
+        yield return new WaitForSecondsRealtime(GameManager.anxiety < 1.8f ? 1.9f - GameManager.anxiety : .1f);
+        yield return new WaitForEndOfFrame();
+        for(;heartbeat < .03f;)
+        {
+            heartbeat = Mathf.Lerp(heartbeat, .03f, .2f + GameManager.anxiety / 2);
+            yield return new WaitForEndOfFrame();
+            if(heartbeat > .028f)
+            {
+                heartbeat = .03f;
+            }
+        }
+        yield return new WaitForEndOfFrame();
+        for (; heartbeat >0;)
+        {
+            heartbeat = Mathf.Lerp(heartbeat, 0, .2f + GameManager.anxiety / 2);
+            yield return new WaitForEndOfFrame();
+            if (heartbeat < .002f)
+            {
+                heartbeat = 0;
+            }
+        }
+        yield return new WaitForSecondsRealtime((GameManager.anxiety < 1.8f ? (1.9f - GameManager.anxiety) / 10 : .01f));
+        yield return new WaitForEndOfFrame();
+        for (; heartbeat < .03f;)
+        {
+            heartbeat = Mathf.Lerp(heartbeat,.03f, .2f + GameManager.anxiety / 2);
+            yield return new WaitForEndOfFrame();
+            if (heartbeat > .028f)
+            {
+                heartbeat = .03f;
+            }
+        }
+        yield return new WaitForEndOfFrame();
+        for (; heartbeat > 0;)
+        {
+            heartbeat = Mathf.Lerp(heartbeat, 0, .1f + GameManager.anxiety / 2);
+            yield return new WaitForEndOfFrame();
+            if (heartbeat < .002f)
+            {
+                heartbeat = 0;
+            }
+        }
+        StartCoroutine(heartbeatChange());
     }
 }
