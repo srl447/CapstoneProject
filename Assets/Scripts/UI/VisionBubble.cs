@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class VisionBubble : MonoBehaviour {
 
+    public float rotateSpeed;
+    public GameObject hand;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +13,8 @@ public class VisionBubble : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        transform.eulerAngles += Vector3.forward * rotateSpeed * Time.deltaTime;
+        transform.position = hand.transform.position;
 		
 	}
 
