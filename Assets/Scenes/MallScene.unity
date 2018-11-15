@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9bd0bdb8945144f9d0770f4471391c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clothType: jeans
+  clothType: Jeans
 --- !u!1 &252914587 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1448384448081694, guid: d4645708849767540a7f5055dec53076,
@@ -3134,6 +3134,10 @@ MonoBehaviour:
   - {fileID: 1931369846577494, guid: e40c8e990bbb8ad4094f908fcf909bff, type: 2}
   - {fileID: 1380887975885352, guid: c6702cb0dabff7c4b9b9a5a80ac5a8a2, type: 2}
   - {fileID: 1103886111301302, guid: 25311dc989457ca4e92ab0c612bc17c7, type: 2}
+  jeans:
+  - {fileID: 1889327911075446, guid: 5ce6d5888d95cb14eab7069af750cea4, type: 2}
+  - {fileID: 1835375213940996, guid: a5286481102b7e94fa39d74cac277748, type: 2}
+  - {fileID: 1423946627963678, guid: f1528e0a6d45bef478215b8f260a3235, type: 2}
   mH: {fileID: 164858190}
 --- !u!1 &519420028
 GameObject:
@@ -9128,6 +9132,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114951179781559654, guid: 2e3faa6cac3a989428d477b8986723bd,
         type: 2}
+      propertyPath: jeans.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951179781559654, guid: 2e3faa6cac3a989428d477b8986723bd,
+        type: 2}
       propertyPath: skirts.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -9235,6 +9244,24 @@ Prefab:
       propertyPath: skirts.Array.data[2]
       value: 
       objectReference: {fileID: 1103886111301302, guid: 25311dc989457ca4e92ab0c612bc17c7,
+        type: 2}
+    - target: {fileID: 114951179781559654, guid: 2e3faa6cac3a989428d477b8986723bd,
+        type: 2}
+      propertyPath: jeans.Array.data[0]
+      value: 
+      objectReference: {fileID: 1889327911075446, guid: 5ce6d5888d95cb14eab7069af750cea4,
+        type: 2}
+    - target: {fileID: 114951179781559654, guid: 2e3faa6cac3a989428d477b8986723bd,
+        type: 2}
+      propertyPath: jeans.Array.data[1]
+      value: 
+      objectReference: {fileID: 1835375213940996, guid: a5286481102b7e94fa39d74cac277748,
+        type: 2}
+    - target: {fileID: 114951179781559654, guid: 2e3faa6cac3a989428d477b8986723bd,
+        type: 2}
+      propertyPath: jeans.Array.data[2]
+      value: 
+      objectReference: {fileID: 1423946627963678, guid: f1528e0a6d45bef478215b8f260a3235,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e3faa6cac3a989428d477b8986723bd, type: 2}
@@ -9585,6 +9612,10 @@ MonoBehaviour:
   - {fileID: 1931369846577494, guid: e40c8e990bbb8ad4094f908fcf909bff, type: 2}
   - {fileID: 1380887975885352, guid: c6702cb0dabff7c4b9b9a5a80ac5a8a2, type: 2}
   - {fileID: 1103886111301302, guid: 25311dc989457ca4e92ab0c612bc17c7, type: 2}
+  jeans:
+  - {fileID: 1889327911075446, guid: 5ce6d5888d95cb14eab7069af750cea4, type: 2}
+  - {fileID: 1835375213940996, guid: a5286481102b7e94fa39d74cac277748, type: 2}
+  - {fileID: 1423946627963678, guid: f1528e0a6d45bef478215b8f260a3235, type: 2}
   mH: {fileID: 164858190}
 --- !u!1001 &1893915667
 Prefab:
