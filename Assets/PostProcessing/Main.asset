@@ -100,14 +100,14 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 1.5199478
-        threshold: 0.9
-        softKnee: 0.286
-        radius: 4
-        antiFlicker: 1
+        intensity: 0.35168755
+        threshold: 0
+        softKnee: 0
+        radius: 0
+        antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
-        intensity: 3
+        intensity: 0
   colorGrading:
     m_Enabled: 0
     m_Settings:
@@ -307,26 +307,26 @@ MonoBehaviour:
   chromaticAberration:
     m_Enabled: 1
     m_Settings:
-      spectralTexture: {fileID: 2800000, guid: ff5f3317371838d4fa16ac6c2acf2040, type: 3}
-      intensity: 1.5199478
+      spectralTexture: {fileID: 0}
+      intensity: 0.6894912
   grain:
     m_Enabled: 1
     m_Settings:
       colored: 0
-      intensity: 0.17992169
+      intensity: 0
       size: 0.41
       luminanceContribution: 1
   vignette:
     m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0, g: 0, b: 0, a: 1}
+      color: {r: 0, g: 0, b: 0, a: 0}
       center: {x: 0.5, y: 0.5}
-      intensity: 1.2079791
-      smoothness: 0.11
-      roundness: 0.331
-      mask: {fileID: 0}
-      opacity: 1
+      intensity: 0.88412684
+      smoothness: 0.15
+      roundness: 0
+      mask: {fileID: 2800000, guid: a07554157221ddb4b8a9fd17b14ae5bc, type: 3}
+      opacity: 0
       rounded: 0
   dithering:
     m_Enabled: 0

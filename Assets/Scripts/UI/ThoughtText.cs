@@ -19,7 +19,7 @@ public class ThoughtText : MonoBehaviour {
     }
     void Update ()
     {
-        if(current != tail)
+        if(current != tail && thought.text == "")
         {
             next();
             StartCoroutine(thoughtTime(current));

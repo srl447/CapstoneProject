@@ -43,12 +43,12 @@ public class AnxietyUI : MonoBehaviour {
         StartCoroutine(heartbeatChange());
         grainS = mainProfile.grain.settings;
         grainS.intensity = 0;
+        mainProfile.grain.settings = grainS;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log(heartbeat);
         // vigS.center = player.position; //Need to convert world space to canvas space
         //Basically, this just increases several post processing effects intensities, bloom
         //vingette, and chromatic abberation, as anxiety rises.
