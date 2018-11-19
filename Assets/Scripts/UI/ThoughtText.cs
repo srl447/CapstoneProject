@@ -10,6 +10,7 @@ public class ThoughtText : MonoBehaviour {
     public Node current;
     public Node tail;
 
+    public AudioSource aS;
     private void Start()
     {
         Node startNode = new Node();
@@ -65,6 +66,10 @@ public class ThoughtText : MonoBehaviour {
     IEnumerator thoughtTime(Node thoughtNode)
     {
         thought.text = thoughtNode.thoughts;
+        if (thoughtNode.voiceLine != null)
+        {
+            aS.PlayOneShot(thoughtNode.voiceLine);
+        }
         yield return new WaitForSecondsRealtime(thoughtNode.thoughtTime);
         if(hasNext(current))
         {
@@ -83,6 +88,7 @@ public class Node
 {
     public string thoughts;
     public float thoughtTime;
+    public AudioClip voiceLine;
     public Node nextNode;
 
     public Node()
@@ -93,5 +99,11 @@ public class Node
     {
         thoughts = text;
         thoughtTime = num;
+    }
+    public Node(string text, int num, AudioClip line)
+    {
+        thoughts = text;
+        thoughtTime = num;
+        voiceLine = line;
     }
 }
