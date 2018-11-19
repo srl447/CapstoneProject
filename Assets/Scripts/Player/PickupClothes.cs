@@ -15,6 +15,7 @@ public class PickupClothes : MonoBehaviour
     public MoveHand mH;
     public GameObject topUI;
     public bool purchased = false;
+    public AudioClip[] clothesThoughts;
 
 	// Use this for initialization
 	void Start ()
@@ -39,12 +40,12 @@ public class PickupClothes : MonoBehaviour
             {
                 if (GameManager.clothes.Count == 0)
                 {
-                    Node newThought = new Node("Ooo they're so many cute options!", 2);
+                    Node newThought = new Node("Ooo they're so many cute options!", 2, clothesThoughts[0]);
                     tT.add(newThought);
                 }
                 else if(GameManager.clothes.Count == 2)
                 {
-                    Node newThought = new Node("I hope I'm not spending too much", 2);
+                    Node newThought = new Node("I hope I'm not spending too much", 2, clothesThoughts[1]);
                     tT.add(newThought);
                 }
                 clothesScreen.SetActive(true);

@@ -56,6 +56,7 @@ public class ThoughtText : MonoBehaviour {
             Node nextThought = new Node();
             nextThought.thoughts = other.GetComponent<ThoughtZone>().thought;
             nextThought.thoughtTime = other.gameObject.GetComponent<ThoughtZone>().thoughtTime;
+            nextThought.voiceLine = other.gameObject.GetComponent<ThoughtZone>().voiceLine;
             add(nextThought);
             Destroy(other.gameObject);
         }

@@ -6,6 +6,7 @@ public class ThoughtZone : MonoBehaviour {
 
     public string thought;
     public float thoughtTime;
+    public AudioClip voiceLine;
 	// Use this for initialization
 	void Start () {
 		
