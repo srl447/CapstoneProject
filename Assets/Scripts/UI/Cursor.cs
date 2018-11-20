@@ -27,6 +27,22 @@ public class Cursor : MonoBehaviour
         if(holding)
         {
             heldObject.transform.position = this.transform.position;
+            if(Input.GetKey(KeyCode.A))
+            {
+                heldObject.transform.eulerAngles = new Vector3(heldObject.transform.eulerAngles.x, heldObject.transform.eulerAngles.y, heldObject.transform.eulerAngles.z - 1);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                heldObject.transform.eulerAngles = new Vector3(heldObject.transform.eulerAngles.x, heldObject.transform.eulerAngles.y, heldObject.transform.eulerAngles.z + 1);
+            }
+            if(Input.GetKey(KeyCode.W))
+            {
+                heldObject.GetComponent<SpriteRenderer>().sortingOrder--;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                heldObject.GetComponent<SpriteRenderer>().sortingOrder++;
+            }
         }
 
     }
