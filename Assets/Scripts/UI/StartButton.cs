@@ -13,7 +13,7 @@ public class StartButton : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
 		
 	}
 }

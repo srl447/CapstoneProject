@@ -29,11 +29,11 @@ public class Leaving : MonoBehaviour {
             {
                 DontDestroyOnLoad(g);
             }
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         else if (collision.gameObject.tag == "Exit" && gS.anx > 1.5)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
         }
         else if (collision.gameObject.tag == "Exit" && pC.purchased == false)
         {

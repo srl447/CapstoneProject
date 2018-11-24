@@ -36,7 +36,7 @@ public class EndingText : MonoBehaviour {
         if (wordIndex == words.Length)
         {
             yield return new WaitForSecondsRealtime(1f);
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
         }
         else
         {

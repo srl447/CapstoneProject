@@ -73,7 +73,7 @@ public class PickupClothes : MonoBehaviour
                 foreach (GameObject c in GameManager.clothes)
                 {
                     GameObject newCloth = Instantiate(c) as GameObject;
-                    newCloth.transform.position = new Vector3(Random.Range(-9f, -5f), Random.Range(-.55f, -1.75f), -9f);
+                    newCloth.transform.position = new Vector3(Random.Range(-17f, -11f), Random.Range(-.55f, -1.75f), -9f);
                     clothSet.Add(newCloth);
                 }
                 check.clothSet = clothSet;
