@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cursor : MonoBehaviour
+public class CursorUI : MonoBehaviour
 {
     bool holding;
     GameObject heldObject;
+    internal static bool visible;
+
     // Use this for initialization
     void Start()
     {

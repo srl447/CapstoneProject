@@ -15,7 +15,10 @@ public class RegisterThoughts3 : MonoBehaviour
 
     void Awake()
     {
-        StartCoroutine(Conversation());
+        if (this.enabled)
+        {
+            StartCoroutine(Conversation());
+        }
     }
 
     private void Update()
@@ -44,7 +47,10 @@ public class RegisterThoughts3 : MonoBehaviour
         player.text = "";
         cash.text = "Is that for you? You'll look great in it!";
         yield return new WaitForSecondsRealtime(3);
-
+        player.text = "aww thanks";
+        cash.text = "";
+        yield return new WaitForSecondsRealtime(1);
+        player.text = "";
         introDone = true;
     }
 

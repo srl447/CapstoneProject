@@ -81,17 +81,23 @@ public class PickupClothes : MonoBehaviour
                 mH.checkout = true;
                 if(collision.gameObject.tag == "Counter")
                 {
+                    Debug.Log("1");
+                    checkOut.GetComponentInChildren<Checkout>().rT.enabled = true;
                     checkOut.GetComponentInChildren<Checkout>().rT2.enabled = false;
                     checkOut.GetComponentInChildren<Checkout>().rT3.enabled = false;
 
                 }
-                if (collision.gameObject.tag == "Counter2")
+                else if (collision.gameObject.tag == "Counter2")
                 {
+                    Debug.Log("2");
+                    checkOut.GetComponentInChildren<Checkout>().rT2.enabled = true;
                     checkOut.GetComponentInChildren<Checkout>().rT.enabled = false;
                     checkOut.GetComponentInChildren<Checkout>().rT3.enabled = false;
                 }
-                if (collision.gameObject.tag == "Counter3")
+                else if (collision.gameObject.tag == "Counter3")
                 {
+                    Debug.Log("3");
+                    checkOut.GetComponentInChildren<Checkout>().rT3.enabled = true;
                     checkOut.GetComponentInChildren<Checkout>().rT2.enabled = false;
                     checkOut.GetComponentInChildren<Checkout>().rT.enabled = false;
                 }

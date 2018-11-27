@@ -13,7 +13,10 @@ public class RegisterThoughts : MonoBehaviour {
     public bool fin = false;
 
     void Awake () {
-        StartCoroutine(Conversation());
+        if (this.enabled)
+        {
+            StartCoroutine(Conversation());
+        }
 	}
 
     private void Update()
