@@ -10,12 +10,14 @@ public class Checkout : MonoBehaviour {
     public PickupClothes pC;
     public ThoughtText tT;
     public RegisterThoughts rT;
+    public RegisterThoughts2 rT2;
+    public RegisterThoughts3 rT3;
     public AnxiousThoughts aT;
 
     int clothCount;
-    
-	// Use this for initialization
-	void Awake () {
+
+    // Use this for initialization
+    void Awake() {
         cart.SetActive(false);
         clothes.SetActive(false);
         tT.enabled = false;
@@ -24,15 +26,17 @@ public class Checkout : MonoBehaviour {
         {
             c.SetActive(true);
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update() {
         if (GameManager.clothes.Count <= clothCount)
         {
             rT.end = true;
+            rT2.end = true;
+            rT3.end = true;
         }
-        if (rT.fin)
+        if (rT.fin || rT2.fin || rT3.fin)
         {
            // Debug.Log("step 1");
             tT.enabled = true;

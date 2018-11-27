@@ -11,6 +11,8 @@ TagManager:
   - Exit
   - CashSight
   - ClothesZone
+  - Counter2
+  - Counter3
   layers:
   - Default
   - TransparentFX

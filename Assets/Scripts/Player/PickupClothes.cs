@@ -65,7 +65,7 @@ public class PickupClothes : MonoBehaviour
             }
         }
         //purchasing clothes
-        if (collision.gameObject.tag == "Counter" && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.anxiety < 1.4f)
+        if ((collision.gameObject.tag == "Counter" || collision.gameObject.tag == "Counter2" || collision.gameObject.tag == "Counter3")  && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.anxiety < 1.4f)
         {
             if (clothesCount > 0)
             {
@@ -79,6 +79,22 @@ public class PickupClothes : MonoBehaviour
                 check.clothSet = clothSet;
                 checkOut.SetActive(true);
                 mH.checkout = true;
+                if(collision.gameObject.tag == "Counter")
+                {
+                    checkOut.GetComponentInChildren<Checkout>().rT2.enabled = false;
+                    checkOut.GetComponentInChildren<Checkout>().rT3.enabled = false;
+
+                }
+                if (collision.gameObject.tag == "Counter2")
+                {
+                    checkOut.GetComponentInChildren<Checkout>().rT.enabled = false;
+                    checkOut.GetComponentInChildren<Checkout>().rT3.enabled = false;
+                }
+                if (collision.gameObject.tag == "Counter3")
+                {
+                    checkOut.GetComponentInChildren<Checkout>().rT2.enabled = false;
+                    checkOut.GetComponentInChildren<Checkout>().rT.enabled = false;
+                }
                 topUI.SetActive(true);
                 this.GetComponent<Movement>().up = false;
                 this.GetComponent<Movement>().left = false;
