@@ -15,6 +15,7 @@ public class PickupClothes : MonoBehaviour
     public MoveHand mH;
     public GameObject topUI;
     public bool purchased = false;
+    public bool canBuy = true;
     public AudioClip[] clothesThoughts;
 
 	// Use this for initialization
@@ -36,7 +37,7 @@ public class PickupClothes : MonoBehaviour
             { 
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
             } 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy && collision.GetComponent<ClothType>() && !mH.checkout)
+            if (canBuy && Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy && collision.GetComponent<ClothType>() && !mH.checkout)
             {
                 if (GameManager.clothes.Count == 0)
                 {
@@ -61,6 +62,7 @@ public class PickupClothes : MonoBehaviour
                 this.GetComponent<Movement>().enabled = false;
                 clothesCount++;
                 collidedClothes = collision.GetComponent<ClothType>().clothType;
+                canBuy = false;
                 this.GetComponent<PickupClothes>().enabled = false;
             }
         }

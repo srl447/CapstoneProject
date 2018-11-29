@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212820524188908700}
   - component: {fileID: 61206101278409232}
   - component: {fileID: 114406194665840604}
+  - component: {fileID: 114455181108279438}
   m_Layer: 9
   m_Name: UgRedShirt
   m_TagString: Clothes
@@ -79,6 +80,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothType: Ugly Red Shirt
+--- !u!114 &114455181108279438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217139561877610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03010909c41a4144db9b96280149ef22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212820524188908700
 SpriteRenderer:
   m_ObjectHideFlags: 1

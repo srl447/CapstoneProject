@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212115043879764800}
   - component: {fileID: 61280222050063552}
   - component: {fileID: 114974500457305184}
+  - component: {fileID: 114976577959092638}
   m_Layer: 9
   m_Name: LargePants
   m_TagString: Clothes
@@ -79,6 +80,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothType: Large Pants
+--- !u!114 &114976577959092638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868759866690316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03010909c41a4144db9b96280149ef22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212115043879764800
 SpriteRenderer:
   m_ObjectHideFlags: 1

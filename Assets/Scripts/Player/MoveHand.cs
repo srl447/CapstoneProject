@@ -90,5 +90,6 @@ public class MoveHand : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(.4f);
         playerPickup.enabled = true;
+        playerPickup.canBuy = true;
     }
 }

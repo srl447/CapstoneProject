@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212414530960188628}
   - component: {fileID: 61758264822769110}
   - component: {fileID: 114064268152479984}
+  - component: {fileID: 114440461550292124}
   m_Layer: 9
   m_Name: PinkDress
   m_TagString: Clothes
@@ -79,6 +80,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothType: Pink Dress
+--- !u!114 &114440461550292124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1343311180380144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03010909c41a4144db9b96280149ef22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212414530960188628
 SpriteRenderer:
   m_ObjectHideFlags: 1

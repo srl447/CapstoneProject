@@ -41,12 +41,12 @@ public class Checkout : MonoBehaviour {
            // Debug.Log("step 1");
             tT.enabled = true;
             topUI.SetActive(false);
-            counterScreen.SetActive(false);
-           // Debug.Log("step 2");
             foreach (GameObject c in clothSet)
             {
                 c.SetActive(false);
             }
+            counterScreen.SetActive(false);
+           // Debug.Log("step 2");
             move.enabled = true;
             pC.enabled = true;
            // Debug.Log("step 3");
@@ -72,6 +72,10 @@ public class Checkout : MonoBehaviour {
             if(c.transform.position.x < -18)
             {
                 return false;
+            }
+            else
+            {
+                //c.SetActive(false);
             }
         }
         return true;

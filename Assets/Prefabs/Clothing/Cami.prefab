@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212433682501600070}
   - component: {fileID: 61998194762654456}
   - component: {fileID: 114176801396677382}
+  - component: {fileID: 114450694320358672}
   m_Layer: 9
   m_Name: Cami
   m_TagString: Clothes
@@ -79,6 +80,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothType: Cami
+--- !u!114 &114450694320358672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973626276910060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03010909c41a4144db9b96280149ef22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212433682501600070
 SpriteRenderer:
   m_ObjectHideFlags: 1

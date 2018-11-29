@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212740598833910818}
   - component: {fileID: 61510656121412554}
   - component: {fileID: 114826699888287466}
+  - component: {fileID: 114347117668028096}
   m_Layer: 9
   m_Name: UgGreen Shirt
   m_TagString: Clothes
@@ -67,6 +68,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5542082, y: 1.4193269}
   m_EdgeRadius: 0
+--- !u!114 &114347117668028096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1188436629836688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03010909c41a4144db9b96280149ef22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114826699888287466
 MonoBehaviour:
   m_ObjectHideFlags: 1

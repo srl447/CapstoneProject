@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212405573889831140}
   - component: {fileID: 61237998775491982}
   - component: {fileID: 114268325110616476}
+  - component: {fileID: 114673833919766684}
   m_Layer: 9
   m_Name: Red Shirt
   m_TagString: Clothes
@@ -79,6 +80,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clothType: Red Shirt
+--- !u!114 &114673833919766684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065775967066538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03010909c41a4144db9b96280149ef22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212405573889831140
 SpriteRenderer:
   m_ObjectHideFlags: 1
