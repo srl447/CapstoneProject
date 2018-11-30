@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -8,16 +9,12 @@ public class GameManager : MonoBehaviour {
     public static bool thinking;
     public static float anxiety;
 
+
     public static bool holding;
 
 	// Use this for initialization
 	void Awake ()
     {
         DontDestroyOnLoad(this.gameObject);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }

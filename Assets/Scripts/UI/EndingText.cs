@@ -36,6 +36,7 @@ public class EndingText : MonoBehaviour {
         if (wordIndex == words.Length)
         {
             yield return new WaitForSecondsRealtime(1f);
+            GameManager.clothes = new ArrayList();
             SceneManager.LoadScene(0);
         }
         else
