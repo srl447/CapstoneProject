@@ -100,7 +100,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.35168755
+        intensity: 0.026687328
         threshold: 0
         softKnee: 0
         radius: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.6894912
+      intensity: 0.038087327
   grain:
     m_Enabled: 1
     m_Settings:
@@ -322,7 +322,7 @@ MonoBehaviour:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 0}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.88412684
+      intensity: 0.56536186
       smoothness: 0.15
       roundness: 0
       mask: {fileID: 2800000, guid: a07554157221ddb4b8a9fd17b14ae5bc, type: 3}

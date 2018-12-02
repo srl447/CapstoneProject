@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pause : MonoBehaviour {
 
     public GameObject pauseMenu;
+    public ChangingRooms cR;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,7 +21,7 @@ public class Pause : MonoBehaviour {
         {
             Time.timeScale = 0;
         }
-        else
+        else if (!pauseMenu.activeSelf && !cR.start)
         {
             Time.timeScale = 1;
         }
