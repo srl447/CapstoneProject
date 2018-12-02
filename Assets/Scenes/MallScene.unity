@@ -8590,6 +8590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 62561168}
   cR: {fileID: 440725151}
+  bath: {fileID: 1863005176}
 --- !u!1001 &1417692119
 Prefab:
   m_ObjectHideFlags: 0
@@ -11150,7 +11151,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bathroom Thoughts
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11162,12 +11163,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1863005175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a7c6a7a137c564f8a496a1b2e2edfc, type: 3}
+  m_Script: {fileID: 11500000, guid: 01cbe5bc413218041bd8953c7ebfe747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thought: I can't use the bathroom, are you crazy!!?!?!
-  thoughtTime: 3
-  voiceLine: {fileID: 0}
+  start: 0
+  fade: {fileID: 957710367}
+  text: {fileID: 1442181732}
 --- !u!61 &1863005177
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class Pause : MonoBehaviour {
 
     public GameObject pauseMenu;
     public ChangingRooms cR;
+    public Bathrooms bath;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,7 +22,7 @@ public class Pause : MonoBehaviour {
         {
             Time.timeScale = 0;
         }
-        else if (!pauseMenu.activeSelf && !cR.start)
+        else if (!pauseMenu.activeSelf && !cR.start && !bath.start)
         {
             Time.timeScale = 1;
         }
