@@ -44,6 +44,11 @@ public class PickupClothes : MonoBehaviour
                     Node newThought = new Node("Ooo they're so many cute options!", 2, clothesThoughts[0]);
                     tT.add(newThought);
                 }
+                else if (GameManager.clothes.Count == 1)
+                {
+                    Node newThought = new Node("I wonder if these are the right size?", 2);
+                    tT.add(newThought);
+                }
                 else if(GameManager.clothes.Count == 2)
                 {
                     Node newThought = new Node("I hope I'm not spending too much", 2, clothesThoughts[1]);
