@@ -8,6 +8,7 @@ public class WorkerSight : MonoBehaviour {
     public GameObject topUI;
     public Text helpText;
     public ThoughtText tT;
+    public Workers work;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,7 @@ public class WorkerSight : MonoBehaviour {
             collision.gameObject.GetComponent<Movement>().right = false;
             collision.gameObject.GetComponent<Movement>().enabled = false;
             topUI.SetActive(true);
+            work.enabled = false;
             StartCoroutine(Convo(collision.gameObject));
             tT.add(new Node("", 3));
             tT.add(new Node("nothing im fine", 1.4f));
@@ -39,11 +41,16 @@ public class WorkerSight : MonoBehaviour {
     IEnumerator Convo(GameObject player)
     {
         yield return new WaitForEndOfFrame();
+        Vector3 dir = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
+        transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         helpText.text = "Hello Sir! Can I help you at all today?";
         yield return new WaitForSecondsRealtime(3);
         helpText.text = "";
         yield return new WaitForSecondsRealtime(3);
         player.gameObject.GetComponent<Movement>().enabled = true;
         topUI.SetActive(false);
+        work.enabled = true;
+
     }
 }
