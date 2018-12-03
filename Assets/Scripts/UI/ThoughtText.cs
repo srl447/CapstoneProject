@@ -96,12 +96,12 @@ public class Node
     {
 
     }
-    public Node(string text, int num)
+    public Node(string text, float num)
     {
         thoughts = text;
         thoughtTime = num;
     }
-    public Node(string text, int num, AudioClip line)
+    public Node(string text, float num, AudioClip line)
     {
         thoughts = text;
         thoughtTime = num;
