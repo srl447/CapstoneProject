@@ -28,6 +28,5 @@ public class Workers : MonoBehaviour {
                 pointIndex = 0;
             }
         }
-        
 	}
 }
