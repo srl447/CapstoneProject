@@ -6138,6 +6138,8 @@ MonoBehaviour:
   player: {fileID: 1297783615}
   end: 0
   fin: 0
+  head: {fileID: 1732822151}
+  headSprite: {fileID: 21300000, guid: 5ea326ac38a9af94d941093ca9d6c2c2, type: 3}
 --- !u!1001 &887489011
 Prefab:
   m_ObjectHideFlags: 0
@@ -10097,7 +10099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: 34}
+  m_AnchoredPosition: {x: 525, y: 388}
   m_SizeDelta: {x: 1019.8, y: 563.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1624162123
@@ -10119,7 +10121,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: acdc62d2bd4769146b6dacaf6bdd81d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffe55137985294d4aba719b445bfea07, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

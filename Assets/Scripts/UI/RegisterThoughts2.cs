@@ -12,12 +12,15 @@ public class RegisterThoughts2 : MonoBehaviour
     public bool end = false;
     bool endRun = false;
     public bool fin = false;
+    public Image head;
+    public Sprite headSprite;
 
     void Awake()
     {
         if (this.enabled)
         {
             StartCoroutine(Conversation());
+            head.sprite = headSprite;
         }
     }
 
