@@ -6123,6 +6123,8 @@ MonoBehaviour:
   player: {fileID: 1297783615}
   end: 0
   fin: 0
+  head: {fileID: 1732822151}
+  headSprite: {fileID: 21300000, guid: cefda5a2bde8a7b439a0cb1fa9dd2ea9, type: 3}
 --- !u!114 &857130115
 MonoBehaviour:
   m_ObjectHideFlags: 0
