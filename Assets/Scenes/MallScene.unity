@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 40737042}
   - component: {fileID: 40737041}
   - component: {fileID: 40737040}
+  - component: {fileID: 40737043}
   m_Layer: 0
   m_Name: AnxietyEffects
   m_TagString: Untagged
@@ -303,6 +304,8 @@ MonoBehaviour:
   player: {fileID: 25711157}
   gS: {fileID: 25711152}
   mainProfile: {fileID: 11400000, guid: 5a8b47741bd364040b3d1d9a4dcf4999, type: 2}
+  heartSound: {fileID: 8300000, guid: 972d2bb867ff2a44d9caed7373d7e024, type: 3}
+  aud: {fileID: 40737043}
 --- !u!114 &40737041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +345,101 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40737038}
+--- !u!82 &40737043
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40737038}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &41087951
 Prefab:
   m_ObjectHideFlags: 0
@@ -796,8 +894,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 08b80fee61bbce74ea8911262f990b5c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1106,6 +1204,31 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.79260015
       objectReference: {fileID: 0}
+    - target: {fileID: 114196836872373336, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: aud
+      value: 
+      objectReference: {fileID: 25711164}
+    - target: {fileID: 114196836872373336, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: sound1
+      value: 
+      objectReference: {fileID: 8300000, guid: 1919a235d19951d4ca66c7d6f7c32787, type: 3}
+    - target: {fileID: 114196836872373336, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: sound2
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ba4714a35390984eaad763370535ee3, type: 3}
+    - target: {fileID: 114196836872373336, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: sound3
+      value: 
+      objectReference: {fileID: 8300000, guid: 8053c416814d983478810e7b1dc7a4f9, type: 3}
+    - target: {fileID: 114196836872373336, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: sound4
+      value: 
+      objectReference: {fileID: 8300000, guid: a0fd5ae315cd1f6449d94fcf54cc9e92, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
   m_IsPrefabParent: 0
@@ -2662,8 +2785,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 08b80fee61bbce74ea8911262f990b5c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7507,8 +7630,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 08b80fee61bbce74ea8911262f990b5c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

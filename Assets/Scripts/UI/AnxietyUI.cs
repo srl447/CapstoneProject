@@ -16,10 +16,10 @@ public class AnxietyUI : MonoBehaviour {
     public GetSpotted gS;
     public PostProcessingProfile mainProfile;
 
-    /*bool flicker = false;
-    float flickerAmount = 0;
-    float sinWave = 0;*/
+
     float heartbeat = 0;
+    public AudioClip heartSound;
+    public AudioSource aud;
 
     //To edit Post Processing effects through code
     //you need to have setting variables that you edit
@@ -80,30 +80,10 @@ public class AnxietyUI : MonoBehaviour {
         sinWave += .001f;*/
 	}
 
-    /*IEnumerator flickering()
-    {
-        yield return new WaitForEndOfFrame();
-        float randomAmount = Random.Range(-.08f, .08f);
-        float randomSpeed = Random.Range(.3f, .8f);
-        int counter = 0;
-        for(;flickerAmount != randomAmount;)
-        {
-            flickerAmount = Mathf.Lerp(flickerAmount, randomAmount, randomSpeed);
-            yield return new WaitForEndOfFrame();
-            counter++;
-            if(counter > 9)
-            {
-                flickerAmount = randomAmount;
-            }
-            Debug.Log(flickerAmount);
-            //if(flickerAmount +.05f > randomAmount || flickerAmount -.05f < randomAmount)
-        }
-        Debug.Log("finished");
-        StartCoroutine(flickering());
-    }*/
     IEnumerator heartbeatChange()
     {
         yield return new WaitForSecondsRealtime(GameManager.anxiety < 1.8f ? 1.9f - GameManager.anxiety : .1f);
+        aud.PlayOneShot(heartSound, 1f + GameManager.anxiety);
         yield return new WaitForEndOfFrame();
         for(;heartbeat < .03f;)
         {
@@ -117,7 +97,7 @@ public class AnxietyUI : MonoBehaviour {
         yield return new WaitForEndOfFrame();
         for (; heartbeat >0;)
         {
-            heartbeat = Mathf.Lerp(heartbeat, 0, .2f + GameManager.anxiety / 2);
+            heartbeat = Mathf.Lerp(heartbeat, 0, 1f + GameManager.anxiety / 2);
             yield return new WaitForEndOfFrame();
             if (heartbeat < .002f)
             {
@@ -125,6 +105,7 @@ public class AnxietyUI : MonoBehaviour {
             }
         }
         yield return new WaitForSecondsRealtime((GameManager.anxiety < 1.8f ? (1.9f - GameManager.anxiety) / 10 : .01f));
+        aud.PlayOneShot(heartSound, .7f + GameManager.anxiety);
         yield return new WaitForEndOfFrame();
         for (; heartbeat < .03f;)
         {
