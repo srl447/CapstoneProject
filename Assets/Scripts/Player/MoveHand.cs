@@ -12,6 +12,8 @@ public class MoveHand : MonoBehaviour
     bool holding;
     GameObject heldObject;
     public ArrayList viewClothes = new ArrayList();
+    public AudioClip sound1, sound2, sound3;
+    public AudioSource aud;
     // Use this for initialization
     void Start()
     {
@@ -74,6 +76,18 @@ public class MoveHand : MonoBehaviour
     //picks up the clothes, but run as it's own method to not rely on collision
     private void pickup()
     {
+        switch ((int) Mathf.Ceil(Random.Range(0, 3)))
+        {
+            case 1:
+                aud.PlayOneShot(sound1,2);
+                break;
+            case 2:
+                aud.PlayOneShot(sound2,2);
+                break;
+            case 3:
+                aud.PlayOneShot(sound3,2);
+                break;
+        }
         //remove clothes
         for (int i = 0; i < viewClothes.Count; i++)
         {

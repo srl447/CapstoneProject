@@ -10,6 +10,12 @@ public class Movement : MonoBehaviour {
     public bool up, down, left, right, upLeft, downLeft, upRight, downRight, walking;
     public float velocity;
     string[] triggers = new string[6] { "idle", "upIdle", "idleS", "sideWalk", "downWalk", "upWalk"};
+
+    int soundTimer;
+    public AudioClip sound1, sound2, sound3, sound4;
+    public AudioSource aud;
+    int soundCase;
+
 	void Start ()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -119,6 +125,34 @@ public class Movement : MonoBehaviour {
         else
         {
             walking = true;
+            if (soundTimer < 15)
+            {
+                soundTimer++;
+            }
+            else
+            {
+                soundTimer = 0;
+                switch (soundCase)
+                {
+                    case 1:
+                        aud.PlayOneShot(sound1, 1);
+                        break;
+                    case 2:
+                        aud.PlayOneShot(sound2, 1);
+                        break;
+                    case 3:
+                        aud.PlayOneShot(sound3, 1);
+                        break;
+                    case 4:
+                        aud.PlayOneShot(sound4, 1);
+                        break;
+                }
+                soundCase++;
+                if(soundCase > 4)
+                {
+                    soundCase = 0;
+                }
+            }
         }
     }
 
