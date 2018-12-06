@@ -19,7 +19,7 @@ public class Losing : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(GameManager.anxiety > 1.6f)
+        if(GameManager.anxiety > 1.6f && !GameManager.cantLoose)
         {
             GetComponent<ThoughtText>().enabled = false;
             if (fade.color.a < 1)

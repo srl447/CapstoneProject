@@ -51,7 +51,7 @@ public class ThoughtText : MonoBehaviour {
     {
         //sets text based on hitting certain areas 
         //such as store entrance
-        if (other.gameObject.GetComponent<ThoughtZone>() != null && !GameManager.thinking)
+        if (other.gameObject.GetComponent<ThoughtZone>() != null)
         {
             Node nextThought = new Node();
             nextThought.thoughts = other.GetComponent<ThoughtZone>().thought;

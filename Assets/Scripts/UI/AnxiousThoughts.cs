@@ -10,14 +10,19 @@ public class AnxiousThoughts : MonoBehaviour {
     public ThoughtText tT;
     public bool[] thoughts = new bool[1];
     public Image img;
-    public Sprite[] heads;
+    public Sprite[] head1, head2, head3, head4, head5, head6;
+    Sprite[][] heads;
     public AudioClip[] lines;
+    bool blink;
+    int index, counter;
+
 	// Use this for initialization
 	void Start ()
     {
         pC = GetComponent<PickupClothes>();
+        heads = new Sprite[][]{head1,head2,head3,head4,head5,head6};
         //No thoughts have been thunk
-		for(int i = 0; i < thoughts.Length; i++)
+        for (int i = 0; i < thoughts.Length; i++)
         {
             thoughts[i] = false;
         }
@@ -38,7 +43,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.voiceLine = lines[0];
             tT.add(newThought);
             thoughts[0] = true;
-            img.sprite = heads[0];
+            img.sprite = heads[0][0];
 
         }
         if (gS.anx > .3 && !thoughts[1])
@@ -49,7 +54,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.voiceLine = lines[1];
             tT.add(newThought);
             thoughts[1] = true;
-            img.sprite = heads[1];
+            img.sprite = heads[1][0];
 
         }
         if (gS.anx > .6 && !thoughts[2])
@@ -60,7 +65,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.thoughtTime = 2;
             tT.add(newThought);
             thoughts[2] = true;
-            img.sprite = heads[2];
+            img.sprite = heads[2][0];
 
         }
         if (gS.anx > .64 && !thoughts[5])
@@ -71,7 +76,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.thoughtTime = 2;
             tT.add(newThought);
             thoughts[5] = true;
-            img.sprite = heads[2];
+            img.sprite = heads[5][0];
 
         }
         if (gS.anx > .8 && ! thoughts[4])
@@ -79,7 +84,7 @@ public class AnxiousThoughts : MonoBehaviour {
             Node newThought= new Node("You need to stay calm Kril, pretend like no one's around", 4,lines[4]);
             tT.add(newThought);
             thoughts[4] = true;
-            img.sprite = heads[4];
+            img.sprite = heads[4][0];
         }
         if(gS.anx > 1.2 && !thoughts[3])
         {
@@ -87,7 +92,17 @@ public class AnxiousThoughts : MonoBehaviour {
             tT.add(badEnd);
             thoughts[3] = true;
             pC.enabled = false;
-            img.sprite = heads[3];
+            img.sprite = heads[3][0];
+        }
+
+        if(Mathf.Floor(Random.Range(0,180)) == 1)
+        {
+            blink = true;
+        }
+
+        if(blink)
+        {
+
         }
     }
 }

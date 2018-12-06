@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public static ArrayList clothes = new ArrayList();
-    public static bool thinking;
     public static float anxiety;
+    public static bool cantLoose = false;
 
 
     public static bool holding;
