@@ -29,6 +29,12 @@ public class RegisterThoughts : MonoBehaviour {
     }
     IEnumerator Conversation()
     {
+        Vector3 oldPos = GetComponent<RectTransform>().position;
+        for (int i = 0; i < 8; i++)
+        {
+            yield return new WaitForEndOfFrame();
+            GetComponent<RectTransform>().position = new Vector3(GetComponent<RectTransform>().position.x, Mathf.Lerp(GetComponent<RectTransform>().position.y, oldPos.y - 300, .1f), GetComponent<RectTransform>().position.z);
+        }
         yield return new WaitForEndOfFrame();
         cash.text = "Good Evening";
         player.text = "";
