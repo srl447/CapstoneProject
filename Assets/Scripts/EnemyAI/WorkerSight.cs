@@ -10,6 +10,7 @@ public class WorkerSight : MonoBehaviour {
     public ThoughtText tT;
     public Workers work;
 
+    public RectTransform loc;
 	// Use this for initialization
 	void Start () {
 		
@@ -42,7 +43,7 @@ public class WorkerSight : MonoBehaviour {
         for (int i = 0; i < 8; i++)
         {
             yield return new WaitForEndOfFrame();
-            topUI.GetComponent<RectTransform>().position = new Vector3(topUI.GetComponent<RectTransform>().position.x, Mathf.Lerp(topUI.GetComponent<RectTransform>().position.y, oldPos.y - 300, .1f), topUI.GetComponent<RectTransform>().position.z);
+            topUI.GetComponent<RectTransform>().position = new Vector3(topUI.GetComponent<RectTransform>().position.x, Mathf.Lerp(topUI.GetComponent<RectTransform>().position.y, loc.position.y, .1f), topUI.GetComponent<RectTransform>().position.z);
 
         }
         for (; tT.current.nextNode != null;)
