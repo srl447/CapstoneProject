@@ -70,7 +70,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.voiceLine = lines[5];
             newThought.thoughtTime = 2;
             tT.add(newThought);
-            thoughts[2] = true;
+            thoughts[5] = true;
             img.sprite = heads[2];
 
         }
