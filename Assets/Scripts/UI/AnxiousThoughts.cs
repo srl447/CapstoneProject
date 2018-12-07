@@ -69,7 +69,7 @@ public class AnxiousThoughts : MonoBehaviour {
             index = 2;
 
         }
-        if (gS.anx > .64 && !thoughts[5])
+        if (gS.anx > .7467 && !thoughts[5])
         {
             Node newThought = new Node();
             newThought.thoughts = "I hate it, I hate it, I hate it";
@@ -80,7 +80,7 @@ public class AnxiousThoughts : MonoBehaviour {
             index = 5;
 
         }
-        if (gS.anx > .8 && ! thoughts[4])
+        if (gS.anx > .9 && ! thoughts[4])
         {
             Node newThought= new Node("You need to stay calm Kril, pretend like no one's around", 4,lines[4]);
             tT.add(newThought);

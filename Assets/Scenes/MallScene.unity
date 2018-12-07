@@ -958,27 +958,27 @@ Prefab:
     - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
         type: 2}
       propertyPath: head2.Array.size
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
         type: 2}
       propertyPath: head3.Array.size
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
         type: 2}
       propertyPath: head4.Array.size
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
         type: 2}
       propertyPath: head5.Array.size
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
         type: 2}
       propertyPath: head6.Array.size
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
         type: 2}
@@ -1259,6 +1259,162 @@ Prefab:
       propertyPath: head1.Array.data[6]
       value: 
       objectReference: {fileID: 21300000, guid: cfb0f6ed207241a469dd07d3ff215c3a,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head2.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d81eeadfbe6ed74e9ecc06ca555666c,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head2.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 61e4e6ef812320f47a8c7926435060c1,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head2.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0d118d7d79e6c5848894127bc523d302,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head2.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 61e4e6ef812320f47a8c7926435060c1,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head2.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d81eeadfbe6ed74e9ecc06ca555666c,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head2.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: b65324e2851f1c24495c9412ca4d7201,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head3.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34676004ff892b64592f59a476f13aad,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head3.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 58243d912e58be94e8c3a005e7a70f37,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head3.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 016fbfefca97096449c0c54a24d498f7,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head3.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 58243d912e58be94e8c3a005e7a70f37,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head3.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34676004ff892b64592f59a476f13aad,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head4.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9913612bf1d1f2d4896b5dcc48004d1e,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head4.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ad8c604d9eb49e4aa375abdc36d045d,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head4.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b4ec50683ffbd34aa09f2099303157b,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head4.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ad8c604d9eb49e4aa375abdc36d045d,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head4.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9913612bf1d1f2d4896b5dcc48004d1e,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head5.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f5652f7effcb19f499610758012ebac0,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head5.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: f5652f7effcb19f499610758012ebac0,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head5.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: f5652f7effcb19f499610758012ebac0,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head5.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: f5652f7effcb19f499610758012ebac0,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head5.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: f5652f7effcb19f499610758012ebac0,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head6.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 44d026e84cf04f24d9ef23aef1cbe878,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head6.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 44d026e84cf04f24d9ef23aef1cbe878,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head6.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 44d026e84cf04f24d9ef23aef1cbe878,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head6.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 44d026e84cf04f24d9ef23aef1cbe878,
+        type: 3}
+    - target: {fileID: 114722368104766260, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: head6.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 44d026e84cf04f24d9ef23aef1cbe878,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
