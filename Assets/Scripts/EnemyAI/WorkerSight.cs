@@ -10,6 +10,8 @@ public class WorkerSight : MonoBehaviour {
     public ThoughtText tT;
     public Workers work;
 
+    bool canTalk = true;
+
     public RectTransform loc;
 	// Use this for initialization
 	void Start () {
@@ -23,7 +25,7 @@ public class WorkerSight : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" && canTalk)
         {
             collision.gameObject.GetComponent<Movement>().up = false;
             collision.gameObject.GetComponent<Movement>().left = false;
@@ -34,6 +36,7 @@ public class WorkerSight : MonoBehaviour {
             topUI.SetActive(true);
             work.enabled = false;
             StartCoroutine(Convo(collision.gameObject));
+            canTalk = false;
         }
     }
 
@@ -81,5 +84,7 @@ public class WorkerSight : MonoBehaviour {
         topUI.SetActive(false);
         work.enabled = true;
 
+        yield return new WaitForSecondsRealtime(3);
+        canTalk = true;
     }
 }

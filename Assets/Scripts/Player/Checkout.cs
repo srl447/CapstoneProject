@@ -18,7 +18,6 @@ public class Checkout : MonoBehaviour {
 
     // Use this for initialization
     void Awake() {
-        GameManager.cantLoose = true;
         cart.SetActive(false);
         clothes.SetActive(false);
         tT.enabled = false;

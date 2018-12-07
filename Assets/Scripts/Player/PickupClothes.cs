@@ -86,7 +86,8 @@ public class PickupClothes : MonoBehaviour
                 check.clothSet = clothSet;
                 checkOut.SetActive(true);
                 mH.checkout = true;
-                if(collision.gameObject.tag == "Counter")
+                GameManager.cantLoose = true;
+                if (collision.gameObject.tag == "Counter")
                 {
                     Debug.Log("1");
                     checkOut.GetComponentInChildren<Checkout>().rT.enabled = true;
