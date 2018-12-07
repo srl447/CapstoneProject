@@ -104,7 +104,8 @@ public class AnxiousThoughts : MonoBehaviour {
         if(blink)
         {
             counter++;
-            if (index2 < thoughts.GetLength(index) - 1 && counter > 3)
+            //Debug.Log(heads.GetLength(index));
+            if (index2 < 5 && counter > 3)
             {
                 index2++;
                 counter = 0;
