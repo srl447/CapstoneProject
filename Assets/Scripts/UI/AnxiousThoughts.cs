@@ -14,7 +14,7 @@ public class AnxiousThoughts : MonoBehaviour {
     Sprite[][] heads;
     public AudioClip[] lines;
     bool blink;
-    int index, counter;
+    int index, index2,counter;
 
 	// Use this for initialization
 	void Start ()
@@ -35,6 +35,7 @@ public class AnxiousThoughts : MonoBehaviour {
         //when anxiety reaches a certain point a new thought will be displayed
         //and then never displayed again
         //the array of bools keeps track of this
+        img.sprite = heads[index][index2];
         if (gS.anx > 0 && !thoughts[0])
         {
             Node newThought = new Node();
@@ -43,7 +44,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.voiceLine = lines[0];
             tT.add(newThought);
             thoughts[0] = true;
-            img.sprite = heads[0][0];
+            index = 0;
 
         }
         if (gS.anx > .3 && !thoughts[1])
@@ -54,7 +55,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.voiceLine = lines[1];
             tT.add(newThought);
             thoughts[1] = true;
-            img.sprite = heads[1][0];
+            index = 1;
 
         }
         if (gS.anx > .6 && !thoughts[2])
@@ -65,7 +66,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.thoughtTime = 2;
             tT.add(newThought);
             thoughts[2] = true;
-            img.sprite = heads[2][0];
+            index = 2;
 
         }
         if (gS.anx > .64 && !thoughts[5])
@@ -76,7 +77,7 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.thoughtTime = 2;
             tT.add(newThought);
             thoughts[5] = true;
-            img.sprite = heads[5][0];
+            index = 5;
 
         }
         if (gS.anx > .8 && ! thoughts[4])
@@ -84,7 +85,7 @@ public class AnxiousThoughts : MonoBehaviour {
             Node newThought= new Node("You need to stay calm Kril, pretend like no one's around", 4,lines[4]);
             tT.add(newThought);
             thoughts[4] = true;
-            img.sprite = heads[4][0];
+            index = 4;
         }
         if(gS.anx > 1.2 && !thoughts[3])
         {
@@ -92,7 +93,7 @@ public class AnxiousThoughts : MonoBehaviour {
             tT.add(badEnd);
             thoughts[3] = true;
             pC.enabled = false;
-            img.sprite = heads[3][0];
+            index = 3;
         }
 
         if(Mathf.Floor(Random.Range(0,180)) == 1)
@@ -102,7 +103,17 @@ public class AnxiousThoughts : MonoBehaviour {
 
         if(blink)
         {
-
+            counter++;
+            if (index2 < thoughts.GetLength(index) - 1 && counter > 3)
+            {
+                index2++;
+                counter = 0;
+            }
+            else if (counter > 3)
+            {
+                index2 = 0;
+                blink = false;
+            }
         }
     }
 }
