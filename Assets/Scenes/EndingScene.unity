@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 1129594228}
   - component: {fileID: 1129594227}
   m_Layer: 5
-  m_Name: Credits6
+  m_Name: Credits 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
