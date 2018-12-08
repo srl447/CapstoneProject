@@ -13,6 +13,9 @@ TagManager:
   - ClothesZone
   - Counter2
   - Counter3
+  - 1sides
+  - Sides
+  - Outside
   layers:
   - Default
   - TransparentFX

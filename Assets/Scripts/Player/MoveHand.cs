@@ -14,6 +14,8 @@ public class MoveHand : MonoBehaviour
     public ArrayList viewClothes = new ArrayList();
     public AudioClip sound1, sound2, sound3;
     public AudioSource aud;
+
+    public string type;
     // Use this for initialization
     void Start()
     {
@@ -41,7 +43,16 @@ public class MoveHand : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Mouse1) && clothesScreen.activeSelf)
         {
-            pickup();
+            //remove clothes
+            for (int i = 0; i < viewClothes.Count; i++)
+            {
+                Destroy((GameObject)viewClothes[i]);
+                viewClothes.Remove(i);
+            }
+            //allow the player to move again
+            clothesScreen.SetActive(false);
+            playerMovement.enabled = true;
+            StartCoroutine(clothDelay());
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -54,8 +65,33 @@ public class MoveHand : MonoBehaviour
                 GameObject newCloth = Instantiate(collision.gameObject) as GameObject;
                 newCloth.SetActive(false);
                 GameManager.clothes.Add(newCloth);
-                
+
                 pickup();
+            }
+            else if (collision.gameObject.tag == "Sides")
+            {
+                for (int i = 0; i < viewClothes.Count; i++)
+                {
+                    Destroy((GameObject)viewClothes[i]);
+                    viewClothes.Remove(i);
+                }
+                foreach (ClothesSpawner c in playerPickup.cS)
+                {
+                     c.Spawn();
+                }
+            }
+            else if (collision.gameObject.tag == "Outside")
+            {
+                //remove clothes
+                for (int i = 0; i < viewClothes.Count; i++)
+                {
+                    Destroy((GameObject)viewClothes[i]);
+                    viewClothes.Remove(i);
+                }
+                //allow the player to move again
+                clothesScreen.SetActive(false);
+                playerMovement.enabled = true;
+                StartCoroutine(clothDelay());
             }
             else
             {

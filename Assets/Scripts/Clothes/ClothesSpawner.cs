@@ -30,6 +30,7 @@ public class ClothesSpawner : MonoBehaviour {
             float randScale = Random.Range(1f, 1.3f);
             cloth.transform.localScale = new Vector3(randScale, randScale, randScale);
             mH.viewClothes.Add(cloth);
+            mH.type = "Tops";
         }
         //each area have their own kinds of clothes
         else if (player.collidedClothes == "Pants")
