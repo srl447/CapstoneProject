@@ -16,7 +16,7 @@ public class CursorSprite : MonoBehaviour {
 	void Update () {
         if (checkOut.activeSelf || clothes.activeSelf)
         {
-            circle.GetComponent<SpriteRenderer>().enabled = false;
+            circle.SetActive(false);
             if (col)
             {
                 GetComponent<SpriteRenderer>().sprite = grabbyHand;
@@ -29,13 +29,13 @@ public class CursorSprite : MonoBehaviour {
         else
         {
             GetComponent<SpriteRenderer>().sprite = cursor;
-            circle.GetComponent<SpriteRenderer>().enabled = True;
+            circle.SetActive(true);
         }
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Clothes")
+        if (collision.gameObject.tag == "Clothes" || collision.gameObject.tag == "sides")
         {
             col = true;
         }
