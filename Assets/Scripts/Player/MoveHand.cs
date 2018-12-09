@@ -27,7 +27,7 @@ public class MoveHand : MonoBehaviour
     {
         Vector3 pos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0); //get the x and y value
         pos = Camera.main.ScreenToWorldPoint(pos); //convert them to unity space
-        pos = new Vector3(pos.x, pos.y, -9.1f); //push the cursor up infront of the camera
+        pos = new Vector3(pos.x, pos.y, -9.9f); //push the cursor up infront of the camera
         transform.position = pos; //actually move the cursor
 
         if(checkout)

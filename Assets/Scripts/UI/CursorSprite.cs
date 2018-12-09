@@ -35,11 +35,18 @@ public class CursorSprite : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Clothes" || collision.gameObject.tag == "sides")
+        if (collision.gameObject.tag == "Clothes" || collision.gameObject.tag == "Sides")
         {
             col = true;
         }
         else
+        {
+            col = false;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Clothes" || collision.gameObject.tag == "Sides")
         {
             col = false;
         }
