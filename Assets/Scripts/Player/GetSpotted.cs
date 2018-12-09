@@ -5,7 +5,7 @@ using UnityEngine.PostProcessing;
 
 public class GetSpotted : MonoBehaviour {
 
-    public float enemyPow, cashPow;
+    public float enemyPow, cashPow, workPow;
     public float aZ1Pow;
     public float anx;
     public AnxietyUI aUI;
@@ -44,6 +44,10 @@ public class GetSpotted : MonoBehaviour {
         {
             anx += cashPow;
             aUI.extravig = Mathf.Lerp(aUI.extravig, -.1f, .3f);
+        }
+        if(collision.gameObject.tag == "WorkSight")
+        {
+            anx += workPow;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WorkerSight : MonoBehaviour {
+public class WorkerSight2 : MonoBehaviour {
 
     public GameObject topUI;
     public Text helpText;
@@ -13,19 +13,21 @@ public class WorkerSight : MonoBehaviour {
     bool canTalk = true;
 
     public RectTransform loc;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" && canTalk)
+        if (collision.gameObject.tag == "Player" && canTalk)
         {
             collision.gameObject.GetComponent<Movement>().up = false;
             collision.gameObject.GetComponent<Movement>().left = false;
@@ -54,25 +56,23 @@ public class WorkerSight : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         tT.add(new Node(" ", .2f));
-        tT.add(new Node("nothing im fine", 1.4f));
-        tT.add(new Node(" ", 4));
-        tT.add(new Node("   thanks.", 1));
+        tT.add(new Node("just looking", 1.4f));
+        tT.add(new Node(" ", 3));
+        tT.add(new Node("thank you...", 1));
         tT.add(new Node(" ", 1));
         yield return new WaitForEndOfFrame();
         Vector3 dir = player.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
         transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        helpText.text = "Hello Sir! Can I help you at all today?";
+        helpText.text = "Excuse me Mister, are you looking for the men's section?";
         yield return new WaitForSecondsRealtime(2);
         helpText.text = "";
         yield return new WaitForSecondsRealtime(1.4f);
-        helpText.text = "The man's section on the right. You shouldn't care about the rest.";
-        yield return new WaitForSecondsRealtime(2);
-        helpText.text = " Fitting Rooms and Bathrooms are in the back";
+        helpText.text = "Oh the bathrooms and fitting rooms are in the back";
         yield return new WaitForSecondsRealtime(2);
         helpText.text = "";
         yield return new WaitForSecondsRealtime(1);
-        helpText.text = "If you need anything else, just ask...";
+        helpText.text = "No problem sir, anything for our customers.";
         yield return new WaitForSecondsRealtime(1);
         for (int i = 0; i < 8; i++)
         {

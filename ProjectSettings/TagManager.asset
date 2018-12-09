@@ -16,6 +16,7 @@ TagManager:
   - 1sides
   - Sides
   - Outside
+  - WorkSight
   layers:
   - Default
   - TransparentFX

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RegisterThoughts2 : MonoBehaviour
-{
+public class RegisterThoughts : MonoBehaviour {
 
     public Text cash;
     public Text player;
@@ -12,19 +11,15 @@ public class RegisterThoughts2 : MonoBehaviour
     public bool end = false;
     bool endRun = false;
     public bool fin = false;
-    public Image head;
-    public Sprite headSprite;
 
     public RectTransform loc;
 
-    void Awake()
-    {
+    void Awake () {
         if (this.enabled)
         {
             StartCoroutine(Conversation());
-            head.sprite = headSprite;
         }
-    }
+	}
 
     private void Update()
     {
@@ -43,23 +38,17 @@ public class RegisterThoughts2 : MonoBehaviour
             GetComponent<RectTransform>().position = new Vector3(GetComponent<RectTransform>().position.x, Mathf.Lerp(GetComponent<RectTransform>().position.y, loc.position.y, .1f), GetComponent<RectTransform>().position.z);
         }
         yield return new WaitForEndOfFrame();
-        cash.text = "Hello, do you have a store card with us";
+        cash.text = "Good Evening";
         player.text = "";
-        yield return new WaitForSecondsRealtime(4);
-        player.text = "      no";
+        yield return new WaitForSecondsRealtime(3);
+        player.text = "      hi";
         cash.text = "";
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
-        cash.text = "Oh are these for your girlfriend?";
-        yield return new WaitForSecondsRealtime(5);
+        cash.text = "Did you find everything alright?";
+        yield return new WaitForSecondsRealtime(3);
         cash.text = "";
-        player.text = "yeah sure";
-        yield return new WaitForSecondsRealtime(1);
-        player.text = "";
-        cash.text = "Oh good I wouldn't want you to be with one of those creeps who wears women's clothes";
-        yield return new WaitForSecondsRealtime(2);
-        cash.text = "";
-        player.text = "haha yea";
+        player.text = "...";
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
         introDone = true;
@@ -80,5 +69,5 @@ public class RegisterThoughts2 : MonoBehaviour
         fin = true;
 
     }
-
+	
 }
