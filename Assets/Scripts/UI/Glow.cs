@@ -20,12 +20,12 @@ public class Glow : MonoBehaviour {
         if(anxLastFrame < GameManager.anxiety)
         {
             if (glow.color.a < 1)
-                glow.color += new Color(0f,0f,0f,.2f);
+                glow.color += new Color(0f,0f,0f,.15f);
         }
         else
         {
             if (glow.color.a > 0)
-                glow.color -= new Color(0f, 0f, 0f, .2f);
+                glow.color -= new Color(0f, 0f, 0f, .15f);
         }
         anxLastFrame = GameManager.anxiety;
     }
