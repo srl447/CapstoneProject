@@ -68,7 +68,7 @@ public class WorkerSight : MonoBehaviour {
         yield return new WaitForSecondsRealtime(1.4f);
         helpText.text = "The man's section on the right. You shouldn't care about the rest.";
         yield return new WaitForSecondsRealtime(2);
-        helpText.text = " Fitting Rooms and Bathrooms are in the back";
+        helpText.text = "Fitting Rooms and Bathrooms are in the back";
         yield return new WaitForSecondsRealtime(2);
         helpText.text = "";
         yield return new WaitForSecondsRealtime(1);

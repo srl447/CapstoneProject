@@ -75,7 +75,7 @@ public class RegisterThoughts2 : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         player.text = "";
         yield return new WaitForSecondsRealtime(4f);
-        cash.text = "Here you go, have a nice day!";
+        cash.text = "Here's your stuff";
         yield return new WaitForSecondsRealtime(2f);
         fin = true;
 
