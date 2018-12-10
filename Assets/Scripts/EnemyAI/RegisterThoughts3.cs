@@ -68,7 +68,7 @@ public class RegisterThoughts3 : MonoBehaviour
     IEnumerator endConvo()
     {
         yield return new WaitForEndOfFrame();
-        cash.text = "Will that be cash or card?";
+        cash.text = "Will you pay with cash or card?";
         yield return new WaitForSecondsRealtime(2);
         cash.text = "";
         player.text = "card";

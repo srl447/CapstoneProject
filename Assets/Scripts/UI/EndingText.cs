@@ -39,7 +39,6 @@ public class EndingText : MonoBehaviour {
             yield return new WaitForSecondsRealtime(.3f);
             GameManager.clothes = new ArrayList();
             StartCoroutine(Credits());
-            //SceneManager.LoadScene(0);
         }
         else
         {
@@ -65,68 +64,104 @@ public class EndingText : MonoBehaviour {
             credits[0].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(3f);
         for (; credits[0].GetComponent<Image>().color.a > 0;)
         {
             credits[0].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(.4f);
+        yield return new WaitForSecondsRealtime(.6f);
         for (; credits[1].GetComponent<Image>().color.a < 1;)
         {
             credits[1].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
             credits[2].GetComponent<Text>().color += new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(3f);
         for (; credits[1].GetComponent<Image>().color.a > 0;)
         {
             credits[1].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
             credits[2].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(.4f);
+        yield return new WaitForSecondsRealtime(.6f);
         for (; credits[3].GetComponent<Image>().color.a < 1;)
         {
             credits[3].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
             credits[4].GetComponent<Text>().color += new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(3f);
         for (; credits[3].GetComponent<Image>().color.a > 0;)
         {
             credits[3].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
             credits[4].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(.4f);
+        yield return new WaitForSecondsRealtime(.6f);
         for (; credits[5].GetComponent<Image>().color.a < 1;)
         {
             credits[5].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
             credits[6].GetComponent<Text>().color += new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(3f);
         for (; credits[5].GetComponent<Image>().color.a > 0;)
         {
             credits[5].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
             credits[6].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(.4f);
+        yield return new WaitForSecondsRealtime(.6f);
         for (; credits[7].GetComponent<Image>().color.a < 1;)
         {
             credits[7].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
+            credits[9].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
             credits[8].GetComponent<Text>().color += new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(3f);
         for (; credits[7].GetComponent<Image>().color.a > 0;)
         {
             credits[7].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
+            credits[9].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
             credits[8].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
+        yield return new WaitForSecondsRealtime(.6f);
+        for (; credits[10].GetComponent<Image>().color.a < 1;)
+        {
+            credits[10].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
+            credits[11].GetComponent<Text>().color += new Color(0f, 0f, 0f, .22f);
+            credits[12].GetComponent<Text>().color += new Color(0f, 0f, 0f, .22f);
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSecondsRealtime(3f);
+        for (; credits[10].GetComponent<Image>().color.a > 0;)
+        {
+            credits[10].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
+            credits[11].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
+            credits[12].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSecondsRealtime(.6f);
+        for (; credits[13].GetComponent<Image>().color.a < 1;)
+        {
+            credits[13].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
+            credits[14].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
+            credits[15].GetComponent<Text>().color += new Color(0f, 0f, 0f, .22f);
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSecondsRealtime(5f);
+        for (; credits[13].GetComponent<Image>().color.a > 0;)
+        {
+            credits[13].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
+            credits[14].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
+            credits[15].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSecondsRealtime(.2f);
+        SceneManager.LoadScene(0);
 
     }
 }
