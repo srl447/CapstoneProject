@@ -60,7 +60,7 @@ public class Leaving : MonoBehaviour {
             {
                 DontDestroyOnLoad(g);
             }
-            SceneManager.LoadScene(1);
+            StartCoroutine(FadeLeave());
         }
         else if (collision.gameObject.tag == "Exit" && gS.anx > 1.5)
         {
