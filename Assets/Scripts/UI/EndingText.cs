@@ -7,12 +7,16 @@ using UnityEngine.SceneManagement;
 public class EndingText : MonoBehaviour {
 
     string[] words = {"I wish I could wear these clothes.", "The world's a scary place.", "But I love these clothes", "Because they are mine!" };
+    public AudioClip[] lines;
     public GameObject[] credits;
     public Text final;
     public int wordIndex = 0;
+
+    AudioSource aud;
     // Use this for initialization
     void Start ()
     {
+        aud = this.GetComponent<AudioSource>();
         final.text = words[0];
         StartCoroutine(TextFades());
         GameManager.clothes = new ArrayList();
@@ -25,6 +29,7 @@ public class EndingText : MonoBehaviour {
 
     IEnumerator TextFades()
     {
+        aud.PlayOneShot(lines[wordIndex]);
         yield return new WaitForSecondsRealtime(2);
         for(int i = 0; i < 10; i++)
         { 
