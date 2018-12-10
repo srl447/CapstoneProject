@@ -5975,6 +5975,13 @@ MonoBehaviour:
   tT: {fileID: 25711156}
   work: {fileID: 1244822234}
   loc: {fileID: 1295641306}
+  tessLines:
+  - {fileID: 8300000, guid: 97fbce49d71df9a4bba299762911df7b, type: 3}
+  - {fileID: 8300000, guid: c5c540e30e571504abed76c4b2bab8b5, type: 3}
+  workLines:
+  - {fileID: 8300000, guid: 7b14c70317290d4489f2b2eaa706067d, type: 3}
+  - {fileID: 8300000, guid: 2cd71b3435ec5b549946a848432d6273, type: 3}
+  - {fileID: 8300000, guid: f98d69b129bed094598cfd994761ef15, type: 3}
 --- !u!60 &724814841
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9916,7 +9923,7 @@ GameObject:
   - component: {fileID: 1244822234}
   - component: {fileID: 1244822233}
   m_Layer: 0
-  m_Name: Worker1 (1)
+  m_Name: Worker2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12891,6 +12898,7 @@ GameObject:
   - component: {fileID: 1688357402}
   - component: {fileID: 1688357401}
   - component: {fileID: 1688357400}
+  - component: {fileID: 1688357403}
   m_Layer: 10
   m_Name: visioncones
   m_TagString: WorkSight
@@ -12927,6 +12935,14 @@ MonoBehaviour:
   tT: {fileID: 25711156}
   work: {fileID: 569163512}
   loc: {fileID: 1295641306}
+  tessLines:
+  - {fileID: 8300000, guid: 66d1e47a17f0abd4d9c5186020eb2904, type: 3}
+  - {fileID: 8300000, guid: 062a61b5208b0a845b523efd248bc119, type: 3}
+  workLines:
+  - {fileID: 8300000, guid: 7b14c70317290d4489f2b2eaa706067d, type: 3}
+  - {fileID: 8300000, guid: c3d2609a16c55e347bfc230c04c7d4cb, type: 3}
+  - {fileID: 8300000, guid: 274335ceb36ff3a4aba3dab7bee04da9, type: 3}
+  - {fileID: 8300000, guid: 29e8662e4f3f9ae428b5a1d17e006eb5, type: 3}
 --- !u!60 &1688357401
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13039,6 +13055,101 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!82 &1688357403
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688357398}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1700517066
 GameObject:
   m_ObjectHideFlags: 0

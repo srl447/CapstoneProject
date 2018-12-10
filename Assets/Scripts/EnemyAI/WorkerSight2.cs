@@ -13,10 +13,12 @@ public class WorkerSight2 : MonoBehaviour {
     bool canTalk = true;
 
     public RectTransform loc;
+    public AudioClip[] tessLines, workLines;
+    AudioSource aud;
     // Use this for initialization
     void Start()
     {
-
+        aud = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,23 +58,26 @@ public class WorkerSight2 : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         tT.add(new Node(" ", .2f));
-        tT.add(new Node("just looking", 1.4f));
+        tT.add(new Node("just looking", 1.4f, tessLines[0]));
         tT.add(new Node(" ", 3));
-        tT.add(new Node("thank you...", 1));
+        tT.add(new Node("thank you...", 1, tessLines[1]));
         tT.add(new Node(" ", 1));
         yield return new WaitForEndOfFrame();
         Vector3 dir = player.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
         transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         helpText.text = "Excuse me Mister, are you looking for the men's section?";
+        aud.PlayOneShot(workLines[0]);
         yield return new WaitForSecondsRealtime(2);
         helpText.text = "";
         yield return new WaitForSecondsRealtime(1.4f);
         helpText.text = "Oh the bathrooms and fitting rooms are in the back";
+        aud.PlayOneShot(workLines[1]);
         yield return new WaitForSecondsRealtime(2);
         helpText.text = "";
         yield return new WaitForSecondsRealtime(1);
         helpText.text = "No problem sir, anything for our customers.";
+        aud.PlayOneShot(workLines[2]);
         yield return new WaitForSecondsRealtime(1);
         for (int i = 0; i < 8; i++)
         {

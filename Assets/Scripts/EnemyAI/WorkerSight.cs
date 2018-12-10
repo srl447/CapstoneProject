@@ -17,7 +17,8 @@ public class WorkerSight : MonoBehaviour {
     public AudioClip[] tessLines, workLines;
     AudioSource aud;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         aud = GetComponent<AudioSource>();
 	}
 	
