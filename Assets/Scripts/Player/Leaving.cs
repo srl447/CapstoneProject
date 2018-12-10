@@ -78,4 +78,15 @@ public class Leaving : MonoBehaviour {
             start = true;
         }
     }
+
+    IEnumerator FadeLeave()
+    {
+        yield return new WaitForEndOfFrame();
+        for(;fade.color.a < 1;)
+        {
+            fade.color = new Color(0, 0, 0, fade.color.a + .05f * 2);
+            yield return new WaitForEndOfFrame();
+        }
+        SceneManager.LoadScene(1);
+    }
 }
