@@ -8,6 +8,9 @@ public class Bathrooms : MonoBehaviour {
     public Image fade;
     public Text text;
 
+    public AudioClip[] lines;
+    public AudioSource aud;
+    bool[] played = new bool[3];
     int timer = 0;
     // Use this for initialization
     void Start()
@@ -28,6 +31,11 @@ public class Bathrooms : MonoBehaviour {
             if (timer <= 220)
             {
                 text.text = "As much as I have to go to the bathroom, I cant.";
+                if (!played[0])
+                {
+                    aud.PlayOneShot(lines[0]);
+                    played[0] = true;
+                }
                 if (text.color.a < 1)
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;
@@ -40,6 +48,11 @@ public class Bathrooms : MonoBehaviour {
             else if (timer <= 540)
             {
                 text.text = "What would people think of me?";
+                if (!played[1])
+                {
+                    aud.PlayOneShot(lines[1]);
+                    played[1] = true;
+                }
                 if (text.color.a < 1)
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;
@@ -52,6 +65,11 @@ public class Bathrooms : MonoBehaviour {
             else if (timer <= 720)
             {
                 text.text = "I don't wanna make anyone uncomfortable, so I can just never go";
+                if (!played[2])
+                {
+                    aud.PlayOneShot(lines[2]);
+                    played[2] = true;
+                }
                 if (text.color.a < 1)
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;

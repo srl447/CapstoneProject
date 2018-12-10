@@ -12,6 +12,9 @@ public class RegisterThoughts : MonoBehaviour {
     bool endRun = false;
     public bool fin = false;
 
+    public AudioClip[] lines;
+    public AudioSource aud;
+
     public RectTransform loc;
 
     void Awake () {
@@ -39,18 +42,21 @@ public class RegisterThoughts : MonoBehaviour {
         }
         yield return new WaitForEndOfFrame();
         cash.text = "Good Evening";
-        player.text = "";
+        aud.PlayOneShot(lines[0]);
+        player.text = " ";
         yield return new WaitForSecondsRealtime(3);
         player.text = "      hi";
-        cash.text = "";
+        aud.PlayOneShot(lines[2]);
+        cash.text = " ";
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
         cash.text = "Did you find everything alright?";
+        aud.PlayOneShot(lines[3]);
         yield return new WaitForSecondsRealtime(3);
-        cash.text = "";
+        cash.text = " ";
         player.text = "...";
         yield return new WaitForSecondsRealtime(1);
-        player.text = "";
+        player.text = " ";
         introDone = true;
     }
 
@@ -58,13 +64,16 @@ public class RegisterThoughts : MonoBehaviour {
     {
         yield return new WaitForEndOfFrame();
         cash.text = "Will that be cash or card?";
+        aud.PlayOneShot(lines[4]);
         yield return new WaitForSecondsRealtime(2);
         cash.text = "";
         player.text = "card";
+        aud.PlayOneShot(lines[5]);
         yield return new WaitForSecondsRealtime(1f);
         player.text = "";
         yield return new WaitForSecondsRealtime(4f);
         cash.text = "Here you go, have a nice day!";
+        aud.PlayOneShot(lines[6]);
         yield return new WaitForSecondsRealtime(2f);
         fin = true;
 
