@@ -20,7 +20,7 @@ public class VisionBubble : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "EnemySight")
+        if(collision.gameObject.tag == "EnemySight" || collision.gameObject.tag == "WorkSight")
         {
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
@@ -31,7 +31,7 @@ public class VisionBubble : MonoBehaviour {
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "EnemySight")
+        if (collision.gameObject.tag == "EnemySight" || collision.gameObject.tag == "WorkSight")
         {
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
