@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PersonReact : MonoBehaviour {
 
-    public Sprite sad, happy;
+    public Sprite reallyHappy, happy;
+    int clothes;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,20 +13,22 @@ public class PersonReact : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if(clothes == 1)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = happy;
+        }
+        else if (clothes == 2)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = reallyHappy;
+        }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("colliding");
-        if(collision.gameObject.tag == "Clothes" && (collision.gameObject.transform.localScale.x < 1 || collision.gameObject.transform.localScale.x > 1.3))
+        if (collision.gameObject.tag == "Clothes")
         {
-            GetComponent<SpriteRenderer>().sprite = sad;
+            clothes++;
         }
-        else
-        {
-            GetComponent<SpriteRenderer>().sprite = happy;
-        }
-
     }
 }
