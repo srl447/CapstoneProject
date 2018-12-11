@@ -11,12 +11,20 @@ public class WorkerSight2 : MonoBehaviour {
     public Workers work;
 
     bool canTalk = true;
+    bool talking;
+
+    public Image head;
+    public Sprite headSprite;
+
+
+    GameObject player;
+    Vector3 pos;
 
     public RectTransform loc;
     public AudioClip[] tessLines, workLines;
     AudioSource aud;
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         aud = GetComponent<AudioSource>();
     }
@@ -24,7 +32,10 @@ public class WorkerSight2 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        /*if(talking)
+        {
+            player.transform.position = pos;
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,12 +51,16 @@ public class WorkerSight2 : MonoBehaviour {
             topUI.SetActive(true);
             work.enabled = false;
             StartCoroutine(Convo(collision.gameObject));
+            player = collision.gameObject;
+            pos = player.transform.position;
             canTalk = false;
+            talking = true;
         }
     }
 
     IEnumerator Convo(GameObject player)
     {
+        head.sprite = headSprite;
         Vector3 oldPos = topUI.GetComponent<RectTransform>().position;
         for (int i = 0; i < 8; i++)
         {
@@ -88,6 +103,7 @@ public class WorkerSight2 : MonoBehaviour {
         player.gameObject.GetComponent<Movement>().enabled = true;
         topUI.SetActive(false);
         work.enabled = true;
+        talking = false;
 
         yield return new WaitForSecondsRealtime(3);
         canTalk = true;
