@@ -74,7 +74,7 @@ public class EnemyStare : MonoBehaviour {
         stare = false;
         for(int i = 0; i <= 6; i++)
         {
-            shopper.transform.eulerAngles = Vector3.Slerp(shopper.transform.eulerAngles, origin, .2f);
+            shopper.transform.eulerAngles = Vector3.Slerp(shopper.transform.eulerAngles, origin, .25f);
             yield return new WaitForEndOfFrame();
         }
         shopper.transform.eulerAngles = origin;

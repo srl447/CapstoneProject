@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Dressing.unity
     guid: 421bff334a26d3d4488c18ad1514828e
   - enabled: 1
-    path: Assets/Scenes/MallScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MallFinal.unity
+    guid: 750a972245847804e8ec4a6e9fa7b0b5
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
     guid: 90c1e032f0615c74d8d833db01b10d82
+  - enabled: 0
+    path: Assets/Scenes/MallScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

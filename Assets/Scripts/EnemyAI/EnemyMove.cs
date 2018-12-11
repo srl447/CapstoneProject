@@ -7,9 +7,12 @@ public class EnemyMove : MonoBehaviour {
     public float time;
     public float stallTime;
     public Vector3 dir;
+    Quaternion facing, facing2;
 	// Use this for initialization
-	void Awake ()
+	void Start ()
     {
+        facing = this.transform.rotation;
+        facing2 = this.transform.rotation * new Quaternion(0, 0, 1, 0);
         StartCoroutine(SwitchDir());
     }
 	
@@ -17,6 +20,7 @@ public class EnemyMove : MonoBehaviour {
 	void FixedUpdate ()
     {
         this.GetComponent<Rigidbody2D>().MovePosition(transform.position+dir);
+        //this.transform.rotation = Quaternion.AngleAxis(transform.rotation.z, dir);
 	}
 
     public IEnumerator SwitchDir()
@@ -25,7 +29,14 @@ public class EnemyMove : MonoBehaviour {
         Vector3 nextDir = dir * -1;
         dir = new Vector3(0,0,0);
         yield return new WaitForSecondsRealtime(stallTime);
-        transform.eulerAngles = transform.eulerAngles + new Vector3(0,0,180f);
+        if(this.transform.rotation == facing)
+        {
+            this.transform.rotation= facing2;
+        }
+        else
+        {
+            this.transform.rotation = facing;
+        }
         dir = nextDir;
         StartCoroutine(SwitchDir());
     }
