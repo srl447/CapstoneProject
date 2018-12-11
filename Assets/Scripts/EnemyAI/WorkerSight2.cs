@@ -76,7 +76,7 @@ public class WorkerSight2 : MonoBehaviour {
         tT.add(new Node("just looking", 1.4f, tessLines[0]));
         tT.add(new Node(" ", 3));
         tT.add(new Node("thank you...", 1, tessLines[1]));
-        tT.add(new Node(" ", 1));
+        tT.add(new Node(" ", 2));
         yield return new WaitForEndOfFrame();
         Vector3 dir = player.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
