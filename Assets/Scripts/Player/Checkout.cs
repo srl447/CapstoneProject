@@ -21,6 +21,7 @@ public class Checkout : MonoBehaviour {
         cart.SetActive(false);
         clothes.SetActive(false);
         tT.enabled = false;
+        aT.img.sprite = aT.heads[aT.index][0];
         aT.enabled = false;
         foreach (GameObject c in clothSet)
         {

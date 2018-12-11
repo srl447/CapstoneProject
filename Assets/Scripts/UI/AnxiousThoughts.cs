@@ -11,10 +11,10 @@ public class AnxiousThoughts : MonoBehaviour {
     public bool[] thoughts = new bool[1];
     public Image img;
     public Sprite[] head1, head2, head3, head4, head5, head6;
-    Sprite[][] heads;
+    public Sprite[][] heads;
     public AudioClip[] lines;
     bool blink;
-    int index, index2,counter;
+    public int index, index2,counter;
 
 	// Use this for initialization
 	void Start ()
