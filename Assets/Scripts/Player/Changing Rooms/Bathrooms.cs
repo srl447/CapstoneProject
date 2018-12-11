@@ -45,7 +45,7 @@ public class Bathrooms : MonoBehaviour {
                 text.color = new Color(255, 255, 255, (text.color.a) / 2);
                 timer++;
             }
-            else if (timer <= 540)
+            else if (timer <= 390)
             {
                 text.text = "What would people think of me?";
                 if (!played[1])
@@ -57,14 +57,14 @@ public class Bathrooms : MonoBehaviour {
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;
             }
-            else if (timer <= 560)
+            else if (timer <= 410)
             {
                 text.color = new Color(255, 255, 255, (text.color.a) / 2);
                 timer++;
             }
-            else if (timer <= 720)
+            else if (timer <= 700)
             {
-                text.text = "I don't wanna make anyone uncomfortable, so I can just never go";
+                text.text = "I don't wanna make anyone uncomfortable, so I can never go";
                 if (!played[2])
                 {
                     aud.PlayOneShot(lines[2]);
@@ -74,7 +74,7 @@ public class Bathrooms : MonoBehaviour {
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;
             }
-            else if (timer <= 740)
+            else if (timer <= 720)
             {
                 text.color = new Color(255, 255, 255, (text.color.a) / 2);
                 timer++;
