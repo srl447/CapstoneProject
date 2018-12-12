@@ -38,7 +38,7 @@ public class MoveHand : MonoBehaviour
             }
             if (holding)
             {
-                heldObject.transform.position = this.transform.position;
+                heldObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, heldObject.transform.position.z);
             }
         }
         if(Input.GetKeyDown(KeyCode.Mouse1) && clothesScreen.activeSelf)

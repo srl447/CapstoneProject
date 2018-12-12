@@ -12,7 +12,7 @@ public class clothesRemove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (SceneManager.GetActiveScene().name == "MallScene")
+        if (SceneManager.GetActiveScene().name == "MallFinal")
         {
             if(!GameObject.Find("buying clothes screen") && !GameObject.Find("CheckOut"))
             {

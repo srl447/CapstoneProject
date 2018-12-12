@@ -45,6 +45,7 @@ public class Checkout : MonoBehaviour {
             foreach (GameObject c in clothSet)
             {
                 c.SetActive(false);
+                c.GetComponent<SpriteRenderer>().enabled = false;
             }
             counterScreen.SetActive(false);
            // Debug.Log("step 2");

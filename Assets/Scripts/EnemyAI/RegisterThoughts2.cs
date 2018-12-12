@@ -50,7 +50,7 @@ public class RegisterThoughts2 : MonoBehaviour
         cash.text = "Hello, do you have a store card with us";
         aud.PlayOneShot(lines[0]);
         player.text = "";
-        yield return new WaitForSecondsRealtime(4);
+        yield return new WaitForSecondsRealtime(3);
         player.text = "      no";
         aud.PlayOneShot(lines[1]);
         cash.text = "";
@@ -58,7 +58,7 @@ public class RegisterThoughts2 : MonoBehaviour
         player.text = "";
         cash.text = "Oh are these for your girlfriend?";
         aud.PlayOneShot(lines[2]);
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(3);
         cash.text = "";
         player.text = "yeah sure";
         aud.PlayOneShot(lines[3]);
@@ -66,7 +66,7 @@ public class RegisterThoughts2 : MonoBehaviour
         player.text = "";
         cash.text = "Oh good I hate those creeps who wears women's clothes";
         aud.PlayOneShot(lines[4]);
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(3);
         cash.text = "";
         player.text = "haha yea";
         aud.PlayOneShot(lines[5]);
@@ -86,7 +86,7 @@ public class RegisterThoughts2 : MonoBehaviour
         aud.PlayOneShot(lines[7]);
         yield return new WaitForSecondsRealtime(1f);
         player.text = "";
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSecondsRealtime(2f);
         cash.text = "Here's your stuff";
         aud.PlayOneShot(lines[8]);
         yield return new WaitForSecondsRealtime(2f);

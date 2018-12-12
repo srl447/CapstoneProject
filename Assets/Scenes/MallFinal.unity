@@ -954,6 +954,11 @@ Prefab:
       propertyPath: clothesThoughts.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 5d1c05a4da1add04ca291d0a51dff9d4, type: 3}
+    - target: {fileID: 114852881517069290, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: cart
+      value: 
+      objectReference: {fileID: 566284598}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
   m_IsPrefabParent: 0
@@ -3602,7 +3607,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 442810093}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65645d080c71ed24194e21ad234b715b, type: 3}
   m_Name: 
@@ -3610,7 +3615,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 2142353121}
   - {fileID: 1443752704}
-  - {fileID: 0}
+  - {fileID: 806863963}
   - {fileID: 807327861}
 --- !u!1 &448855231
 GameObject:
@@ -4739,7 +4744,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 566284598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.43, y: -0.66, z: -1.87}
+  m_LocalPosition: {x: 1.43, y: -0.66, z: -1.3}
   m_LocalScale: {x: 0.6549507, y: 0.6618576, z: 1}
   m_Children: []
   m_Father: {fileID: 178147123}
@@ -6453,6 +6458,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &806863963 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1448384448081694, guid: d4645708849767540a7f5055dec53076,
+    type: 2}
+  m_PrefabInternal: {fileID: 344153949}
 --- !u!1 &807327861 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1448384448081694, guid: d4645708849767540a7f5055dec53076,

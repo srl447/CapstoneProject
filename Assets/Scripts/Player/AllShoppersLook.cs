@@ -22,8 +22,11 @@ public class AllShoppersLook : MonoBehaviour {
             {
                 foreach (GameObject e in collision.GetComponent<AreaShopperList>().enemies)
                 {
-                    e.GetComponent<EnemyStare>().CollisionOccurence();
-                    e.GetComponent<EnemyStare>().StareWait(3f);
+                    if (e.GetComponent<EnemyStare>())
+                    {
+                        e.GetComponent<EnemyStare>().CollisionOccurence();
+                        e.GetComponent<EnemyStare>().StareWait(3f);
+                    }
                 }
             }
 

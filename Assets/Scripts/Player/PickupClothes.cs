@@ -18,6 +18,8 @@ public class PickupClothes : MonoBehaviour
     public bool canBuy = true;
     public AudioClip[] clothesThoughts;
 
+    public GameObject cart;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -80,7 +82,7 @@ public class PickupClothes : MonoBehaviour
                 foreach (GameObject c in GameManager.clothes)
                 {
                     GameObject newCloth = Instantiate(c) as GameObject;
-                    newCloth.transform.position = new Vector3(Random.Range(-14f, -11f), Random.Range(-.54f, -1.75f), -9f);
+                    newCloth.transform.position = cart.transform.position + new Vector3(Random.Range(-1f,1f),Random.Range(-.5f,.5f), .03f);
                     clothSet.Add(newCloth);
                 }
                 check.clothSet = clothSet;
@@ -89,7 +91,6 @@ public class PickupClothes : MonoBehaviour
                 GameManager.cantLoose = true;
                 if (collision.gameObject.tag == "Counter")
                 {
-                    Debug.Log("1");
                     checkOut.GetComponentInChildren<Checkout>().rT.enabled = true;
                     checkOut.GetComponentInChildren<Checkout>().rT2.enabled = false;
                     checkOut.GetComponentInChildren<Checkout>().rT3.enabled = false;
@@ -97,14 +98,12 @@ public class PickupClothes : MonoBehaviour
                 }
                 else if (collision.gameObject.tag == "Counter2")
                 {
-                    Debug.Log("2");
                     checkOut.GetComponentInChildren<Checkout>().rT2.enabled = true;
                     checkOut.GetComponentInChildren<Checkout>().rT.enabled = false;
                     checkOut.GetComponentInChildren<Checkout>().rT3.enabled = false;
                 }
                 else if (collision.gameObject.tag == "Counter3")
                 {
-                    Debug.Log("3");
                     checkOut.GetComponentInChildren<Checkout>().rT3.enabled = true;
                     checkOut.GetComponentInChildren<Checkout>().rT2.enabled = false;
                     checkOut.GetComponentInChildren<Checkout>().rT.enabled = false;
