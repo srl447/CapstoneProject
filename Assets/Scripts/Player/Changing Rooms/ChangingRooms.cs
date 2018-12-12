@@ -14,6 +14,7 @@ public class ChangingRooms : MonoBehaviour {
     bool[] played = new bool[3];
     AudioSource aud;
 
+    public ThoughtText tT;
     int timer = 0;
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,7 @@ public class ChangingRooms : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(start)
+        if(start && tT.thought.text == "")
         {
             if (fade.color.a < 1)
             {

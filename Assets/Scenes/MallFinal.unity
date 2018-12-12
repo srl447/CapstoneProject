@@ -3641,6 +3641,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 42e3198405d9107459b2aee0ca17f343, type: 3}
   - {fileID: 8300000, guid: d6ce00ce240a54a46b150a8500a8eedb, type: 3}
   - {fileID: 8300000, guid: 4fe9f486d08c3ef4fac37d6246c7136a, type: 3}
+  tT: {fileID: 25711156}
 --- !u!1 &442810093 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1313720619839070, guid: 70dea8b6d236e3d4fb2fda12d063cc2c,
@@ -11135,6 +11136,11 @@ Prefab:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114960264231456078, guid: 6b996ca23ee967d43a3a76b27e05be02,
+        type: 2}
+      propertyPath: thoughtTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b996ca23ee967d43a3a76b27e05be02, type: 2}
   m_IsPrefabParent: 0
@@ -12707,7 +12713,7 @@ Prefab:
     - target: {fileID: 114960264231456078, guid: 6b996ca23ee967d43a3a76b27e05be02,
         type: 2}
       propertyPath: thoughtTime
-      value: 1.4
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1892744577641542, guid: 6b996ca23ee967d43a3a76b27e05be02, type: 2}
       propertyPath: m_Icon

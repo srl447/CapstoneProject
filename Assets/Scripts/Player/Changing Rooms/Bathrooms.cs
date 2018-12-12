@@ -12,6 +12,7 @@ public class Bathrooms : MonoBehaviour {
     public AudioSource aud;
     bool[] played = new bool[3];
     int timer = 0;
+    public ThoughtText tT;
     // Use this for initialization
     void Start()
     {
@@ -22,7 +23,7 @@ public class Bathrooms : MonoBehaviour {
     void Update()
     {
 
-        if (start)
+        if (start && tT.thought.text == "")
         {
             if (fade.color.a < 1)
             {
