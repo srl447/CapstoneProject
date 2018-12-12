@@ -4,10 +4,24 @@ using UnityEngine;
 
 public class Exclamation : MonoBehaviour {
 
+    public AudioClip sound1, sound2, sound3;
+    public AudioSource aud;
 	// Use this for initialization
 	void Awake () {
         StartCoroutine(Squash());
-	}
+        switch ((int) Mathf.Floor(Random.Range(1,4)))
+        {
+            case 1:
+                aud.PlayOneShot(sound1, 1);
+                break;
+            case 2:
+                aud.PlayOneShot(sound2, 1);
+                break;
+            case 3:
+                aud.PlayOneShot(sound3, 1);
+                break;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {

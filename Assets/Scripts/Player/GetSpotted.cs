@@ -23,9 +23,9 @@ public class GetSpotted : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "EnemySight" || collision.gameObject.tag == "AnxietyZone1")
+        if(collision.gameObject.tag == "EnemySight")
         {
-           // ScreenShake.shakeStrength = 2f;
+           
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
