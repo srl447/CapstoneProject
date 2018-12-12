@@ -999,6 +999,11 @@ Prefab:
       propertyPath: leave
       value: 
       objectReference: {fileID: 8300000, guid: 1f6e8d57d56dd1647b494d2f190b1808, type: 3}
+    - target: {fileID: 82384248131647996, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 647e5b0b5b93a7041a0259460136d8dc, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
   m_IsPrefabParent: 0
