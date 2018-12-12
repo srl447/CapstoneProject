@@ -72,7 +72,7 @@ public class RegisterThoughts : MonoBehaviour {
         yield return new WaitForSecondsRealtime(1f);
         player.text = "";
         yield return new WaitForSecondsRealtime(4f);
-        cash.text = "Here you go, have a nice day!";
+        cash.text = "Here you go, have a great day!";
         aud.PlayOneShot(lines[6]);
         yield return new WaitForSecondsRealtime(2f);
         fin = true;

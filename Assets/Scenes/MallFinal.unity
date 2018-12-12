@@ -130,6 +130,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 102626232}
   m_Script: {fileID: 11500000, guid: 785e72c55aa9e404aa982dc7bb65e2c8, type: 3}
+--- !u!82 &25711153 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82384248131647996, guid: 009ff8ea692ea9b4ca7170f540677420,
+    type: 2}
+  m_PrefabInternal: {fileID: 102626232}
 --- !u!114 &25711155 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114196836872373336, guid: 009ff8ea692ea9b4ca7170f540677420,
@@ -832,6 +837,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114930767402991670, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 114852881517069290, guid: 009ff8ea692ea9b4ca7170f540677420,
         type: 2}
       propertyPath: clothesThoughts.Array.size
@@ -959,6 +969,36 @@ Prefab:
       propertyPath: cart
       value: 
       objectReference: {fileID: 566284598}
+    - target: {fileID: 114930767402991670, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: lines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 56e702cf0971dea4bb7b41e06a8cc887, type: 3}
+    - target: {fileID: 114930767402991670, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: lines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 58b8daf5e776fd64d9b087d029ebfde0, type: 3}
+    - target: {fileID: 114930767402991670, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: lines.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3536eb3467830e14d8053f5ddfaff886, type: 3}
+    - target: {fileID: 114729186681427836, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: aud
+      value: 
+      objectReference: {fileID: 25711153}
+    - target: {fileID: 114729186681427836, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: noLeave
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e77a1aa3fa54954dbddefdcf4771cf0, type: 3}
+    - target: {fileID: 114729186681427836, guid: 009ff8ea692ea9b4ca7170f540677420,
+        type: 2}
+      propertyPath: leave
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f6e8d57d56dd1647b494d2f190b1808, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 009ff8ea692ea9b4ca7170f540677420, type: 2}
   m_IsPrefabParent: 0
@@ -6928,13 +6968,13 @@ MonoBehaviour:
   end: 0
   fin: 0
   lines:
-  - {fileID: 8300000, guid: 972d2bb867ff2a44d9caed7373d7e024, type: 3}
+  - {fileID: 8300000, guid: d957e582b90e33248b548bc6b6c3760b, type: 3}
   - {fileID: 8300000, guid: fe660a4cebd3e454fad4015559da2aa4, type: 3}
-  - {fileID: 8300000, guid: 972d2bb867ff2a44d9caed7373d7e024, type: 3}
-  - {fileID: 8300000, guid: 972d2bb867ff2a44d9caed7373d7e024, type: 3}
-  - {fileID: 8300000, guid: 972d2bb867ff2a44d9caed7373d7e024, type: 3}
+  - {fileID: 8300000, guid: fe660a4cebd3e454fad4015559da2aa4, type: 3}
+  - {fileID: 8300000, guid: d4e3212fe1f22af4b9cd0c915cdf21e7, type: 3}
+  - {fileID: 8300000, guid: 175575a4e09951743bfba3b801813649, type: 3}
   - {fileID: 8300000, guid: aa5453b0435689f4e80d98838bc57a5b, type: 3}
-  - {fileID: 8300000, guid: 972d2bb867ff2a44d9caed7373d7e024, type: 3}
+  - {fileID: 8300000, guid: bc68091558b21d84580b095615d5b29a, type: 3}
   aud: {fileID: 857130116}
   loc: {fileID: 1295641306}
 --- !u!114 &857130114
@@ -6975,7 +7015,7 @@ MonoBehaviour:
   loc: {fileID: 1295641306}
   lines:
   - {fileID: 8300000, guid: 66b32ace4b193284d84f7d75f0e87bf7, type: 3}
-  - {fileID: 8300000, guid: 972d2bb867ff2a44d9caed7373d7e024, type: 3}
+  - {fileID: 8300000, guid: c8ed90f7deb2a164e952be184abae21c, type: 3}
   - {fileID: 8300000, guid: cbb1e8905995a7142ac2eab0f03fc09a, type: 3}
   - {fileID: 8300000, guid: b1b742b6f61897c4989a0e043c7f6d7e, type: 3}
   - {fileID: 8300000, guid: 7b6819279ab098344830bc4b7a5c9be7, type: 3}

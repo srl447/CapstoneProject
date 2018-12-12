@@ -10,11 +10,14 @@ public class Losing : MonoBehaviour {
     public Image fade;
     public Text text;
 
+    public AudioClip[] lines;
+    bool[] played = new bool[3];
+    AudioSource aud;
     int timer = 0;
 
     // Use this for initialization
     void Start () {
-		
+        aud = this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +32,11 @@ public class Losing : MonoBehaviour {
             if (timer <= 220)
             {
                 text.text = "I think I have to give up";
+                if (!played[0])
+                {
+                    aud.PlayOneShot(lines[0]);
+                    played[0] = true;
+                }
                 if (text.color.a < 1)
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;
@@ -41,6 +49,11 @@ public class Losing : MonoBehaviour {
             else if (timer <= 540)
             {
                 text.text = "There's always tomorrow";
+                if (!played[1])
+                {
+                    aud.PlayOneShot(lines[1]);
+                    played[1] = true;
+                }
                 if (text.color.a < 1)
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;
@@ -52,7 +65,12 @@ public class Losing : MonoBehaviour {
             }
             else if (timer <= 720)
             {
-                text.text = "I'll just drop the clothes, and try again later";
+                text.text = "I'll just drop the clothes and try again later";
+                if (!played[2])
+                {
+                    aud.PlayOneShot(lines[2]);
+                    played[2] = true;
+                }
                 if (text.color.a < 1)
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;

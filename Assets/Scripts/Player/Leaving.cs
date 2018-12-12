@@ -14,6 +14,11 @@ public class Leaving : MonoBehaviour {
     public Image fade;
     public Text text;
 
+    public AudioClip leave, noLeave;
+    public AudioSource aud;
+
+    bool played;
+
     int timer = 0;
 
     // Use this for initialization
@@ -35,6 +40,12 @@ public class Leaving : MonoBehaviour {
             if (timer <= 220)
             {
                 text.text = "I guess I can always come back another day...";
+                if(!played)
+                {
+                    aud.PlayOneShot(leave);
+                    played = true;
+                }
+
                 if (text.color.a < 1)
                     text.color = new Color(255, 255, 255, (text.color.a + .05f) * 2);
                 timer++;
@@ -71,6 +82,7 @@ public class Leaving : MonoBehaviour {
             Node dontLeave = new Node();
             dontLeave.thoughts = "I'm not letting myself leave until I purchase some clothes!";
             dontLeave.thoughtTime = 2;
+            dontLeave.voiceLine = noLeave;
             tT.add(dontLeave);
         }
         else if (collision.gameObject.tag == "Exit" && pC.purchased == false)
