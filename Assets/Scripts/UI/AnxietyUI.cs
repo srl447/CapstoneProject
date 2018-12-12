@@ -66,7 +66,7 @@ public class AnxietyUI : MonoBehaviour {
         mainProfile.chromaticAberration.settings = chromeS;
         mainProfile.bloom.settings = bloomS;
        // anxietyText.text = "Anxiety: " + Mathf.Floor(gS.anx*100);
-        if(GameManager.anxiety > 1.2)
+        if(GameManager.anxiety > 1)
         {
             grainS.intensity = (GameManager.anxiety - 1.2f)*2;
             mainProfile.grain.settings = grainS;

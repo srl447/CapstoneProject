@@ -10,8 +10,8 @@ public class WorkerSight : MonoBehaviour {
     public ThoughtText tT;
     public Workers work;
 
-    GameObject player;
-    Vector3 pos;
+    //GameObject player;
+   // Vector3 pos;
 
 
     public Image head;
@@ -51,8 +51,8 @@ public class WorkerSight : MonoBehaviour {
             topUI.SetActive(true);
             work.enabled = false;
             StartCoroutine(Convo(collision.gameObject));
-            player = collision.gameObject;
-            pos = player.transform.position;
+            //player = collision.gameObject;
+            //pos = player.transform.position;
             canTalk = false;
         }
     }

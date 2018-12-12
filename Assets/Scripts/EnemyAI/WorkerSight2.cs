@@ -17,8 +17,8 @@ public class WorkerSight2 : MonoBehaviour {
     public Sprite headSprite;
 
 
-    GameObject player;
-    Vector3 pos;
+    //GameObject player;
+    //Vector3 pos;
 
     public RectTransform loc;
     public AudioClip[] tessLines, workLines;
@@ -51,8 +51,8 @@ public class WorkerSight2 : MonoBehaviour {
             topUI.SetActive(true);
             work.enabled = false;
             StartCoroutine(Convo(collision.gameObject));
-            player = collision.gameObject;
-            pos = player.transform.position;
+            //player = collision.gameObject;
+            //pos = player.transform.position;
             canTalk = false;
             talking = true;
         }
