@@ -71,8 +71,11 @@ public class WorkerSight : MonoBehaviour {
         {
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(tT.current.thoughtTime);
-        tT.add(new Node(" ", .2f));
+        if (tT.thought.text != "")
+        {
+            yield return new WaitForSecondsRealtime(tT.current.thoughtTime);
+        }
+        tT.add(new Node(" ", 2f));
         tT.add(new Node("nothing im fine", 1.4f, tessLines[0]));
         tT.add(new Node(" ", 4));
         tT.add(new Node("   thanks.", 1, tessLines[1]));
