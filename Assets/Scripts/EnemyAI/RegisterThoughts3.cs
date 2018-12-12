@@ -15,10 +15,14 @@ public class RegisterThoughts3 : MonoBehaviour
     public Image head;
     public Sprite headSprite;
 
+    public AudioClip[] lines;
+    AudioSource aud;
+
     public RectTransform loc;
 
     void Awake()
     {
+        aud = GetComponent<AudioSource>();
         if (this.enabled)
         {
             StartCoroutine(Conversation());
@@ -44,21 +48,27 @@ public class RegisterThoughts3 : MonoBehaviour
         }
         yield return new WaitForEndOfFrame();
         cash.text = "Hey There!";
+        aud.PlayOneShot(lines[0]);
         player.text = "";
         yield return new WaitForSecondsRealtime(2);
         player.text = "      hi";
+        aud.PlayOneShot(lines[1]);
         cash.text = "";
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
         cash.text = "Hope everything went well";
-        yield return new WaitForSecondsRealtime(3);
+        aud.PlayOneShot(lines[2]);
+        yield return new WaitForSecondsRealtime(2);
         cash.text = "";
         player.text = "...it did";
+        aud.PlayOneShot(lines[3]);
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
         cash.text = "Is that for you? You'll look great in it!";
+        aud.PlayOneShot(lines[4]);
         yield return new WaitForSecondsRealtime(3);
         player.text = "aww thanks";
+        aud.PlayOneShot(lines[5]);
         cash.text = "";
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
@@ -69,13 +79,16 @@ public class RegisterThoughts3 : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         cash.text = "Will you pay with cash or card?";
+        aud.PlayOneShot(lines[6]);
         yield return new WaitForSecondsRealtime(2);
         cash.text = "";
         player.text = "card";
+        aud.PlayOneShot(lines[7]);
         yield return new WaitForSecondsRealtime(1f);
         player.text = "";
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSecondsRealtime(2f);
         cash.text = "Here ya go, have a great day!";
+        aud.PlayOneShot(lines[8]);
         yield return new WaitForSecondsRealtime(2f);
         fin = true;
 
