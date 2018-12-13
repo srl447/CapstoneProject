@@ -16,12 +16,12 @@ public class SoundDistortion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (aDF.distortionLevel < .8f)
+       /* if (aDF.distortionLevel < .6f)
         {
             aDF.distortionLevel = GameManager.anxiety;
-        }
-        aLPF.cutoffFrequency = 5000 - (1200 * GameManager.anxiety);
-        aud.volume = .59f - GameManager.anxiety / 2.5f;
+        }*/
+        aLPF.cutoffFrequency = 4000 - (3200 * GameManager.anxiety);
+        aud.volume = .5f - GameManager.anxiety / 3f;
 		
 	}
 }

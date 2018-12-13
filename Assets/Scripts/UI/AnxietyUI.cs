@@ -70,6 +70,11 @@ public class AnxietyUI : MonoBehaviour {
         {
             grainS.intensity = (GameManager.anxiety - 1.2f)*2;
             mainProfile.grain.settings = grainS;
+            if (!aud.isPlaying)
+            {
+                aud.Play();
+            }
+            aud.volume = .7f*GameManager.anxiety - 1.2f;
         }
         /*if(gS.anx > 1.3 && !flicker)
         {

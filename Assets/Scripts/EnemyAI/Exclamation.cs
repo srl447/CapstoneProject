@@ -12,13 +12,13 @@ public class Exclamation : MonoBehaviour {
         switch ((int) Mathf.Floor(Random.Range(1,4)))
         {
             case 1:
-                aud.PlayOneShot(sound1, 1);
+                aud.PlayOneShot(sound1, 2);
                 break;
             case 2:
-                aud.PlayOneShot(sound2, 1);
+                aud.PlayOneShot(sound2, 2);
                 break;
             case 3:
-                aud.PlayOneShot(sound3, 1);
+                aud.PlayOneShot(sound3, 2);
                 break;
         }
     }

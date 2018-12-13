@@ -115,13 +115,13 @@ public class MoveHand : MonoBehaviour
         switch ((int) Mathf.Ceil(Random.Range(0, 3)))
         {
             case 1:
-                aud.PlayOneShot(sound1,2);
+                aud.PlayOneShot(sound1,5);
                 break;
             case 2:
-                aud.PlayOneShot(sound2,2);
+                aud.PlayOneShot(sound2,5);
                 break;
             case 3:
-                aud.PlayOneShot(sound3,2);
+                aud.PlayOneShot(sound3,5);
                 break;
         }
         for(int i = 0; i < 6; i++)

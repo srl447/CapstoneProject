@@ -48,6 +48,7 @@ public class WorkerSight2 : MonoBehaviour {
             collision.gameObject.GetComponent<Movement>().right = false;
             collision.gameObject.GetComponent<Movement>().walking = false;
             collision.gameObject.GetComponent<Movement>().enabled = false;
+            collision.gameObject.GetComponent<PickupClothes>().enabled = false;
             topUI.SetActive(true);
             work.enabled = false;
             StartCoroutine(Convo(collision.gameObject));
@@ -104,7 +105,8 @@ public class WorkerSight2 : MonoBehaviour {
             topUI.GetComponent<RectTransform>().position = new Vector3(topUI.GetComponent<RectTransform>().position.x, Mathf.Lerp(topUI.GetComponent<RectTransform>().position.y, oldPos.y, .1f), topUI.GetComponent<RectTransform>().position.z);
 
         }
-        player.gameObject.GetComponent<Movement>().enabled = true;
+        player.GetComponent<Movement>().enabled = true;
+        player.GetComponent<PickupClothes>().enabled = true;
         topUI.SetActive(false);
         work.enabled = true;
         talking = false;
