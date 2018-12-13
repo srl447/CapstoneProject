@@ -18,7 +18,9 @@ public class Losing : MonoBehaviour {
     // Use this for initialization
     void Start () {
         aud = this.GetComponent<AudioSource>();
-	}
+        GameManager.cantLoose = false;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
