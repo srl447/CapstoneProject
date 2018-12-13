@@ -83,7 +83,7 @@ public class RegisterThoughts3 : MonoBehaviour
         yield return new WaitForSecondsRealtime(2);
         cash.text = "";
         player.text = "card";
-        aud.PlayOneShot(lines[7]);
+        aud.PlayOneShot(lines[7], 2);
         yield return new WaitForSecondsRealtime(1f);
         player.text = "";
         yield return new WaitForSecondsRealtime(2f);
