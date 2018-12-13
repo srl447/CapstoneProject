@@ -66,7 +66,7 @@ public class MoveHand : MonoBehaviour
                 newCloth.SetActive(false);
                 GameManager.clothes.Add(newCloth);
 
-                pickup();
+                StartCoroutine(pickup(collision.gameObject));
             }
             else if (collision.gameObject.tag == "Sides")
             {
@@ -110,7 +110,7 @@ public class MoveHand : MonoBehaviour
     }
 
     //picks up the clothes, but run as it's own method to not rely on collision
-    private void pickup()
+    IEnumerator pickup(GameObject cloth)
     {
         switch ((int) Mathf.Ceil(Random.Range(0, 3)))
         {
@@ -123,6 +123,16 @@ public class MoveHand : MonoBehaviour
             case 3:
                 aud.PlayOneShot(sound3,2);
                 break;
+        }
+        for(int i = 0; i < 6; i++)
+        {
+            cloth.transform.localScale += new Vector3(.15f, .15f, 0);
+            yield return new WaitForEndOfFrame();
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            cloth.transform.localScale -= new Vector3(.2f, .2f, 0);
+            yield return new WaitForEndOfFrame();
         }
         //remove clothes
         for (int i = 0; i < viewClothes.Count; i++)
