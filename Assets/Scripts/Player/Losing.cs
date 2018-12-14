@@ -84,6 +84,7 @@ public class Losing : MonoBehaviour {
             }
             else if (timer < 900)
             {
+                GameManager.clothes = new ArrayList();
                 SceneManager.LoadScene(0);
             }
         }
