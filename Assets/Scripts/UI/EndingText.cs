@@ -74,7 +74,7 @@ public class EndingText : MonoBehaviour {
             credits[0].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(3.5f);
         for (; credits[0].GetComponent<Image>().color.a > 0;)
         {
             credits[0].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
@@ -136,6 +136,20 @@ public class EndingText : MonoBehaviour {
             credits[7].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
             credits[9].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
             credits[8].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSecondsRealtime(.6f);
+        for (; credits[17].GetComponent<Image>().color.a < 1;)
+        {
+            credits[17].GetComponent<Image>().color += new Color(0f, 0f, 0f, .22f);
+            credits[16].GetComponent<Text>().color += new Color(0f, 0f, 0f, .22f);
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSecondsRealtime(3f);
+        for (; credits[17].GetComponent<Image>().color.a > 0;)
+        {
+            credits[17].GetComponent<Image>().color -= new Color(0f, 0f, 0f, .22f);
+            credits[16].GetComponent<Text>().color -= new Color(0f, 0f, 0f, .22f);
             yield return new WaitForEndOfFrame();
         }
         yield return new WaitForSecondsRealtime(.6f);
