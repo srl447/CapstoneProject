@@ -5526,7 +5526,7 @@ Prefab:
     - target: {fileID: 114960264231456078, guid: 6b996ca23ee967d43a3a76b27e05be02,
         type: 2}
       propertyPath: thought
-      value: What if they see a guy buying girl's clothes
+      value: What if they see a guy buying girl's pants
       objectReference: {fileID: 0}
     - target: {fileID: 1892744577641542, guid: 6b996ca23ee967d43a3a76b27e05be02, type: 2}
       propertyPath: m_Name
@@ -17277,7 +17277,7 @@ Prefab:
     - target: {fileID: 114960264231456078, guid: 6b996ca23ee967d43a3a76b27e05be02,
         type: 2}
       propertyPath: thoughtTime
-      value: 4.5
+      value: 4.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b996ca23ee967d43a3a76b27e05be02, type: 2}

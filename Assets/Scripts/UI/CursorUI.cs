@@ -7,7 +7,8 @@ public class CursorUI : MonoBehaviour
     bool holding;
     GameObject heldObject;
     internal static bool visible;
-
+    bool handOn;
+    public Sprite cursor, hand, grabbyHand;
     // Use this for initialization
     void Start()
     {
@@ -28,6 +29,7 @@ public class CursorUI : MonoBehaviour
         }
         if(holding)
         {
+            this.GetComponent<SpriteRenderer>().sprite = grabbyHand;
             heldObject.transform.position = this.transform.position;
             if(Input.GetKey(KeyCode.A))
             {
@@ -46,6 +48,10 @@ public class CursorUI : MonoBehaviour
                 heldObject.GetComponent<SpriteRenderer>().sortingOrder++;
             }
         }
+        else if (!handOn)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = cursor;
+        }
 
     }
 
@@ -57,6 +63,11 @@ public class CursorUI : MonoBehaviour
             holding = true;
             heldObject = collision.gameObject;
         }
+        if(collision.gameObject.tag == "Clothes")
+        {
+            handOn = true;
+            this.GetComponent<SpriteRenderer>().sprite = hand;
+        }
         /*else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             holding = false;
@@ -65,5 +76,13 @@ public class CursorUI : MonoBehaviour
         {
             collision.gameObject.transform.position = this.transform.position;
         }*/
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Clothes")
+        {
+            handOn = false;
+        }
     }
 }

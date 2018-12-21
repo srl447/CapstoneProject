@@ -64,7 +64,7 @@ public class RegisterThoughts2 : MonoBehaviour
         aud.PlayOneShot(lines[3]);
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
-        cash.text = "Oh good I hate those creeps who wears women's clothes";
+        cash.text = "Oh good I hate those creeps who wears women's clothing";
         aud.PlayOneShot(lines[4]);
         yield return new WaitForSecondsRealtime(3);
         cash.text = "";

@@ -12,7 +12,7 @@ public class SpawningClothes : MonoBehaviour {
         {
             GameObject newCloth = Instantiate((GameObject) GameManager.clothes[i]) as GameObject;
             newCloth.SetActive(true);
-            newCloth.transform.position = new Vector3(Random.Range(-7f, -1f), Random.Range(-4f, 4f), -1f); 
+            newCloth.transform.position = new Vector3(Random.Range(-6f, -2f), Random.Range(-3f, 3f), -1f); 
         }
 		
 	}
