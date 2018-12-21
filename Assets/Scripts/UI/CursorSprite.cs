@@ -5,7 +5,7 @@ using UnityEngine;
 public class CursorSprite : MonoBehaviour {
 
     public GameObject checkOut, clothes, circle;
-    public Sprite cursor, hand, grabbyHand;
+    public Sprite cursor, hand, grabbyHand, cursor2;
     bool col;
 	// Use this for initialization
 	void Start () {
@@ -17,13 +17,17 @@ public class CursorSprite : MonoBehaviour {
         if (checkOut.activeSelf || clothes.activeSelf)
         {
             circle.SetActive(false);
-            if (col)
+            if(this.GetComponent<MoveHand>().holding)
             {
                 GetComponent<SpriteRenderer>().sprite = grabbyHand;
             }
-            else
+            else if (col)
             {
                 GetComponent<SpriteRenderer>().sprite = hand;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().sprite = cursor2;
             }
         }
         else

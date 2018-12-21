@@ -1810,6 +1810,8 @@ MonoBehaviour:
   playerMovement: {fileID: 25711155}
   playerPickup: {fileID: 25711151}
   checkout: 0
+  holding: 0
+  inCart: 0
   sound1: {fileID: 8300000, guid: fe32b94321f6d8847b21e0b5c236ddf3, type: 3}
   sound2: {fileID: 8300000, guid: 024e9a6203d68ea4f98836399f92735a, type: 3}
   sound3: {fileID: 8300000, guid: 1e876af5ae351c14fb28324fbfa38470, type: 3}
@@ -1879,6 +1881,7 @@ MonoBehaviour:
   cursor: {fileID: 21300000, guid: 13bfad04f9736314088cf469bccd0c37, type: 3}
   hand: {fileID: 21300000, guid: efce8944c3f9e0e4e8b7a891fdfd7e0d, type: 3}
   grabbyHand: {fileID: 21300000, guid: 3c9a7b3778957904e8bdc617f1f44797, type: 3}
+  cursor2: {fileID: 21300000, guid: b2729c056bc8579499a6b7c001670e08, type: 3}
 --- !u!82 &164858194
 AudioSource:
   m_ObjectHideFlags: 0

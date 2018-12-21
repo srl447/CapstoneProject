@@ -9,7 +9,7 @@ public class MoveHand : MonoBehaviour
     public Movement playerMovement;
     public PickupClothes playerPickup;
     public bool checkout;
-    bool holding, inCart;
+    public bool holding, inCart;
     GameObject heldObject;
     public ArrayList viewClothes = new ArrayList();
     public AudioClip sound1, sound2, sound3;
