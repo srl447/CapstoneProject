@@ -48,7 +48,7 @@ public class RegisterThoughts3 : MonoBehaviour
         }
         yield return new WaitForEndOfFrame();
         cash.text = "Hey There!";
-        aud.PlayOneShot(lines[0]);
+        aud.PlayOneShot(lines[0],.8f);
         player.text = "";
         yield return new WaitForSecondsRealtime(2);
         player.text = "      hi";
@@ -57,7 +57,7 @@ public class RegisterThoughts3 : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
         cash.text = "Hope everything went well";
-        aud.PlayOneShot(lines[2]);
+        aud.PlayOneShot(lines[2],.8f);
         yield return new WaitForSecondsRealtime(2);
         cash.text = "";
         player.text = "...it did";
@@ -65,10 +65,10 @@ public class RegisterThoughts3 : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
         cash.text = "Is that for you? You'll look great in it!";
-        aud.PlayOneShot(lines[4]);
+        aud.PlayOneShot(lines[4],.8f);
         yield return new WaitForSecondsRealtime(3);
         player.text = "aww thanks";
-        aud.PlayOneShot(lines[5]);
+        aud.PlayOneShot(lines[5],.9f);
         cash.text = "";
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
@@ -79,7 +79,7 @@ public class RegisterThoughts3 : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         cash.text = "Will you pay with cash or card?";
-        aud.PlayOneShot(lines[6]);
+        aud.PlayOneShot(lines[6],.8f);
         yield return new WaitForSecondsRealtime(2);
         cash.text = "";
         player.text = "card";
@@ -88,7 +88,7 @@ public class RegisterThoughts3 : MonoBehaviour
         player.text = "";
         yield return new WaitForSecondsRealtime(2f);
         cash.text = "Here ya go, have a great day!";
-        aud.PlayOneShot(lines[8]);
+        aud.PlayOneShot(lines[8],.8f);
         yield return new WaitForSecondsRealtime(2f);
         fin = true;
 

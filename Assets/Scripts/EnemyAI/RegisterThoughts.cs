@@ -42,7 +42,7 @@ public class RegisterThoughts : MonoBehaviour {
         }
         yield return new WaitForEndOfFrame();
         cash.text = "Good Evening";
-        aud.PlayOneShot(lines[0]);
+        aud.PlayOneShot(lines[0],.8f);
         player.text = " ";
         yield return new WaitForSecondsRealtime(3);
         player.text = "      hi";
@@ -51,7 +51,7 @@ public class RegisterThoughts : MonoBehaviour {
         yield return new WaitForSecondsRealtime(1);
         player.text = "";
         cash.text = "Did you find everything alright?";
-        aud.PlayOneShot(lines[3]);
+        aud.PlayOneShot(lines[3],.8f);
         yield return new WaitForSecondsRealtime(3);
         cash.text = " ";
         player.text = "...";
@@ -64,16 +64,16 @@ public class RegisterThoughts : MonoBehaviour {
     {
         yield return new WaitForEndOfFrame();
         cash.text = "Will that be cash or card?";
-        aud.PlayOneShot(lines[4]);
+        aud.PlayOneShot(lines[4],.8f);
         yield return new WaitForSecondsRealtime(2);
         cash.text = "";
         player.text = "card";
-        aud.PlayOneShot(lines[5]);
+        aud.PlayOneShot(lines[5],1.5f);
         yield return new WaitForSecondsRealtime(1f);
         player.text = "";
         yield return new WaitForSecondsRealtime(4f);
         cash.text = "Here you go, have a great day!";
-        aud.PlayOneShot(lines[6]);
+        aud.PlayOneShot(lines[6],.8f);
         yield return new WaitForSecondsRealtime(2f);
         fin = true;
 

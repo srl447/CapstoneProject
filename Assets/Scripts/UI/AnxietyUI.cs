@@ -74,7 +74,10 @@ public class AnxietyUI : MonoBehaviour {
             {
                 aud.Play();
             }
-            aud.volume = .7f*GameManager.anxiety - 1.2f;
+            if (aud.volume < .55f)
+            {
+                aud.volume = GameManager.anxiety - 1.2f;
+            }
         }
         /*if(gS.anx > 1.3 && !flicker)
         {
