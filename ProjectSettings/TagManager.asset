@@ -17,6 +17,7 @@ TagManager:
   - Sides
   - Outside
   - WorkSight
+  - Cart
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Sight
   - bubble
   - bg
-  - 
+  - Cart
   - 
   - 
   - 

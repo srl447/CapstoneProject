@@ -51,11 +51,11 @@ public class PickupClothes : MonoBehaviour
                     Node newThought = new Node("I wonder if these are the right size?", 2, clothesThoughts[2]);
                     tT.add(newThought);
                 }
-                else if(GameManager.clothes.Count == 2)
+                /*else if(GameManager.clothes.Count == 2)
                 {
                     Node newThought = new Node("I hope I'm not spending too much", 2, clothesThoughts[1]);
                     tT.add(newThought);
-                }
+                }*/
                 clothesScreen.SetActive(true);
                 foreach (ClothesSpawner c in cS)
                 {

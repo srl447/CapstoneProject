@@ -76,7 +76,7 @@ public class WorkerSight : MonoBehaviour {
             yield return new WaitForSecondsRealtime(tT.current.thoughtTime);
         }
         tT.add(new Node(" ", 2f));
-        tT.add(new Node("nothing im fine", 1.4f, tessLines[0]));
+        tT.add(new Node("hi", 1f, tessLines[0]));
         tT.add(new Node(" ", 4));
         tT.add(new Node("   thanks.", 1, tessLines[1]));
         tT.add(new Node(" ", 2));
@@ -84,11 +84,11 @@ public class WorkerSight : MonoBehaviour {
         Vector3 dir = player.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
         transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        helpText.text = "Hello Sir! Can I help you at all today?";
+        helpText.text = "Hello Sir!";
         aud.PlayOneShot(workLines[0]);
         yield return new WaitForSecondsRealtime(2);
         helpText.text = "";
-        yield return new WaitForSecondsRealtime(1.4f);
+        yield return new WaitForSecondsRealtime(1f);
         helpText.text = "The man's section on the right. You shouldn't care about the rest.";
         aud.PlayOneShot(workLines[1]);
         yield return new WaitForSecondsRealtime(2);
