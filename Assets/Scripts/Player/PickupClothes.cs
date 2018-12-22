@@ -18,6 +18,7 @@ public class PickupClothes : MonoBehaviour
     public bool canBuy = true;
     public AudioClip[] clothesThoughts;
 
+    bool[] played = { false, false, false };
     public GameObject cart;
 
 	// Use this for initialization
@@ -41,15 +42,17 @@ public class PickupClothes : MonoBehaviour
             } 
             if (canBuy && Input.GetKeyDown(KeyCode.Mouse0) && !clothesScreen.activeInHierarchy && collision.GetComponent<ClothType>() && !mH.checkout)
             {
-                if (GameManager.clothes.Count == 0)
+                if (GameManager.clothes.Count == 0 && !played[0])
                 {
                     Node newThought = new Node("Ooo they're so many cute options!", 2, clothesThoughts[0]);
                     tT.add(newThought);
+                    played[0] = true;
                 }
-                else if (GameManager.clothes.Count == 1)
+                else if (GameManager.clothes.Count == 1 && !played[1])
                 {
                     Node newThought = new Node("I wonder if these are the right size?", 2, clothesThoughts[2]);
                     tT.add(newThought);
+                    played[1] = true;
                 }
                 /*else if(GameManager.clothes.Count == 2)
                 {

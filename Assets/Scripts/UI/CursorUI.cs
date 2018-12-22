@@ -41,11 +41,13 @@ public class CursorUI : MonoBehaviour
             }
             if(Input.GetKey(KeyCode.W))
             {
+                if(heldObject.GetComponent<SpriteRenderer>().sortingOrder > -2)
                 heldObject.GetComponent<SpriteRenderer>().sortingOrder--;
             }
             if (Input.GetKey(KeyCode.D))
             {
-                heldObject.GetComponent<SpriteRenderer>().sortingOrder++;
+                    if (heldObject.GetComponent<SpriteRenderer>().sortingOrder < 2)
+                    heldObject.GetComponent<SpriteRenderer>().sortingOrder++;
             }
         }
         else if (!handOn)
