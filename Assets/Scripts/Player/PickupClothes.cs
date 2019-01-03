@@ -77,7 +77,7 @@ public class PickupClothes : MonoBehaviour
             }
         }
         //purchasing clothes
-        if ((collision.gameObject.tag == "Counter" || collision.gameObject.tag == "Counter2" || collision.gameObject.tag == "Counter3")  && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.anxiety <= 1.6f)
+        if ((collision.gameObject.tag == "Counter" || collision.gameObject.tag == "Counter2" || collision.gameObject.tag == "Counter3")  && Input.GetKeyDown(KeyCode.Mouse0) && GameManager.anxiety <= 1.55f)
         {
             if (clothesCount > 0)
             {
