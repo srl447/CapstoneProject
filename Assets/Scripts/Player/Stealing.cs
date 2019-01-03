@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stealing : MonoBehaviour {
 
     public GameObject wall;
+    public AudioClip steal;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,7 +21,7 @@ public class Stealing : MonoBehaviour {
         if(collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<PickupClothes>().purchased == false && GameManager.clothes.Count > 0)
         {
             wall.SetActive(true);
-            collision.gameObject.GetComponent<ThoughtText>().add(new Node("Even if the register is scary, I can't shoplift!", 3f));
+            collision.gameObject.GetComponent<ThoughtText>().add(new Node("Even if the register is scary, I can't shoplift!", 3f, steal));
         }
         
     }

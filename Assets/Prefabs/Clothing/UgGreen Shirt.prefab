@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9bd0bdb8945144f9d0770f4471391c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clothType: Ugly Blue Shirt
+  clothType: Ugly
 --- !u!212 &212740598833910818
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -254,7 +254,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: b2729c056bc8579499a6b7c001670e08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 226862245}
   - component: {fileID: 226862246}
   - component: {fileID: 226862247}
+  - component: {fileID: 226862248}
   m_Layer: 0
   m_Name: person
   m_TagString: Untagged
@@ -458,6 +459,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &226862248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 226862242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d55ad2ecd70ec4f9409ac68dc9bfbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bandana: {fileID: 8300000, guid: 4dfdebf0012976241b4b0c82c94deef7, type: 3}
+  jeans: {fileID: 8300000, guid: 4d12529a5929479439c3d449b0b0c2e3, type: 3}
+  leggings: {fileID: 8300000, guid: 49b7df34e7a0ab94ca4f6e103941a31f, type: 3}
+  splatter: {fileID: 8300000, guid: bc55494dfbc27e64fb169709c6daee0e, type: 3}
+  ugly: {fileID: 8300000, guid: dfeb5f9d538ad054993423d120d82ae4, type: 3}
+  romper: {fileID: 8300000, guid: 2a361eb9327f40844affc6b0a94197eb, type: 3}
+  aud: {fileID: 673456953}
 --- !u!1 &481498127
 GameObject:
   m_ObjectHideFlags: 0

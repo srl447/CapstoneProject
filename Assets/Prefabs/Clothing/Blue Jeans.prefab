@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9bd0bdb8945144f9d0770f4471391c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clothType: Blue Jeans
+  clothType: Jeans
 --- !u!114 &114727351937822354
 MonoBehaviour:
   m_ObjectHideFlags: 1
