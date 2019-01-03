@@ -40,7 +40,7 @@ public class WorkerSight : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" && canTalk)
+        if(collision.gameObject.tag == "Player" && canTalk && GameManager.anxiety <= 1.55f)
         {
             collision.gameObject.GetComponent<Movement>().up = false;
             collision.gameObject.GetComponent<Movement>().left = false;
