@@ -117,7 +117,6 @@ public class MoveHand : MonoBehaviour
     {
         if(holding && other.gameObject.tag == "Cart")
         {
-            Debug.Log(holding);
             StartCoroutine(pickup(heldObject));
         }
     }
