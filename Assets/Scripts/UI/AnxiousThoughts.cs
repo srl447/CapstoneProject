@@ -47,7 +47,7 @@ public class AnxiousThoughts : MonoBehaviour {
             index = 0;
 
         }
-        if (gS.anx > .3 && !thoughts[1])
+        if (gS.anx > .9f && !thoughts[1])
         {
             Node newThought = new Node();
             newThought.thoughts = "Fuckkk people are staring at me";
@@ -55,10 +55,10 @@ public class AnxiousThoughts : MonoBehaviour {
             newThought.voiceLine = lines[1];
             tT.add(newThought);
             thoughts[1] = true;
-            index = 1;
+            index = 4;
 
         }
-        if (gS.anx > .6 && !thoughts[2])
+        if (gS.anx > .6f && !thoughts[2])
         {
             Node newThought = new Node();
             newThought.thoughts = "I hate this, I hate this, I hate this";
@@ -69,7 +69,7 @@ public class AnxiousThoughts : MonoBehaviour {
             index = 2;
 
         }
-        if (gS.anx > .7467 && !thoughts[5])
+        if (gS.anx > .7467f && !thoughts[5])
         {
             Node newThought = new Node();
             newThought.thoughts = "I hate it, I hate it, I hate it";
@@ -80,14 +80,14 @@ public class AnxiousThoughts : MonoBehaviour {
             index = 5;
 
         }
-        if (gS.anx > .9 && ! thoughts[4])
+        if (gS.anx > .22f && ! thoughts[4])
         {
             Node newThought= new Node("You need to stay calm Kril, pretend like no one's around", 4,lines[4]);
             tT.add(newThought);
             thoughts[4] = true;
-            index = 4;
+            index = 1;
         }
-        if(gS.anx > 1.2 && !thoughts[3])
+        if(gS.anx > 1.2f && !thoughts[3])
         {
             Node badEnd = new Node("I can't take this anymore. I can barely think. I have to get out!", 3, lines[3]);
             tT.add(badEnd);

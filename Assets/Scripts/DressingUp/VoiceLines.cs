@@ -5,9 +5,9 @@ using UnityEngine;
 public class VoiceLines : MonoBehaviour
 {
 
-    public AudioClip bandana, jeans, leggings, splatter, ugly, romper;
+    public AudioClip bandana, jeans, leggings, splatter, ugly, romper, uglyW, basicOkay, cute, skirt;
     public AudioSource aud;
-    bool[] played = { false, false, false, false, false, false, false, false };
+    bool[] played = { false, false, false, false, false, false, false, false, false, false, false };
 
     // Use this for initialization
     void Start()
@@ -22,10 +22,10 @@ public class VoiceLines : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<ClothType>() != null)
+        if (collision.gameObject.GetComponent<ClothType>() != null)
         {
             ClothType name = collision.gameObject.GetComponent<ClothType>();
-            if(name.clothType == "Bandana" && !played[0])
+            if (name.clothType == "Bandana" && !played[0])
             {
                 aud.PlayOneShot(bandana);
                 played[0] = true;
@@ -49,7 +49,7 @@ public class VoiceLines : MonoBehaviour
                 played[3] = true;
                 return;
             }
-            if(name.clothType == "Ugly" && !played[4])
+            if (name.clothType == "Ugly" && !played[4])
             {
                 aud.PlayOneShot(ugly);
                 played[4] = true;
@@ -58,7 +58,31 @@ public class VoiceLines : MonoBehaviour
             if (name.clothType == "Romper" && !played[5])
             {
                 aud.PlayOneShot(romper);
-                played[4] = true;
+                played[5] = true;
+                return;
+            }
+            if (name.clothType == "UglyW" && !played[6])
+            {
+                aud.PlayOneShot(uglyW);
+                played[6] = true;
+                return;
+            }
+            if (name.clothType == "Shirt" && !played[7])
+            {
+                aud.PlayOneShot(basicOkay);
+                played[7] = true;
+                return;
+            }
+            if (name.clothType == "Cute" && !played[8])
+            {
+                aud.PlayOneShot(cute);
+                played[8] = true;
+                return;
+            }
+            if (name.clothType == "Skirt" && !played[9])
+            {
+                aud.PlayOneShot(skirt);
+                played[9] = true;
                 return;
             }
         }
